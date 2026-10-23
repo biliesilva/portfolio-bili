@@ -23,6 +23,18 @@ pnpm lint
 | `/contact` | Email, calendar, "for hiring teams" block |
 | `/404`, `/sitemap.xml`, `/robots.txt`, `/opengraph-image` | Generated automatically |
 
+## Three kinds of entry
+
+Not every piece of work can be told the same way, so `content/types.ts` has a
+`kind` field and the page template shows only the sections an entry fills in:
+
+- **`case-study`** — public work, told in full: problem, decisions, outcome.
+  Heroic Games Launcher, where every claim is a public pull request.
+- **`role`** — employed work under NDA. Scope, ownership and practice; no client
+  internals, no invented metrics. Each one opens with a "what I can show" note,
+  because saying so is more credible than quietly having nothing to show.
+- **`project`** — personal work, free to show.
+
 ## Where the content lives
 
 All copy is typed data — no CMS, no MDX to debug. Edit these and the pages follow:
@@ -47,14 +59,14 @@ TypeScript says so at build time.
 
 Search the repo for `TODO` — every placeholder is marked. The ones that matter:
 
-1. **`content/resume.ts`** — your real roles, dates and bullets from LinkedIn.
-2. **`content/site.ts`** — your city, the live domain, the scheduling link.
-3. **Images** — drop screenshots in `public/work/<slug>/` and fill the `src`
-   fields. Until then every image renders as a labelled placeholder frame whose
-   caption doubles as a shot list.
-4. **`public/biliane-silva-resume.pdf`** — the downloadable résumé.
-5. **Case-study metrics** — the three case studies seeded as drafts
-   (`tradebook`, `juriswed`, `antagning`) need real numbers in `outcome.metrics`.
+1. **`TODO (Bili)` markers** — each one is a sentence only you can write:
+   one concrete, non-confidential thing you shipped per role.
+2. **Images** — `public/work/<slug>/`, then fill the `src` fields. Until then
+   every image renders as a labelled placeholder whose caption is the shot list.
+   The Heroic screenshots are the safest ones to start with: open source.
+3. **`public/biliane-silva-resume.pdf`** — the downloadable résumé.
+4. **`content/site.ts`** — the scheduling link (`calendar`).
+5. **A portrait** at `public/about/portrait.jpg`.
 
 ## Notes on the build
 

@@ -1,23 +1,24 @@
-import type { CaseStudy } from "../types";
+import type { WorkEntry } from "../types";
 
 /**
  * Every number and claim here is verifiable from the public pull requests.
  * Add screenshots to /public/work/heroic/ and fill in the `src` fields.
  */
-export const heroic: CaseStudy = {
+export const heroic: WorkEntry = {
   slug: "heroic-games-launcher",
+  kind: "case-study",
   title: "Heroic Games Launcher",
   client: "Open source · 12,500+ stars",
-  year: "2025 — 2026",
+  year: "2020 — present",
   summary:
     "Redesigning a 12.5k-star desktop games launcher and shipping the code: a design system that survives 15 user themes, built across ~14,000 lines of TypeScript.",
   disciplines: ["Product Design", "Design Systems", "Front-end", "UI/UX"],
   featured: true,
   order: 1,
 
-  role: "Product designer & front-end contributor",
+  role: "UX/UI design contributor (2020—) · front-end contributor (2025—)",
   team: "Open-source maintainers and contributors",
-  timeline: "Ongoing since March 2025",
+  timeline: "5+ years, ongoing",
   platforms: ["Desktop (Linux, Windows, macOS)", "Electron"],
   stack: ["TypeScript", "React", "SCSS", "Electron", "Lucide", "Figma"],
 
@@ -27,9 +28,13 @@ export const heroic: CaseStudy = {
     aspect: "16/10",
   },
 
+  disclosure:
+    "Open source, so there is nothing I cannot show you. Every pull request, review conversation and decision below is public on GitHub.",
+
   context: [
-    "Heroic Games Launcher is how hundreds of thousands of people play GOG, Amazon and Epic games on Linux, Windows and macOS. It is open source, has 12,500+ stars, and like most community-built apps, its interface had grown one contribution at a time: three fonts, Material UI mixed with custom SCSS, and 15 bundled themes that each broke in a different place.",
-    "I joined as a contributor in 2025. Nobody asked for a redesign — I opened one, in public, with the code attached.",
+    "Heroic Games Launcher is how hundreds of thousands of people play GOG, Amazon and Epic games on Linux, Windows, macOS and SteamDeck. It is open source, has 12,500+ stars, and like most community-built apps its interface had grown one contribution at a time: three fonts, Material UI mixed with custom SCSS, and 15 bundled themes that each broke in a different place.",
+    "I have contributed as a UX/UI designer since December 2020, and since March 2025 as a front-end developer too. Nobody commissioned a redesign — I opened one, in public, with the code attached.",
+    "This is the work I point to when an NDA stops me showing something else. It is the same practice I bring to employed work, except here you can read every decision and every review conversation yourself.",
   ],
   goal:
     "Give Heroic a coherent interface that any of its 15 themes can wear, without asking maintainers to accept a rewrite.",

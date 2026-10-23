@@ -15,19 +15,14 @@ export function Hero() {
         </div>
 
         <h1 className="mt-14 max-w-[16ch] text-display font-medium md:mt-20">
-          <RevealWords as="span" text="Product designer who" className="block" />
+          <RevealWords as="span" text="I design products" className="block" />
           <span className="block">
+            <RevealWords as="span" text="and" className="inline" delay={0.18} />{" "}
             <RevealWords
               as="span"
-              text="ships the"
-              className="inline"
-              delay={0.18}
-            />{" "}
-            <RevealWords
-              as="span"
-              text="front-end."
+              text="ship the code."
               className="inline font-serif font-normal italic text-accent"
-              delay={0.3}
+              delay={0.26}
             />
           </span>
         </h1>
@@ -35,10 +30,10 @@ export function Hero() {
         <div className="mt-16 grid gap-10 md:mt-24 md:grid-cols-12">
           <Reveal delay={0.35} className="md:col-span-6 md:col-start-7">
             <p className="max-w-[46ch] text-lead text-bone-dim">
-              I turn ambiguous product problems into interfaces people
-              understand — then write the TypeScript that puts them in
-              production. {site.yearsOfExperience} years across product design,
-              design systems and front-end, working in English, Portuguese and
+              Product designer and front-end developer from Maceió, Brazil.
+              I&apos;ve owned the design system at two companies and shipped the
+              interface in React at both — most recently for US teams at
+              CoinFello and HyperPlay. Working in English, Portuguese and
               Spanish.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">

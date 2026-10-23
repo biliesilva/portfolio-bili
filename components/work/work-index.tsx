@@ -10,8 +10,8 @@ import {
   useSpring,
   useReducedMotion,
 } from "motion/react";
-import type { CaseStudy, Discipline } from "@/content/types";
-import { disciplines } from "@/content/work";
+import type { WorkEntry, Discipline } from "@/content/types";
+import { disciplines, kindLabel } from "@/content/work";
 import { cn } from "@/lib/cn";
 
 /**
@@ -19,9 +19,9 @@ import { cn } from "@/lib/cn";
  * The preview is pointer-only decoration — every row is a plain link, so the
  * list works identically with a keyboard, a screen reader or no JavaScript.
  */
-export function WorkIndex({ items }: { items: CaseStudy[] }) {
+export function WorkIndex({ items }: { items: WorkEntry[] }) {
   const [filter, setFilter] = useState<Discipline | "All">("All");
-  const [hovered, setHovered] = useState<CaseStudy | null>(null);
+  const [hovered, setHovered] = useState<WorkEntry | null>(null);
   const reduced = useReducedMotion();
 
   const x = useMotionValue(0);
@@ -80,6 +80,9 @@ export function WorkIndex({ items }: { items: CaseStudy[] }) {
               </span>
               <span className="col-span-10 col-start-3 text-sm text-bone-dim md:col-span-4 md:col-start-auto">
                 {item.disciplines.join(" · ")}
+                <span className="label mt-2 block text-bone-faint">
+                  {kindLabel[item.kind]}
+                </span>
               </span>
               <span className="label col-span-2 md:col-span-2 md:text-right">
                 {item.year}

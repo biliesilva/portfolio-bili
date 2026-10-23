@@ -13,7 +13,12 @@ export function JsonLd() {
     email: `mailto:${site.email}`,
     jobTitle: site.role,
     description: site.tagline,
-    address: { "@type": "PostalAddress", addressCountry: "BR" },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Maceió",
+      addressRegion: "AL",
+      addressCountry: "BR",
+    },
     knowsLanguage: site.languages.map((language) => language.name),
     knowsAbout: [
       "Product design",

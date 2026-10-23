@@ -62,7 +62,7 @@ export default function AboutPage() {
       </section>
 
       <section className="container-edge py-24">
-        <SectionHead index="01" label="How I work" title="Five things I will not trade away." />
+        <SectionHead index="01" label="How I work" title="Six things I will not trade away." />
         <div className="mt-16">
           {about.principles.map((principle, i) => (
             <Reveal key={principle.title} delay={i * 0.05}>

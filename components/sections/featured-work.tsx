@@ -11,7 +11,7 @@ export function FeaturedWork() {
       <SectionHead
         index="01"
         label="Selected work"
-        title="Three projects, start to shipped."
+        title="Owned end to end, designed and shipped."
       />
 
       <div className="mt-20 space-y-28 md:space-y-40">

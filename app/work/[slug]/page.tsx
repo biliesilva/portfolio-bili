@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import { caseStudies, getCaseStudy, adjacentCaseStudy } from "@/content/work";
+import {
+  caseStudies,
+  getCaseStudy,
+  adjacentCaseStudy,
+  kindLabel,
+} from "@/content/work";
 import { MediaFrame } from "@/components/ui/media-frame";
 import { Reveal, RevealWords } from "@/components/ui/reveal";
 import { SectionHead } from "@/components/ui/section-head";
@@ -24,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: study.summary,
     alternates: { canonical: `/work/${study.slug}` },
     openGraph: {
-      title: `${study.title} — case study`,
+      title: `${study.title} — ${kindLabel[study.kind]}`,
       description: study.summary,
       type: "article",
     },
@@ -73,6 +78,10 @@ async function CaseStudyArticle({ params }: Props) {
     { label: "Stack", value: study.stack.join(", ") },
   ];
 
+  // Sections vary by entry kind, so the numbering is counted rather than hardcoded.
+  let step = 0;
+  const n = () => String(++step).padStart(2, "0");
+
   return (
     <article>
       {/* Hero */}
@@ -80,7 +89,7 @@ async function CaseStudyArticle({ params }: Props) {
         <div className="hairline pt-6">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
             <span className="label">
-              {study.client} — {study.year}
+              {kindLabel[study.kind]} — {study.client}
             </span>
             <span className="label">{study.disciplines.join(" · ")}</span>
           </div>
@@ -92,10 +101,14 @@ async function CaseStudyArticle({ params }: Props) {
           <Reveal delay={0.15} className="mt-10 max-w-[56ch]">
             <p className="text-lead text-bone-dim">{study.summary}</p>
           </Reveal>
-          {study.nda ? (
-            <p className="label mt-6 text-accent">
-              Under NDA — visuals redacted, process intact
-            </p>
+
+          {study.disclosure ? (
+            <Reveal delay={0.25} className="mt-10">
+              <p className="max-w-[64ch] border-l-2 border-accent pl-5 text-sm leading-relaxed text-bone-dim">
+                <span className="label mr-2 text-accent">What I can show</span>
+                {study.disclosure}
+              </p>
+            </Reveal>
           ) : null}
         </div>
       </header>
@@ -124,7 +137,7 @@ async function CaseStudyArticle({ params }: Props) {
       <section className="container-edge py-16">
         <div className="grid gap-16 md:grid-cols-12">
           <div className="md:col-span-7">
-            <SectionHead index="01" label="Context" />
+            <SectionHead index={n()} label="Context" />
             <div className="mt-10 space-y-6">
               {study.context.map((paragraph, i) => (
                 <Reveal key={i}>
@@ -134,33 +147,59 @@ async function CaseStudyArticle({ params }: Props) {
             </div>
           </div>
 
-          <div className="md:col-span-4 md:col-start-9">
-            <div className="hairline pt-6">
-              <span className="label">The goal</span>
-              <p className="mt-6 text-title">{study.goal}</p>
+          {study.goal || study.constraints?.length ? (
+            <div className="md:col-span-4 md:col-start-9">
+              {study.goal ? (
+                <div className="hairline pt-6">
+                  <span className="label">The goal</span>
+                  <p className="mt-6 text-title">{study.goal}</p>
+                </div>
+              ) : null}
+              {study.constraints?.length ? (
+                <div className="hairline mt-10 pt-6">
+                  <span className="label">Constraints</span>
+                  <ul className="mt-6 space-y-4">
+                    {study.constraints.map((constraint) => (
+                      <li key={constraint} className="flex gap-3 text-sm text-bone-dim">
+                        <span className="mt-2 size-1 shrink-0 rounded-full bg-accent" />
+                        {constraint}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
             </div>
-            <div className="hairline mt-10 pt-6">
-              <span className="label">Constraints</span>
-              <ul className="mt-6 space-y-4">
-                {study.constraints.map((constraint) => (
-                  <li key={constraint} className="flex gap-3 text-sm text-bone-dim">
-                    <span className="mt-2 size-1 shrink-0 rounded-full bg-accent" />
-                    {constraint}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          ) : null}
         </div>
       </section>
+
+      {/* What I owned — the honest shape for employed work */}
+      {study.responsibilities?.length ? (
+        <section className="container-edge py-16">
+          <SectionHead index={n()} label="What I owned" title="Scope, in my own words." />
+          <div className="mt-16">
+            {study.responsibilities.map((item, i) => (
+              <Reveal key={item.title} delay={i * 0.05}>
+                <div className="hairline grid gap-6 py-8 md:grid-cols-12">
+                  <span className="label text-bone-faint md:col-span-1">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="text-title md:col-span-5">{item.title}</h3>
+                  <p className="max-w-[54ch] text-bone-dim md:col-span-6">{item.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {/* Research */}
       {study.research?.length ? (
         <section className="container-edge py-16">
           <SectionHead
-            index="02"
+            index={n()}
             label="What the research changed"
-            title="Three findings that moved the design."
+            title="The findings that moved the design."
           />
           <div className="mt-16 grid gap-px bg-ink-line md:grid-cols-3">
             {study.research.map((finding, i) => (
@@ -179,59 +218,61 @@ async function CaseStudyArticle({ params }: Props) {
       ) : null}
 
       {/* Decisions */}
-      <section className="container-edge py-16">
-        <SectionHead
-          index="03"
-          label="Key decisions"
-          title="Problem, decision, and why it was the right trade."
-        />
+      {study.decisions?.length ? (
+        <section className="container-edge py-16">
+          <SectionHead
+            index={n()}
+            label="Key decisions"
+            title="Problem, decision, and why it was the right trade."
+          />
 
-        <div className="mt-20 space-y-28">
-          {study.decisions.map((decision, i) => (
-            <Reveal key={decision.title} y={36}>
-              <div className="grid gap-12 md:grid-cols-12">
-                <div className="md:col-span-5">
-                  <span className="label text-accent">
-                    Decision {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-6 text-title">{decision.title}</h3>
-                  <dl className="mt-10 space-y-8">
-                    <div>
-                      <dt className="label">Problem</dt>
-                      <dd className="mt-3 max-w-[48ch] text-bone-dim">
-                        {decision.problem}
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="label">Decision</dt>
-                      <dd className="mt-3 max-w-[48ch]">{decision.decision}</dd>
-                    </div>
-                    <div>
-                      <dt className="label">Why it held</dt>
-                      <dd className="mt-3 max-w-[48ch] text-bone-dim">
-                        {decision.why}
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-                {decision.media ? (
-                  <div className="md:col-span-6 md:col-start-7">
-                    <MediaFrame
-                      media={decision.media}
-                      sizes="(min-width: 768px) 50vw, 100vw"
-                    />
+          <div className="mt-20 space-y-28">
+            {study.decisions.map((decision, i) => (
+              <Reveal key={decision.title} y={36}>
+                <div className="grid gap-12 md:grid-cols-12">
+                  <div className="md:col-span-5">
+                    <span className="label text-accent">
+                      Decision {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="mt-6 text-title">{decision.title}</h3>
+                    <dl className="mt-10 space-y-8">
+                      <div>
+                        <dt className="label">Problem</dt>
+                        <dd className="mt-3 max-w-[48ch] text-bone-dim">
+                          {decision.problem}
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="label">Decision</dt>
+                        <dd className="mt-3 max-w-[48ch]">{decision.decision}</dd>
+                      </div>
+                      <div>
+                        <dt className="label">Why it held</dt>
+                        <dd className="mt-3 max-w-[48ch] text-bone-dim">
+                          {decision.why}
+                        </dd>
+                      </div>
+                    </dl>
                   </div>
-                ) : null}
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+                  {decision.media ? (
+                    <div className="md:col-span-6 md:col-start-7">
+                      <MediaFrame
+                        media={decision.media}
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                      />
+                    </div>
+                  ) : null}
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {/* System */}
       {study.system ? (
         <section className="container-edge py-24">
-          <SectionHead index="04" label="The system" title={study.system.title} />
+          <SectionHead index={n()} label="The system" title={study.system.title} />
           <div className="mt-16 grid gap-12 md:grid-cols-12">
             <div className="space-y-6 md:col-span-5">
               {study.system.body.map((paragraph, i) => (
@@ -256,7 +297,7 @@ async function CaseStudyArticle({ params }: Props) {
       {study.build ? (
         <section className="container-edge py-16">
           <SectionHead
-            index="05"
+            index={n()}
             label="Build"
             title="The part that only exists because I write code."
           />
@@ -270,7 +311,10 @@ async function CaseStudyArticle({ params }: Props) {
             </div>
             <dl className="md:col-span-5 md:col-start-8">
               {study.build.notes.map((note) => (
-                <div key={note.label} className="hairline flex items-baseline justify-between gap-4 py-5">
+                <div
+                  key={note.label}
+                  className="hairline flex items-baseline justify-between gap-4 py-5"
+                >
                   <dt className="label">{note.label}</dt>
                   <dd className="text-title">{note.value}</dd>
                 </div>
@@ -281,61 +325,67 @@ async function CaseStudyArticle({ params }: Props) {
       ) : null}
 
       {/* Outcome */}
-      <section className="container-edge py-24">
-        <SectionHead index="06" label="Outcome" title="What changed." />
-        <dl className="mt-16 grid gap-10 md:grid-cols-3">
-          {study.outcome.metrics.map((metric, i) => (
-            <Reveal key={metric.label} delay={i * 0.08} className="hairline pt-6">
-              <dt className="text-display font-medium leading-none">
-                {metric.value}
-              </dt>
-              <dd className="label mt-6 max-w-[22ch]">{metric.label}</dd>
-            </Reveal>
-          ))}
-        </dl>
+      {study.outcome ? (
+        <section className="container-edge py-24">
+          <SectionHead index={n()} label="Outcome" title="What changed." />
+          {study.outcome.metrics?.length ? (
+            <dl className="mt-16 grid gap-10 md:grid-cols-3">
+              {study.outcome.metrics.map((metric, i) => (
+                <Reveal key={metric.label} delay={i * 0.08} className="hairline pt-6">
+                  <dt className="text-display font-medium leading-none">
+                    {metric.value}
+                  </dt>
+                  <dd className="label mt-6 max-w-[22ch]">{metric.label}</dd>
+                </Reveal>
+              ))}
+            </dl>
+          ) : null}
 
-        <div className="mt-20 grid gap-12 md:grid-cols-12">
-          <div className="space-y-6 md:col-span-6">
-            {study.outcome.body.map((paragraph, i) => (
-              <p key={i} className="text-lead">
+          <div className="mt-20 grid gap-12 md:grid-cols-12">
+            <div className="space-y-6 md:col-span-6">
+              {study.outcome.body.map((paragraph, i) => (
+                <p key={i} className="text-lead">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            {study.outcome.quote ? (
+              <blockquote className="md:col-span-5 md:col-start-8">
+                <p className="font-serif text-title italic">
+                  &ldquo;{study.outcome.quote.text}&rdquo;
+                </p>
+                <footer className="label mt-6">
+                  {study.outcome.quote.author} — {study.outcome.quote.role}
+                </footer>
+              </blockquote>
+            ) : null}
+          </div>
+        </section>
+      ) : null}
+
+      {/* Reflection */}
+      {study.reflection?.length ? (
+        <section className="container-edge py-16">
+          <SectionHead
+            index={n()}
+            label="Reflection"
+            title="What I would do differently."
+          />
+          <div className="mt-12 max-w-[62ch] space-y-6">
+            {study.reflection.map((paragraph, i) => (
+              <p key={i} className="text-lead text-bone-dim">
                 {paragraph}
               </p>
             ))}
           </div>
-          {study.outcome.quote ? (
-            <blockquote className="md:col-span-5 md:col-start-8">
-              <p className="font-serif text-title italic">
-                &ldquo;{study.outcome.quote.text}&rdquo;
-              </p>
-              <footer className="label mt-6">
-                {study.outcome.quote.author} — {study.outcome.quote.role}
-              </footer>
-            </blockquote>
-          ) : null}
-        </div>
-      </section>
-
-      {/* Reflection */}
-      <section className="container-edge py-16">
-        <SectionHead
-          index="07"
-          label="Reflection"
-          title="What I would do differently."
-        />
-        <div className="mt-12 max-w-[62ch] space-y-6">
-          {study.reflection.map((paragraph, i) => (
-            <p key={i} className="text-lead text-bone-dim">
-              {paragraph}
-            </p>
-          ))}
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       {/* Next */}
       <section className="container-edge py-24 md:py-36">
         <Link href={`/work/${next.slug}`} className="group hairline block pt-6">
-          <span className="label">Next project</span>
-          <h2 className="mt-8 text-display font-medium transition-colors duration-500 group-hover:text-accent">
+          <span className="label">Next — {kindLabel[next.kind]}</span>
+          <h2 className="mt-8 text-hero font-medium transition-colors duration-500 group-hover:text-accent">
             {next.title}
           </h2>
           <p className="mt-6 max-w-[48ch] text-lead text-bone-dim">

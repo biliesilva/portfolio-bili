@@ -1,8 +1,9 @@
-import type { CaseStudy } from "../types";
+import type { WorkEntry } from "../types";
 
 /** Based on the real FlashFlow 2.0 repository — fill in metrics and screenshots. */
-export const flashflow: CaseStudy = {
+export const flashflow: WorkEntry = {
   slug: "flashflow",
+  kind: "project",
   title: "FlashFlow 2.0",
   client: "Self-initiated product",
   year: "2026",
@@ -10,13 +11,16 @@ export const flashflow: CaseStudy = {
     "A full-stack spaced-repetition app, designed and built end to end — the project where I owned the data model and the type scale.",
   disciplines: ["Front-end", "Product Design", "UI/UX"],
   featured: false,
-  order: 4,
+  order: 5,
 
   role: "Designer & full-stack developer",
   team: "Solo",
   timeline: "Ongoing",
   platforms: ["Responsive web"],
   stack: ["TypeScript", "React", "Node", "Tailwind CSS"],
+
+  disclosure:
+    "Mine, start to finish — code is on GitHub.",
 
   cover: { src: "", alt: "FlashFlow deck management and review session", aspect: "16/10" },
 

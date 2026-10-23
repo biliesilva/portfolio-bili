@@ -1,66 +1,138 @@
 import type { ResumeRole } from "./types";
 
 /**
- * TODO: this is the one file you must fill in by hand.
- * Copy the roles, dates and bullets straight from your LinkedIn profile.
- * Keep bullets outcome-first: what changed because you were there.
+ * Taken from the LinkedIn profile. The highlights are where a CV earns its keep —
+ * TODO (Bili): replace the bracketed prompts with what you actually did, keeping
+ * it at a level you are free to share.
  */
 export const roles: ResumeRole[] = [
   {
-    company: "Heroic Games Launcher",
-    title: "Open-source contributor — product design & front-end",
-    period: "2025 — present",
-    location: "Remote",
+    company: "CoinFello",
+    title: "Front-end Developer",
+    period: "Aug 2025 — Oct 2026",
+    location: "Remote — United States",
     summary:
-      "Design and ship interface and design-system work for an open-source desktop games launcher with 12,500+ GitHub stars.",
+      "Front-end development on a distributed US team, with ownership of the design system.",
+    highlights: [
+      "Owned the design system from inside engineering — tokens, component library and the conventions that keep an interface coherent across contributors.",
+      "Built product interface in typed React and Tailwind CSS.",
+      "Introduced AI tooling into my daily workflow deliberately, reviewing everything it produced and keeping the design judgement human.",
+      "TODO (Bili): one concrete, non-confidential thing you shipped or improved.",
+    ],
+    stack: ["TypeScript", "React", "Tailwind CSS", "Design tokens"],
+  },
+  {
+    company: "HyperPlay",
+    title: "Front-end Developer",
+    period: "Nov 2024 — Apr 2026",
+    location: "Remote — Texas, United States",
+    summary:
+      "Moved from the design team into engineering on the same product, refining the HyperPlay Game Launcher interface.",
+    highlights: [
+      "Implemented the interface I had previously designed, in TypeScript and React.",
+      "Carried design-system ownership across the design/engineering boundary.",
+      "TODO (Bili): one thing you shipped that you are free to describe.",
+    ],
+    stack: ["TypeScript", "React", "Design tokens"],
+  },
+  {
+    company: "HyperPlay",
+    title: "Product Designer",
+    period: "Sep 2022 — Jan 2025",
+    location: "Remote — Texas, United States",
+    summary:
+      "Product design for a web3 game launcher, with ownership of the design system.",
+    highlights: [
+      "Owned the design system: token architecture, component library and documented states.",
+      "Designed launcher flows and interface alongside product and engineering.",
+      "Also ran content and player support for over a year — testing games and troubleshooting with players and game developers, which fed directly back into the design.",
+      "TODO (Bili): one outcome you can describe without internal numbers.",
+    ],
+    stack: ["Figma", "Design tokens", "Prototyping"],
+  },
+  {
+    company: "Heroic Games Launcher",
+    title: "UX/UI Design Contributor → Front-end Contributor",
+    period: "Dec 2020 — present",
+    location: "Open source — remote",
+    summary:
+      "Design and front-end contributions to an open-source game launcher with 12,500+ GitHub stars. Everything here is public.",
     highlights: [
       "Introduced surface-aware colour tokens and a semantic type scale that keep text legible across all 15 bundled themes.",
       "Built an atomic Modal and Button system and migrated every modal in the app to it — 1,250 lines added, 1,127 deleted across 60 files.",
       "Rebuilt the game page and settings on shared layout primitives (Panel, SettingsCard, SettingRow, Alert, Tabs, SpecCard) across 266 files.",
       "Contributed ~14,000 lines of TypeScript and SCSS across four public pull requests, each defended in open review.",
     ],
-    stack: ["TypeScript", "React", "SCSS", "Electron"],
+    stack: ["TypeScript", "React", "SCSS", "Electron", "Figma"],
   },
   {
-    company: "TODO — Company name",
-    title: "TODO — e.g. Senior Product Designer",
-    period: "TODO — 20XX — 20XX",
-    location: "TODO — Remote / City",
-    summary: "TODO — one line on the product, the team and your scope.",
+    company: "Starbreeze Entertainment",
+    title: "UI/UX Designer",
+    period: "Oct 2021 — Nov 2022",
+    location: "Stockholm, Sweden",
+    summary: "Game interface design for Payday 2, a shipped and actively developed AAA title.",
     highlights: [
-      "TODO — an outcome with a number in it.",
-      "TODO — a design-system or process change you owned.",
-      "TODO — something you shipped with engineers, ideally code you wrote.",
+      "UI/UX design within an established visual language and a long-standing player base.",
+      "TODO (Bili): one or two specifics you are free to share about your scope.",
     ],
-    stack: ["Figma", "React", "TypeScript"],
+    stack: ["Figma", "Adobe CC"],
   },
   {
-    company: "TODO — Company name",
-    title: "TODO — e.g. UI/UX Designer",
-    period: "TODO — 20XX — 20XX",
-    location: "TODO — Remote / City",
-    summary: "TODO — one line on the product, the team and your scope.",
-    highlights: ["TODO", "TODO"],
+    company: "Freelance",
+    title: "User Interface Designer",
+    period: "Feb 2016 — Nov 2018",
+    location: "Alagoas, Brazil",
+    summary: "Interface design for direct clients.",
+    highlights: ["TODO (Bili): name a client or a type of product, if you can."],
+  },
+  {
+    company: "COLET Sistemas de Gestão Empresarial",
+    title: "Graphic Designer",
+    period: "Sep 2011 — Dec 2012",
+    location: "Novo Hamburgo, Brazil",
+    summary:
+      "Brand and web work: company logo, website, campaign materials and analytics.",
+    highlights: [
+      "Designed the company's new logo and built its website.",
+      "Ran social channels, Google Ads campaigns and Analytics reporting.",
+    ],
   },
 ];
 
-/** TODO: verify titles, institutions and years. */
 export const education = [
   {
-    title: "Postgraduate — Front-end Development (Dev Start)",
+    title: "Postgraduate Degree — Information Technology",
     institution: "Rocketseat",
     period: "2025 — 2026",
   },
   {
-    title: "Digital Design Fundamentals",
+    title: "UX Design Upskill",
     institution: "Hyper Island",
-    period: "2021",
+    period: "2023 — 2024",
   },
   {
-    title: "TODO — Bachelor's degree",
-    institution: "TODO — Institution",
-    period: "TODO",
+    title: "Product Design Immersion",
+    institution: "Aela",
+    period: "2023 — 2024",
   },
+  {
+    title: "Upskill — Business Development, Digitalization & Sustainability",
+    institution: "Hyper Island",
+    period: "2022 — 2023",
+  },
+  {
+    title: "UX and Product Design",
+    institution: "Berghs School of Communication",
+    period: "2022",
+  },
+];
+
+export const certifications = [
+  "UX Design",
+  "Web Design",
+  "Visual Elements of User Interface Design",
+  "JavaScript Algorithms and Data Structures (300h)",
+  "4º React Conference Brasil",
 ];
 
 export const skills = [
@@ -70,18 +142,18 @@ export const skills = [
       "Discovery & problem framing",
       "User flows & information architecture",
       "Prototyping",
+      "Game & launcher UI",
       "Usability testing",
-      "Heuristic evaluation",
       "Design critique & facilitation",
     ],
   },
   {
     group: "UI & Systems",
     items: [
-      "Interface design",
       "Design tokens",
       "Component libraries",
       "Figma architecture & variables",
+      "Documentation",
       "WCAG 2.2 AA",
       "Motion & interaction design",
     ],
@@ -92,9 +164,9 @@ export const skills = [
       "TypeScript",
       "React & Next.js",
       "Tailwind CSS & SCSS",
-      "GSAP & Motion",
-      "Git & code review",
-      "Core Web Vitals",
+      "Electron",
+      "Docker & databases",
+      "AI-assisted workflow",
     ],
   },
 ];

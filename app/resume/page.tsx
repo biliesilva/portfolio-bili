@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
-import { roles, education, skills } from "@/content/resume";
+import { roles, education, skills, certifications } from "@/content/resume";
 import { Reveal, RevealWords } from "@/components/ui/reveal";
 import { SectionHead } from "@/components/ui/section-head";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -108,8 +108,22 @@ export default function ResumePage() {
         </ul>
       </section>
 
+      <section className="container-edge py-16">
+        <SectionHead index="04" label="Certifications" />
+        <ul className="mt-12 flex flex-wrap gap-2">
+          {certifications.map((item) => (
+            <li
+              key={item}
+              className="label rounded-full border border-ink-line px-4 py-2"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section className="container-edge py-16 pb-32">
-        <SectionHead index="04" label="Languages" />
+        <SectionHead index="05" label="Languages" />
         <ul className="mt-12 md:max-w-xl">
           {site.languages.map((language) => (
             <li

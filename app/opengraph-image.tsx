@@ -45,7 +45,7 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           >
-            Product designer who ships the front-end.
+            I design products and ship the code.
           </div>
           <div style={{ display: "flex", fontSize: 28, color: "#a3a09a" }}>
             {site.role}
