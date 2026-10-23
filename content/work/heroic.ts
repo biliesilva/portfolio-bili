@@ -8,18 +8,18 @@ export const heroic: WorkEntry = {
   slug: "heroic-games-launcher",
   kind: "case-study",
   title: "Heroic Games Launcher",
-  client: "Open source · 12,500+ stars",
+  client: "Open source · 500k+ monthly users",
   year: "2020 — present",
   summary:
-    "Redesigning a 12.5k-star desktop games launcher and shipping the code: a design system that survives 15 user themes, built across ~14,000 lines of TypeScript.",
+    "I ran the validation research that decided this was worth building. Five years later it has 500k+ monthly users, and I still design and ship its interface.",
   disciplines: ["Product Design", "Design Systems", "Front-end", "UI/UX"],
   featured: true,
   order: 1,
 
-  role: "UX/UI design contributor (2020—) · front-end contributor (2025—)",
+  role: "Validation research · UX/UI design (2020—) · front-end (2025—)",
   team: "Open-source maintainers and contributors",
   timeline: "5+ years, ongoing",
-  platforms: ["Desktop (Linux, Windows, macOS)", "Electron"],
+  platforms: ["Linux", "Windows", "macOS", "Steam Deck"],
   stack: ["TypeScript", "React", "SCSS", "Electron", "Lucide", "Figma"],
 
   cover: {
@@ -32,9 +32,10 @@ export const heroic: WorkEntry = {
     "Open source, so there is nothing I cannot show you. Every pull request, review conversation and decision below is public on GitHub.",
 
   context: [
-    "Heroic Games Launcher is how hundreds of thousands of people play GOG, Amazon and Epic games on Linux, Windows, macOS and SteamDeck. It is open source, has 12,500+ stars, and like most community-built apps its interface had grown one contribution at a time: three fonts, Material UI mixed with custom SCSS, and 15 bundled themes that each broke in a different place.",
-    "I have contributed as a UX/UI designer since December 2020, and since March 2025 as a front-end developer too. Nobody commissioned a redesign — I opened one, in public, with the code attached.",
-    "This is the work I point to when an NDA stops me showing something else. It is the same practice I bring to employed work, except here you can read every decision and every review conversation yourself.",
+    "Heroic Games Launcher is how more than 500,000 people a month play GOG, Amazon and Epic games on Linux, Windows, macOS and Steam Deck. It is free and open source.",
+    "I have been here since before it was a product. In 2020 I led the validation research — desk research plus interviews with Linux users — that answered the question underneath the idea: was this worth building at all? The research said yes, and five years of adoption has said the same thing louder.",
+    "I stayed, as a UX/UI design contributor from 2020 and as a front-end contributor since 2025. Like most community-built software the interface had grown one contribution at a time: three fonts, Material UI mixed with custom SCSS, and 15 bundled themes that each broke in a different place. Nobody commissioned a redesign — I opened one, in public, with the code attached.",
+    "This is the work I point to when an NDA stops me showing something else. Same practice as my employed work, except here you can read every decision and every review conversation yourself.",
   ],
   goal:
     "Give Heroic a coherent interface that any of its 15 themes can wear, without asking maintainers to accept a rewrite.",
@@ -46,6 +47,11 @@ export const heroic: WorkEntry = {
   ],
 
   research: [
+    {
+      insight: "It was worth building — Linux users said so first",
+      detail:
+        "The validation research in 2020 combined desk research with interviews with Linux users. The demand was real and specific: people wanted their existing game libraries on Linux without a storefront telling them it was not supported. That finding is what the project was built on.",
+    },
     {
       insight: "The themes were the real constraint",
       detail:
@@ -138,9 +144,9 @@ export const heroic: WorkEntry = {
 
   outcome: {
     metrics: [
-      { value: "12.5k★", label: "Stars on the project I ship to" },
-      { value: "4", label: "Public PRs — 1 merged, 3 in review" },
-      { value: "-1,127", label: "Lines deleted by the Modal migration" },
+      { value: "500k+", label: "Monthly users of the product I validated" },
+      { value: "12.5k★", label: "Stars on the repository I ship to" },
+      { value: "5 yrs", label: "From validation research to shipping code" },
     ],
     body: [
       "The first pull request — tab navigation, theme colours and spacing on the game info page — was merged in March 2025. The library redesign, the Modal system, and the game page and settings rebuild are public and in review.",
@@ -149,6 +155,7 @@ export const heroic: WorkEntry = {
   },
 
   reflection: [
+    "Five years on one product, from the research that justified it to the code that renders it, is the clearest answer I have to what I actually do.",
     "I opened the library redesign before the token layer existed, which made the review harder than it needed to be. The structural change should always ship first — it is the argument for everything after it.",
     "Working in public changed how I write design rationale. A pull request description has to convince a stranger who has no meeting with me.",
   ],

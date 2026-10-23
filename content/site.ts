@@ -59,7 +59,7 @@ export const site = {
   proof: [
     { value: "2010", label: "Designing since" },
     { value: "1", label: "Design system built from scratch" },
-    { value: "12.5k★", label: "Open-source app I design & ship for" },
+    { value: "500k+", label: "Monthly users of the app I design for" },
     { value: "3", label: "Languages spoken" },
   ],
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
-import { roles, education, skills, certifications } from "@/content/resume";
+import { roles, earlier, education, skills, certifications } from "@/content/resume";
 import { Reveal, RevealWords } from "@/components/ui/reveal";
 import { SectionHead } from "@/components/ui/section-head";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -73,7 +73,28 @@ export default function ResumePage() {
       </section>
 
       <section className="container-edge py-16">
-        <SectionHead index="02" label="Skills" />
+        <SectionHead index="02" label="Earlier" />
+        <ul className="mt-12">
+          {earlier.map((entry) => (
+            <li
+              key={`${entry.company}-${entry.period}`}
+              className="hairline grid grid-cols-12 gap-4 py-5"
+            >
+              <span className="label col-span-4 md:col-span-2">{entry.period}</span>
+              <span className="col-span-8 md:col-span-3">{entry.title}</span>
+              <span className="col-span-12 text-bone-dim md:col-span-3">
+                {entry.company}
+              </span>
+              <span className="col-span-12 text-sm text-bone-faint md:col-span-4">
+                {entry.note}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="container-edge py-16">
+        <SectionHead index="03" label="Skills" />
         <div className="mt-12 grid gap-px bg-ink-line md:grid-cols-3">
           {skills.map((group) => (
             <div key={group.group} className="bg-ink p-8">
@@ -91,7 +112,7 @@ export default function ResumePage() {
       </section>
 
       <section className="container-edge py-16">
-        <SectionHead index="03" label="Education" />
+        <SectionHead index="04" label="Education" />
         <ul className="mt-12">
           {education.map((entry, i) => (
             <li
@@ -109,7 +130,7 @@ export default function ResumePage() {
       </section>
 
       <section className="container-edge py-16">
-        <SectionHead index="04" label="Certifications" />
+        <SectionHead index="05" label="Certifications" />
         <ul className="mt-12 flex flex-wrap gap-2">
           {certifications.map((item) => (
             <li
@@ -123,7 +144,7 @@ export default function ResumePage() {
       </section>
 
       <section className="container-edge py-16 pb-32">
-        <SectionHead index="05" label="Languages" />
+        <SectionHead index="06" label="Languages" />
         <ul className="mt-12 md:max-w-xl">
           {site.languages.map((language) => (
             <li

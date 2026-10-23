@@ -52,8 +52,9 @@ export const roles: ResumeRole[] = [
     period: "Dec 2020 — present",
     location: "Open source — remote",
     summary:
-      "Design and front-end contributions to an open-source game launcher with 12,500+ GitHub stars. Everything here is public.",
+      "Validation research, design and front-end on an open-source game launcher with 500,000+ monthly users across Linux, Windows, macOS and Steam Deck. Everything here is public.",
     highlights: [
+      "Led the validation research in 2020 — desk research plus interviews with Linux users — which established that the product was worth building. It now has 500,000+ monthly users.",
       "Introduced surface-aware colour tokens and a semantic type scale that keep text legible across all 15 bundled themes.",
       "Built an atomic Modal and Button system and migrated every modal in the app to it — 1,250 lines added, 1,127 deleted across 60 files.",
       "Rebuilt the game page and settings on shared layout primitives (Panel, SettingsCard, SettingRow, Alert, Tabs, SpecCard) across 266 files.",
@@ -66,32 +67,61 @@ export const roles: ResumeRole[] = [
     title: "UI/UX Designer",
     period: "Oct 2021 — Nov 2022",
     location: "Stockholm, Sweden",
-    summary: "Game interface design for Payday 2, a shipped and actively developed AAA title.",
+    summary:
+      "Quality-of-life UI/UX on Payday 2, a live AAA title in active development — designed and implemented.",
     highlights: [
-      "UI/UX design within an established visual language and a long-standing player base.",
-      "TODO (Bili): one or two specifics you are free to share about your scope.",
+      "Tested the game as a player to find real friction, and designed quality-of-life and menu improvements against a player base with a decade of habits.",
+      "Designed the 2D icons the interface needed, consistent with a visual language that predated me by eight years.",
+      "Implemented the assets into the game myself in Lua, in the studio's in-house engine — the first time I shipped my own design into a build rather than handing it over.",
     ],
-    stack: ["Figma", "Adobe CC"],
+    stack: ["Figma", "Adobe CC", "Lua"],
   },
   {
     company: "Freelance",
     title: "User Interface Designer",
     period: "Feb 2016 — Nov 2018",
     location: "Alagoas, Brazil",
-    summary: "Interface design for direct clients.",
-    highlights: ["TODO (Bili): name a client or a type of product, if you can."],
+    summary:
+      "Design and build for direct clients — websites, brand marks and image work, end to end.",
+    highlights: [
+      "Built client websites on WordPress and Joomla, from design through to the live site.",
+      "Designed logos and brand marks for small businesses.",
+      "Photo retouching and image preparation in Photoshop.",
+      "No hand-off to anybody: whatever I designed, I was also the one who shipped it. That habit started here.",
+    ],
+    stack: ["WordPress", "Joomla", "HTML & CSS", "Adobe CC"],
   },
+];
+
+/**
+ * Pre-2016 work, one line each. A résumé page earns its keep on the last
+ * decade — this is here so the origin story is visible without competing
+ * with the roles that matter.
+ */
+export const earlier = [
   {
+    period: "2011 — 2012",
     company: "COLET Sistemas de Gestão Empresarial",
     title: "Graphic Designer",
-    period: "Sep 2011 — Dec 2012",
-    location: "Novo Hamburgo, Brazil",
-    summary:
-      "Brand and web work: company logo, website, campaign materials and analytics.",
-    highlights: [
-      "Designed the company's new logo and built its website.",
-      "Ran social channels, Google Ads campaigns and Analytics reporting.",
-    ],
+    note: "Company logo, website, direct mail, social channels, Google Ads and Analytics.",
+  },
+  {
+    period: "2010",
+    company: "Instituto Federal de Alagoas",
+    title: "Graphic Designer",
+    note: "Banners, logos and the institute's website.",
+  },
+  {
+    period: "2010",
+    company: "O Consolador (NGO)",
+    title: "Web Designer",
+    note: "Redesigned the website and blog, in HTML and CSS.",
+  },
+  {
+    period: "2009 — 2010",
+    company: "Espaço Fotográfico",
+    title: "Photo Retoucher",
+    note: "Where the pixel-level attention came from.",
   },
 ];
 
