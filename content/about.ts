@@ -18,7 +18,7 @@ export const about = {
     "In 2021 and 2022 I was at Starbreeze in Stockholm, doing quality-of-life UI on Payday 2 and making the game's 2D assets in Photoshop and Illustrator, then bringing them into the build myself. Before design was anyone's job title for me, there were years of freelance in Brazil building client sites on WordPress and Joomla — designing them and shipping them. That is where the habit started, and I have not managed to shake it.",
     "I also hold a law degree, and passed the Brazilian bar exam in 2018 while I was still finishing it. I interned in small claims courts, the regional labour court and the public prosecutor's office. Legal training taught me to read something dense and badly organised, work out what it actually commits you to, and argue a position in writing to someone who starts out disagreeing — which turns out to be most of product design.",
     "I am taking that into digital law: data protection, AI and blockchain. Those are the rules the products I design already run on, so the two halves answer to each other rather than compete. It is the reason a fintech and a web3 launcher felt like familiar ground rather than a compliance minefield — and the reason I am the person on a team who will actually read the data processing agreement.",
-    "I lived in Europe from 2019 to 2026 — Stockholm among other places — and work from Maceió now. English, Portuguese and Spanish, remote since 2022 with teams spread across the US, Europe and Latin America.",
+    "I lived in Europe from 2019 to 2026 — Stockholm among other places — and work from Brazil now. English, Portuguese and Spanish, remote since 2022 with teams spread across the US, Europe and Latin America.",
   ],
   principles: [
     {
