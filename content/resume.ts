@@ -152,6 +152,12 @@ export const education = [
     institution: "Berghs School of Communication",
     period: "2022",
   },
+  {
+    title: "Bachelor of Laws (LL.B.) — active bar licence (OAB, Brazil)",
+    // TODO (Bili): add the university name.
+    institution: "TODO — university",
+    period: "2018",
+  },
 ];
 
 export const certifications = [

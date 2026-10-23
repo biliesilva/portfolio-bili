@@ -38,6 +38,10 @@ export const site = {
         "Remote since 2022 with teams spread across the US (Texas, California, San Juan), Europe and Latin America",
     },
     { label: "Languages", value: "English · Portuguese · Spanish" },
+    {
+      label: "Also",
+      value: "Qualified lawyer (inactive) — regulated products are familiar ground",
+    },
     { label: "Hand-off", value: "Figma to production React — no translation layer" },
   ],
 
