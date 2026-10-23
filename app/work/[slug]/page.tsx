@@ -104,7 +104,7 @@ async function CaseStudyArticle({ params }: Props) {
 
           {study.disclosure ? (
             <Reveal delay={0.25} className="mt-10">
-              <p className="max-w-[64ch] border-l-2 border-accent pl-5 text-sm leading-relaxed text-bone-dim">
+              <p className="max-w-[64ch] border-l-2 border-accent pl-5 text-base leading-relaxed text-bone-dim">
                 <span className="label mr-2 text-accent">What I can show</span>
                 {study.disclosure}
               </p>
@@ -127,7 +127,7 @@ async function CaseStudyArticle({ params }: Props) {
           {meta.map((row) => (
             <div key={row.label} className="bg-ink p-6">
               <dt className="label">{row.label}</dt>
-              <dd className="mt-3 text-sm leading-relaxed">{row.value}</dd>
+              <dd className="mt-3 text-base leading-relaxed">{row.value}</dd>
             </div>
           ))}
         </dl>
@@ -160,7 +160,7 @@ async function CaseStudyArticle({ params }: Props) {
                   <span className="label">Constraints</span>
                   <ul className="mt-6 space-y-4">
                     {study.constraints.map((constraint) => (
-                      <li key={constraint} className="flex gap-3 text-sm text-bone-dim">
+                      <li key={constraint} className="flex gap-3 text-base text-bone-dim">
                         <span className="mt-2 size-1 shrink-0 rounded-full bg-accent" />
                         {constraint}
                       </li>
@@ -208,7 +208,7 @@ async function CaseStudyArticle({ params }: Props) {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-6 text-title">{finding.insight}</h3>
-                <p className="mt-5 text-sm leading-relaxed text-bone-dim">
+                <p className="mt-5 text-base leading-relaxed text-bone-dim">
                   {finding.detail}
                 </p>
               </Reveal>

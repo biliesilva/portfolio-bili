@@ -86,7 +86,7 @@ export default function ResumePage() {
               <span className="col-span-12 text-bone-dim md:col-span-3">
                 {entry.company}
               </span>
-              <span className="col-span-12 text-sm text-bone-faint md:col-span-4">
+              <span className="col-span-12 text-base text-bone-faint md:col-span-4">
                 {entry.note}
               </span>
             </li>

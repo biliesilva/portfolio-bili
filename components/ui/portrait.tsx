@@ -10,16 +10,22 @@ export function Portrait({
   className,
   sizes = "(min-width: 768px) 16rem, 10rem",
   priority = false,
+  halo = "opacity-40 blur-2xl",
 }: {
   className?: string;
   sizes?: string;
   priority?: boolean;
+  /** Tune the glow per context — a large portrait needs a quieter one. */
+  halo?: string;
 }) {
   return (
-    <div className={cn("relative", className)}>
+    <div className={cn("relative isolate", className)}>
       <div
         aria-hidden="true"
-        className="holo-surface blob absolute -inset-3 opacity-45 blur-2xl"
+        className={cn(
+          "holo-surface blob absolute inset-[-4%] -z-10",
+          halo
+        )}
       />
       <div className="blob relative overflow-hidden">
         <Image

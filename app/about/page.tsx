@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { about } from "@/content/about";
 import { site } from "@/content/site";
 import { Portrait } from "@/components/ui/portrait";
+import { cn } from "@/lib/cn";
 import { Reveal, RevealWords } from "@/components/ui/reveal";
 import { SectionHead } from "@/components/ui/section-head";
 import { ContactCta } from "@/components/sections/contact-cta";
@@ -30,17 +31,31 @@ export default function AboutPage() {
       <section className="container-edge pb-24">
         <div className="grid gap-16 md:grid-cols-12">
           <Reveal className="md:col-span-5">
-            <Portrait sizes="(min-width: 768px) 40vw, 100vw" />
-            <dl className="mt-8">
+            <Portrait
+              sizes="(min-width: 768px) 40vw, 100vw"
+              halo="opacity-25 blur-3xl"
+            />
+            <dl className="mt-8 overflow-hidden rounded-2xl border border-ink-line bg-ink-raised/40">
               {[
                 { label: "Based in", value: site.location },
                 { label: "Overlap", value: site.usOverlap },
-                { label: "Languages", value: site.languages.map((l) => l.name).join(", ") },
-                { label: "Open to", value: "Full-time · Contract" },
-              ].map((row) => (
-                <div key={row.label} className="hairline flex justify-between gap-4 py-4">
-                  <dt className="label">{row.label}</dt>
-                  <dd className="text-sm">{row.value}</dd>
+                {
+                  label: "Languages",
+                  value: site.languages.map((l) => l.name).join(" · "),
+                },
+                { label: "Open to", value: "Full-time · Contract · US teams" },
+              ].map((row, i) => (
+                <div
+                  key={row.label}
+                  className={cn(
+                    "flex flex-col gap-1 px-5 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6",
+                    i > 0 && "border-t border-ink-line"
+                  )}
+                >
+                  <dt className="label shrink-0">{row.label}</dt>
+                  <dd className="font-display text-lg leading-snug sm:text-right">
+                    {row.value}
+                  </dd>
                 </div>
               ))}
             </dl>

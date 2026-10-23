@@ -7,7 +7,8 @@ const base =
   "group inline-flex items-center gap-2.5 rounded-full px-7 py-3 font-display text-lg font-medium tracking-[0.01em] transition-[color,background-color,border-color,box-shadow] duration-300";
 
 const variants: Record<Variant, string> = {
-  primary: "holo-surface text-ink shadow-[0_0_28px_-6px_var(--color-holo-violet)] hover:shadow-[0_0_38px_-4px_var(--color-holo-cyan)]",
+  primary:
+    "holo-surface text-ink shadow-[0_0_24px_-8px_var(--color-holo-pink),0_0_32px_-10px_var(--color-holo-cyan)] hover:shadow-[0_0_34px_-6px_var(--color-holo-violet),0_0_46px_-8px_var(--color-holo-mint)]",
   ghost: "border border-ink-line text-bone hover:border-bone hover:bg-bone hover:text-ink",
 };
 

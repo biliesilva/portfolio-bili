@@ -19,12 +19,21 @@
   --color-holo-violet: #a78bfa;
   --color-holo-blue: #60a5fa;
   --color-holo-cyan: #22d3ee;
+  --color-holo-mint: #5eead4;
+  --color-holo-gold: #fde68a;
+  /* Real foil cycles the whole spectrum — magenta through blue, cyan, mint and
+     gold, back to magenta. Three stops read as an ordinary gradient; eight read
+     as iridescence. Every stop is light enough for dark text to sit on it. */
   --gradient-holo: linear-gradient(
-    100deg,
+    105deg,
     var(--color-holo-pink) 0%,
-    var(--color-holo-violet) 28%,
-    var(--color-holo-blue) 52%,
-    var(--color-holo-cyan) 76%,
+    #c084fc 14%,
+    var(--color-holo-violet) 26%,
+    #818cf8 38%,
+    var(--color-holo-blue) 50%,
+    var(--color-holo-cyan) 63%,
+    var(--color-holo-mint) 76%,
+    var(--color-holo-gold) 88%,
     var(--color-holo-pink) 100%
   );
 
@@ -182,7 +191,7 @@
    freezes it at the first frame rather than removing the colour. */
 @utility holo-text {
   background-image: var(--gradient-holo);
-  background-size: 220% 100%;
+  background-size: 150% 100%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -191,10 +200,30 @@
 }
 
 /* Holographic surface, for primary actions and accent rules. */
+/* Holographic surface: the spectrum, plus a specular sheen that travels at a
+   different rate because it sits on a wider layer. That parallax is what makes
+   foil look wet rather than printed. */
 @utility holo-surface {
-  background-image: var(--gradient-holo);
-  background-size: 220% 100%;
-  animation: holo-drift 11s ease-in-out infinite alternate;
+  background-image:
+    linear-gradient(
+      112deg,
+      transparent 12%,
+      rgba(255, 255, 255, 0.6) 30%,
+      rgba(255, 255, 255, 0) 46%
+    ),
+    var(--gradient-holo);
+  background-size: 280% 100%, 150% 100%;
+  background-repeat: no-repeat;
+  animation: holo-sheen 9s ease-in-out infinite alternate;
+}
+
+@keyframes holo-sheen {
+  from {
+    background-position: 0% 50%, 0% 50%;
+  }
+  to {
+    background-position: 100% 50%, 100% 50%;
+  }
 }
 
 @keyframes holo-drift {

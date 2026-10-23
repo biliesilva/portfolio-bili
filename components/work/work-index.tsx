@@ -78,7 +78,7 @@ export function WorkIndex({ items }: { items: WorkEntry[] }) {
               <span className="col-span-10 text-title transition-colors duration-500 group-hover:text-accent md:col-span-5">
                 {item.title}
               </span>
-              <span className="col-span-10 col-start-3 text-sm text-bone-dim md:col-span-4 md:col-start-auto">
+              <span className="col-span-10 col-start-3 text-base text-bone-dim md:col-span-4 md:col-start-auto">
                 {item.disciplines.join(" · ")}
                 <span className="label mt-2 block text-bone-faint">
                   {kindLabel[item.kind]}
@@ -87,7 +87,7 @@ export function WorkIndex({ items }: { items: WorkEntry[] }) {
               <span className="label col-span-2 md:col-span-2 md:text-right">
                 {item.year}
               </span>
-              <span className="col-span-10 col-start-3 max-w-[60ch] text-sm text-bone-faint md:col-span-6 md:col-start-7">
+              <span className="col-span-10 col-start-3 max-w-[60ch] text-base text-bone-faint md:col-span-6 md:col-start-7">
                 {item.summary}
               </span>
             </Link>
