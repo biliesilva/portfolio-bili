@@ -12,7 +12,7 @@ export const starbreeze: WorkEntry = {
   client: "Starbreeze Entertainment — Stockholm, Sweden",
   year: "2021 — 2022",
   summary:
-    "UI/UX on a live AAA game with a decade of players — and the first time I shipped my own design into the build myself. Not in React. In Lua.",
+    "Quality-of-life and accessibility UI on a live AAA game — including a motion-sickness fix I proposed because I have it myself, and icons I put into the build in Lua.",
   disciplines: ["UI/UX", "Product Design"],
   featured: false,
   order: 4,
@@ -35,10 +35,15 @@ export const starbreeze: WorkEntry = {
   context: [
     "Payday 2 shipped in 2013 and was still being actively developed when I joined. A live game with a long memory is a specific kind of design problem: players had learned these menus over hundreds of hours, so a change that reads as an improvement in isolation can break muscle memory for the people who care most.",
     "My work was quality of life. I played the game to find the friction rather than inferring it from a spec, studied menu improvements against how people actually move through them, and designed the 2D icons the interface needed.",
+    "The change I am proudest of came from my own body. I get motion sickness from first-person movement, so I proposed a fixed dot at the centre of the screen — a stationary reference the inner ear can agree with while the world moves. It is cheap to build and it is the difference between playing for twenty minutes and playing for an evening.",
     "Then I put them in the game myself — writing Lua in the studio's in-house engine. This is where the pattern on the rest of my CV starts. Years before I shipped React at HyperPlay, I had already learned that a design is not finished when the file is approved; it is finished when it is in the build.",
   ],
 
   responsibilities: [
+    {
+      title: "Proposed the centre dot, for motion sickness",
+      body: "Nobody assigned this. I get motion sickness from first-person games, so I proposed a fixed reference point at the centre of the screen — the standard mitigation, and one Payday 2 did not have. Designing from my own experience is not a methodology, but it is a reliable reminder that somebody in the player base has the problem you have, and usually nobody has asked them.",
+    },
     {
       title: "Played the game to find the problems",
       body: "Testing Payday 2 as a player, not as a reviewer of screens — which is the only way to notice the friction that lives in repetition rather than in a single interaction.",
@@ -60,9 +65,10 @@ export const starbreeze: WorkEntry = {
   build: {
     body: [
       "Game UI is a useful thing to have done before product work. The constraints are harder — performance budgets, controller and keyboard parity, a visual language you cannot renegotiate — and the audience notices everything.",
+      "It is also where accessibility stopped being a checklist item for me and became something I look for first, because I had spent a year being the user who could not play.",
     ],
     notes: [
-      { value: "2013", label: "The game I was changing shipped in" },
+      { value: "1", label: "Accessibility feature proposed, unprompted" },
       { value: "Lua", label: "First language I shipped a design in" },
       { value: "AAA", label: "Live title, active development" },
     ],

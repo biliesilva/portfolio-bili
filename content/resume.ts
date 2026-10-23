@@ -70,6 +70,7 @@ export const roles: ResumeRole[] = [
     summary:
       "Quality-of-life UI/UX on Payday 2, a live AAA title in active development — designed and implemented.",
     highlights: [
+      "Proposed an accessibility improvement for players with motion sickness — a fixed centre-screen reference point — identified from my own experience rather than from a brief.",
       "Tested the game as a player to find real friction, and designed quality-of-life and menu improvements against a player base with a decade of habits.",
       "Designed the 2D icons the interface needed, consistent with a visual language that predated me by eight years.",
       "Implemented the assets into the game myself in Lua, in the studio's in-house engine — the first time I shipped my own design into a build rather than handing it over.",

@@ -32,7 +32,7 @@ export const about = {
     },
     {
       title: "Accessibility is a requirement",
-      body: "Contrast, focus order, keyboard paths and reduced-motion are part of the definition of done — not a pass someone does later.",
+      body: "Contrast, focus order, keyboard paths and reduced-motion are part of the definition of done, not a pass someone does later. I learned this as a user: I get motion sickness from first-person games, and at Starbreeze I proposed the fix I personally needed.",
     },
     {
       title: "AI moves the slow parts, not the judgement",
