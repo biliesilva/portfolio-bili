@@ -1,9 +1,8 @@
 import type { ResumeRole } from "./types";
 
 /**
- * Taken from the LinkedIn profile. The highlights are where a CV earns its keep —
- * TODO (Bili): replace the bracketed prompts with what you actually did, keeping
- * it at a level you are free to share.
+ * Taken from the LinkedIn profile, with the highlights written from what you
+ * described. Everything here stays at a level you are free to share.
  */
 export const roles: ResumeRole[] = [
   {
@@ -12,12 +11,11 @@ export const roles: ResumeRole[] = [
     period: "Aug 2025 — Oct 2026",
     location: "Remote — United States",
     summary:
-      "Front-end development on a distributed US team, with ownership of the design system.",
+      "Built the design system from scratch and implemented it in code, on a distributed US team.",
     highlights: [
-      "Owned the design system from inside engineering — tokens, component library and the conventions that keep an interface coherent across contributors.",
-      "Built product interface in typed React and Tailwind CSS.",
-      "Introduced AI tooling into my daily workflow deliberately, reviewing everything it produced and keeping the design judgement human.",
-      "TODO (Bili): one concrete, non-confidential thing you shipped or improved.",
+      "Created the entire design system from zero — token architecture, component library and the conventions that keep an interface coherent across contributors.",
+      "Implemented the system myself in typed React and Tailwind CSS, rather than specifying it for someone else to interpret.",
+      "Adopted AI tooling into the daily workflow after the system was established, reviewing everything it produced as I would a junior's pull request.",
     ],
     stack: ["TypeScript", "React", "Tailwind CSS", "Design tokens"],
   },
@@ -29,9 +27,8 @@ export const roles: ResumeRole[] = [
     summary:
       "Moved from the design team into engineering on the same product, refining the HyperPlay Game Launcher interface.",
     highlights: [
-      "Implemented the interface I had previously designed, in TypeScript and React.",
-      "Carried design-system ownership across the design/engineering boundary.",
-      "TODO (Bili): one thing you shipped that you are free to describe.",
+      "Implemented in TypeScript and React the interface I had previously designed — written by hand, with no AI assistance.",
+      "Carried design-system ownership across the design/engineering boundary, which is where most systems quietly break.",
     ],
     stack: ["TypeScript", "React", "Design tokens"],
   },
@@ -41,12 +38,11 @@ export const roles: ResumeRole[] = [
     period: "Sep 2022 — Jan 2025",
     location: "Remote — Texas, United States",
     summary:
-      "Product design for a web3 game launcher, with ownership of the design system.",
+      "Product design for a web3 game launcher inside a design team, with responsibility for the design system.",
     highlights: [
-      "Owned the design system: token architecture, component library and documented states.",
-      "Designed launcher flows and interface alongside product and engineering.",
-      "Also ran content and player support for over a year — testing games and troubleshooting with players and game developers, which fed directly back into the design.",
-      "TODO (Bili): one outcome you can describe without internal numbers.",
+      "Ran user research and interviews, and turned the findings into flows and interactive prototypes the team could argue with before anything was built.",
+      "Built components and was responsible for the design system — token architecture, library and documented states — keeping it usable by the engineers consuming it.",
+      "Also ran content and player support for over a year, troubleshooting with players and game developers, which fed straight back into the design.",
     ],
     stack: ["Figma", "Design tokens", "Prototyping"],
   },

@@ -1,10 +1,6 @@
 import type { WorkEntry } from "../types";
 
-/**
- * NDA-safe by construction: scope, ownership and practice — no internal
- * metrics, no unreleased screens, no proprietary code.
- * TODO (Bili): check the bracketed prompts and replace them with your words.
- */
+/** NDA-safe by construction: scope and practice, no product internals. */
 export const hyperplay: WorkEntry = {
   slug: "hyperplay",
   kind: "role",
@@ -12,7 +8,7 @@ export const hyperplay: WorkEntry = {
   client: "HyperPlay — Texas, United States",
   year: "2022 — 2026",
   summary:
-    "Three and a half years on a web3 game launcher: owned the design system as a product designer, then joined the engineering team and shipped the interface myself.",
+    "Three and a half years on a web3 game launcher: product design and research inside a design team, then the same interface shipped in React by me, by hand.",
   disciplines: ["Product Design", "Design Systems", "Front-end", "UI/UX"],
   featured: true,
   order: 2,
@@ -28,27 +24,32 @@ export const hyperplay: WorkEntry = {
 
   cover: {
     src: "",
-    alt: "HyperPlay — design system and launcher interface work",
+    alt: "HyperPlay — product design, research and launcher interface work",
     aspect: "16/10",
   },
 
   context: [
-    "HyperPlay is a game launcher for web3 games, built by a distributed US team. I joined the design team in 2022 as a product designer and stayed almost four years, which meant I saw the same decisions come back around — the mark of a product you actually live with rather than hand off.",
-    "In late 2024 I moved into the engineering team as a front-end developer on the same product. Same interface, same design system, different side of the hand-off. It is the clearest thing on my CV about how I like to work: I would rather own a decision all the way into the build than specify it and hope.",
+    "HyperPlay is a game launcher for web3 games, built by a distributed US team. I joined the design team in 2022 as a product designer and stayed almost four years — long enough to see the same decisions come back around, which is the difference between working on a product and working on a deliverable.",
+    "The design side was the full practice, not just screens: user research, interviews, prototypes, and the component library the rest of the team built from.",
+    "In late 2024 I moved into the engineering team as a front-end developer on the same product — and wrote all of it by hand, before I used AI for any of my work. Same interface, same system, different side of the hand-off. It is the clearest thing on my CV about how I like to work: I would rather own a decision all the way into the build than specify it and hope.",
   ],
 
   responsibilities: [
     {
-      title: "Owned the design system",
-      body: "I was responsible for the design system — token architecture, component library, documented states, and the rules that keep a growing product from drifting. Keeping it usable by engineers was the job, not a side effect of it.",
+      title: "Research and interviews",
+      body: "I ran user research and interviews rather than designing from assumptions — the part of product design that decides whether anything after it is worth building.",
     },
     {
-      title: "Designed the launcher interface",
-      body: "Product design on the launcher itself: flows, interface, and the trade-off conversations with engineering and product about what was worth building now.",
+      title: "Prototypes and flows",
+      body: "Flows and interactive prototypes used to settle questions before they became engineering cost, and to give the team something concrete to disagree with.",
     },
     {
-      title: "Then shipped it in React",
-      body: "As a front-end developer I refined the launcher interface in TypeScript and React — implementing the system I had designed, and finding out in public which parts of it did not survive contact with the codebase.",
+      title: "Components and the design system",
+      body: "I built components and was responsible for the design system — token architecture, library and documented states — keeping it usable by the engineers consuming it, which was the actual job rather than a side effect of it.",
+    },
+    {
+      title: "Then shipped it in React, by hand",
+      body: "As a front-end developer I refined the launcher interface in TypeScript and React. No AI — this was the year I learned what my own code looks like under review, which is why I can review an assistant's today.",
     },
     {
       title: "Supported the people using it",
@@ -58,12 +59,12 @@ export const hyperplay: WorkEntry = {
 
   build: {
     body: [
-      "The part of this role I can show you is adjacent and public: much of the same craft went into my open-source contributions to Heroic Games Launcher, where every pull request, review conversation and line of code is on GitHub.",
+      "The craft here is the same craft you can inspect in full in my open-source work on Heroic Games Launcher, where every pull request, review conversation and decision is public on GitHub.",
     ],
     notes: [
       { value: "3y 8m", label: "On the same product" },
       { value: "2", label: "Teams — design, then engineering" },
-      { value: "1", label: "Design system owned" },
+      { value: "0", label: "AI in the code I wrote here" },
     ],
   },
 };

@@ -40,12 +40,12 @@ export const site = {
   capabilities: [
     {
       title: "Product Design",
-      body: "Framing the problem before the pixels: flows, prototypes, trade-off conversations, and four years of living with the same product rather than handing it off.",
-      items: ["Discovery & framing", "User flows", "Prototyping", "Game & launcher UI", "Design critique"],
+      body: "Framing the problem before the pixels: user research and interviews, flows, prototypes, and four years of living with the same product rather than handing it off.",
+      items: ["User research & interviews", "Discovery & framing", "User flows", "Prototyping", "Game & launcher UI"],
     },
     {
       title: "Design Systems",
-      body: "I have owned the design system at two companies — token architecture, component libraries, documented states, and keeping it usable by the engineers consuming it.",
+      body: "Responsible for the design system at two companies — and at CoinFello I built it from scratch and implemented it in code myself. Tokens, components, documented states, kept usable by the engineers consuming it.",
       items: ["Design tokens", "Component libraries", "Figma architecture", "Documentation", "WCAG 2.2 AA"],
     },
     {
@@ -58,7 +58,7 @@ export const site = {
   /** Verifiable numbers only — these are the first thing a recruiter scans. */
   proof: [
     { value: "2010", label: "Designing since" },
-    { value: "2", label: "Design systems owned" },
+    { value: "1", label: "Design system built from scratch" },
     { value: "12.5k★", label: "Open-source app I design & ship for" },
     { value: "3", label: "Languages spoken" },
   ],

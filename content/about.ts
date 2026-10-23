@@ -12,7 +12,8 @@ export const about = {
   },
   bio: [
     "I'm a product designer and front-end developer from Maceió, Brazil. I've designed for a decade and I spent the last four years on game launchers — first as a product designer, then as the developer shipping the same interface.",
-    "At HyperPlay I owned the design system as a product designer for over two years, then joined the engineering team and implemented it myself. At CoinFello I owned the design system again, this time from inside engineering. The through-line is the hand-off: I kept ending up on the other side of it, so eventually I stopped crossing back.",
+    "At HyperPlay I was the product designer — research, interviews, prototypes, components — then joined the engineering team and shipped the same interface in React, by hand. At CoinFello I built the design system from scratch and implemented all of it myself. The through-line is the hand-off: I kept ending up on the other side of it, so eventually I stopped crossing back.",
+    "I wrote production front-end for a year before I used AI for any of it. I use it daily now and review everything it produces, but that order matters — you can't review what an assistant writes if you've never built the thing yourself.",
     "The work I can show you in full is open source. I've contributed design to Heroic Games Launcher since 2020 and front-end code since 2025 — a games launcher with 12,500+ GitHub stars where every decision I made is a public pull request you can read, argue with, and check against what I say here.",
     "Before that I designed game UI for Payday 2 at Starbreeze in Stockholm. Before that, brand and web work in Brazil. I work in English, Portuguese and Spanish, remotely with US teams since 2022.",
   ],
