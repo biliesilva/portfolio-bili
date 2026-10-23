@@ -27,8 +27,9 @@ export const starbreeze: WorkEntry = {
   stack: ["Figma", "Adobe CC", "Lua", "In-house game engine"],
 
   cover: {
+    // Captured from the shipped game — no source files needed.
     src: "",
-    alt: "Payday 2 — menu and icon work",
+    alt: "Payday 2 main menu, captured from the released build. Shot list: main menu, inventory/mask screen, and a crop grid of the 2D icons.",
     aspect: "16/10",
   },
 
@@ -39,11 +40,24 @@ export const starbreeze: WorkEntry = {
     "Then I put them in the game myself — writing Lua in the studio's in-house engine. This is where the pattern on the rest of my CV starts. Years before I shipped React at HyperPlay, I had already learned that a design is not finished when the file is approved; it is finished when it is in the build.",
   ],
 
-  responsibilities: [
+  decisions: [
     {
-      title: "Proposed the centre dot, for motion sickness",
-      body: "Nobody assigned this. I get motion sickness from first-person games, so I proposed a fixed reference point at the centre of the screen — the standard mitigation, and one Payday 2 did not have. Designing from my own experience is not a methodology, but it is a reliable reminder that somebody in the player base has the problem you have, and usually nobody has asked them.",
+      title: "A fixed point at the centre of the screen",
+      problem:
+        "First-person movement makes a portion of the player base motion sick. They do not file bug reports about it; they just stop playing after twenty minutes and nobody records why.",
+      decision:
+        "I proposed a fixed dot at the centre of the screen — a stationary reference the inner ear can agree with while the world moves. The standard mitigation, and one the game did not have.",
+      why:
+        "It costs almost nothing to build and it changes who can play. Nobody assigned it: I get motion sickness from first-person games, which is the only reason the problem was visible to anyone in the room.",
+      media: {
+        src: "",
+        alt: "Payday 2 HUD with the centre dot enabled, captured from the released build",
+        aspect: "16/9",
+      },
     },
+  ],
+
+  responsibilities: [
     {
       title: "Played the game to find the problems",
       body: "Testing Payday 2 as a player, not as a reviewer of screens — which is the only way to notice the friction that lives in repetition rather than in a single interaction.",

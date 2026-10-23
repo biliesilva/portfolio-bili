@@ -63,7 +63,12 @@ Search the repo for `TODO` — every placeholder is marked. The ones that matter
    one concrete, non-confidential thing you shipped per role.
 2. **Images** — `public/work/<slug>/`, then fill the `src` fields. Until then
    every image renders as a labelled placeholder whose caption is the shot list.
-   The Heroic screenshots are the safest ones to start with: open source.
+   - **Heroic** is open source: capture anything.
+   - **Payday 2** is a shipped, public game. You do not need the source files —
+     launch it and screenshot the released build (Steam: F12). Everything in the
+     retail build is already public.
+   - **HyperPlay and CoinFello** need no images: the role format does not
+     promise any.
 3. **`public/biliane-silva-resume.pdf`** — the downloadable résumé.
 4. **`content/site.ts`** — the scheduling link (`calendar`).
 5. **A portrait** at `public/about/portrait.jpg`.
