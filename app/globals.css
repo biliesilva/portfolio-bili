@@ -11,33 +11,53 @@
   --color-bone: #f2f0ea;
   --color-bone-dim: #a3a09a;
   --color-bone-faint: #6b6965;
-  --color-accent: #ff4a1c;
-  --color-accent-dim: #c2360f;
+  /* Holographic accent. Every stop clears 6:1 against the ink background, so
+     the gradient can carry text as well as surfaces. */
+  --color-accent: #a78bfa;
+  --color-accent-dim: #7c5cf5;
+  --color-holo-pink: #ff6ec7;
+  --color-holo-violet: #a78bfa;
+  --color-holo-blue: #60a5fa;
+  --color-holo-cyan: #22d3ee;
+  --gradient-holo: linear-gradient(
+    100deg,
+    var(--color-holo-pink) 0%,
+    var(--color-holo-violet) 28%,
+    var(--color-holo-blue) 52%,
+    var(--color-holo-cyan) 76%,
+    var(--color-holo-pink) 100%
+  );
 
   /* Type */
-  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+  /* Condensed throughout. Semi Condensed carries running text, Condensed
+     carries display, labels and controls. */
+  --font-sans: var(--font-barlow-semi-condensed), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-display: var(--font-barlow-condensed), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-condensed: var(--font-barlow-condensed), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-mono: var(--font-barlow-condensed), ui-sans-serif, system-ui, sans-serif;
 
   /* Fluid display sizes */
-  --text-display: clamp(2.75rem, 9vw, 9.5rem);
+  --text-display: clamp(3.25rem, 10.5vw, 11rem);
   --text-display--line-height: 0.92;
   --text-display--letter-spacing: -0.04em;
-  --text-hero: clamp(2.5rem, 6.5vw, 6.5rem);
+  --text-hero: clamp(2.75rem, 7.5vw, 7.5rem);
   --text-hero--line-height: 0.95;
   --text-hero--letter-spacing: -0.035em;
-  --text-headline: clamp(2rem, 5vw, 4.5rem);
+  --text-headline: clamp(2.25rem, 5.5vw, 5rem);
   --text-headline--line-height: 1;
   --text-headline--letter-spacing: -0.03em;
-  --text-title: clamp(1.5rem, 2.6vw, 2.25rem);
+  --text-title: clamp(1.625rem, 2.8vw, 2.5rem);
   --text-title--line-height: 1.1;
   --text-title--letter-spacing: -0.02em;
-  --text-lead: clamp(1.125rem, 1.6vw, 1.5rem);
+  --text-lead: clamp(1.25rem, 1.7vw, 1.625rem);
   --text-lead--line-height: 1.45;
   --text-lead--letter-spacing: -0.01em;
-  --text-label: 0.6875rem;
-  --text-label--line-height: 1.2;
-  --text-label--letter-spacing: 0.12em;
+  --text-label: 0.9375rem;
+  --text-label--line-height: 1.35;
+  --text-label--letter-spacing: 0.01em;
 
   /* Motion */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -78,13 +98,13 @@
 
   body {
     font-family: var(--font-sans);
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.0625rem;
+    line-height: 1.55;
     overflow-x: clip;
   }
 
   ::selection {
-    background-color: var(--color-accent);
+    background-color: var(--color-holo-cyan);
     color: var(--color-ink);
   }
 
@@ -98,6 +118,7 @@
   h2,
   h3,
   h4 {
+    font-family: var(--font-display);
     font-weight: 500;
     text-wrap: balance;
   }
@@ -125,11 +146,10 @@
 
 /* Mono micro-label used for section numbering and meta rows */
 @utility label {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: var(--text-label);
   line-height: var(--text-label--line-height);
   letter-spacing: var(--text-label--letter-spacing);
-  text-transform: uppercase;
   color: var(--color-bone-dim);
 }
 
@@ -155,6 +175,53 @@
   &:hover::after,
   &:focus-visible::after {
     transform: scaleX(1);
+  }
+}
+
+/* Holographic text. The sheen drifts slowly; the global reduced-motion rule
+   freezes it at the first frame rather than removing the colour. */
+@utility holo-text {
+  background-image: var(--gradient-holo);
+  background-size: 220% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: holo-drift 11s ease-in-out infinite alternate;
+}
+
+/* Holographic surface, for primary actions and accent rules. */
+@utility holo-surface {
+  background-image: var(--gradient-holo);
+  background-size: 220% 100%;
+  animation: holo-drift 11s ease-in-out infinite alternate;
+}
+
+@keyframes holo-drift {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+/* Organic blob mask. The radii drift so the silhouette never settles into a
+   shape the eye can name — frozen at the first frame under reduced motion. */
+@utility blob {
+  border-radius: 58% 42% 52% 48% / 46% 54% 46% 54%;
+  animation: blob-morph 18s ease-in-out infinite alternate;
+}
+
+@keyframes blob-morph {
+  0% {
+    border-radius: 58% 42% 52% 48% / 46% 54% 46% 54%;
+  }
+  50% {
+    border-radius: 44% 56% 42% 58% / 56% 44% 58% 44%;
+  }
+  100% {
+    border-radius: 54% 46% 60% 40% / 44% 58% 42% 56%;
   }
 }
 

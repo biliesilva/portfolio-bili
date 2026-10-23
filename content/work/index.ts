@@ -1,16 +1,18 @@
 import type { WorkEntry, Discipline } from "../types";
-import { heroic } from "./heroic";
 import { hyperplay } from "./hyperplay";
 import { coinfello } from "./coinfello";
+import { heroic } from "./heroic";
 import { starbreeze } from "./starbreeze";
-import { flashflow } from "./flashflow";
 
+/**
+ * Four entries, deliberately. Everything else lives on LinkedIn — a portfolio
+ * that gives equal weight to a 2010 internship is a portfolio nobody finishes.
+ */
 export const caseStudies: WorkEntry[] = [
-  heroic,
   hyperplay,
   coinfello,
+  heroic,
   starbreeze,
-  flashflow,
 ].sort((a, b) => a.order - b.order);
 
 export const featuredCaseStudies = caseStudies.filter((c) => c.featured);

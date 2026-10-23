@@ -11,7 +11,7 @@ export function FeaturedWork() {
       <SectionHead
         index="01"
         label="Selected work"
-        title="Owned end to end, designed and shipped."
+        title="Four pieces of work, told properly."
       />
 
       <div className="mt-20 space-y-28 md:space-y-40">
@@ -32,7 +32,7 @@ export function FeaturedWork() {
                 <div className="mt-8 grid gap-6 md:grid-cols-12">
                   <div className="md:col-span-7">
                     <div className="flex items-baseline gap-4">
-                      <span className="label text-bone-faint">
+                      <span className="holo-text font-display text-3xl font-medium leading-none tabular-nums">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <h3 className="text-headline transition-colors duration-500 group-hover:text-accent">
@@ -58,7 +58,7 @@ export function FeaturedWork() {
 
       <Reveal className="mt-24 flex justify-center">
         <ButtonLink href="/work" variant="ghost">
-          All projects
+          Open the index
         </ButtonLink>
       </Reveal>
     </section>

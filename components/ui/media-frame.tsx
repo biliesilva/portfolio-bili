@@ -57,7 +57,7 @@ function Placeholder({ alt, aspect }: { alt: string; aspect: string }) {
       aria-hidden="true"
     >
       <span className="label text-bone-faint">Image pending · {aspect}</span>
-      <span className="max-w-[48ch] font-mono text-xs leading-relaxed text-bone-faint">
+      <span className="max-w-[48ch] font-display text-base leading-relaxed text-bone-faint">
         {alt}
       </span>
     </div>

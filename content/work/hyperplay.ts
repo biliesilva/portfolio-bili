@@ -8,16 +8,16 @@ export const hyperplay: WorkEntry = {
   client: "HyperPlay — Texas, United States",
   year: "2022 — 2026",
   summary:
-    "Three and a half years on a web3 game launcher: product design and research inside a design team, then the same interface shipped in React by me, by hand.",
+    "Three and a half years on a web3 game launcher — product design and research in the design team, then front-end work on the same interface in the engineering team.",
   disciplines: ["Product Design", "Design Systems", "Front-end", "UI/UX"],
   featured: true,
-  order: 2,
+  order: 1,
 
   disclosure:
-    "Employed work. I can talk about what I owned and how I worked, but not about unreleased designs, internal metrics or proprietary code. Ask me in an interview and I'll walk you through the detail that is mine to share.",
+    "Employed work, done inside teams. What follows is my part — the design team and the engineering team built this together, and I am not claiming the whole of it. I also cannot show unreleased designs, internal metrics or proprietary code.",
 
   role: "Product Designer (2022—2025) → Front-end Developer (2024—2026)",
-  team: "Design team, then engineering team — fully remote, US hours",
+  team: "Design team, then engineering team — distributed across the US, Europe and LATAM",
   timeline: "3 years 8 months",
   platforms: ["Desktop game launcher", "Web"],
   stack: ["Figma", "TypeScript", "React", "Design tokens"],
@@ -29,9 +29,9 @@ export const hyperplay: WorkEntry = {
   },
 
   context: [
-    "HyperPlay is a game launcher for web3 games, built by a distributed US team. I joined the design team in 2022 as a product designer and stayed almost four years — long enough to see the same decisions come back around, which is the difference between working on a product and working on a deliverable.",
-    "The design side was the full practice, not just screens: user research, interviews, prototypes, and the component library the rest of the team built from.",
-    "In late 2024 I moved into the engineering team as a front-end developer on the same product — and wrote all of it by hand, before I used AI for any of my work. Same interface, same system, different side of the hand-off. It is the clearest thing on my CV about how I like to work: I would rather own a decision all the way into the build than specify it and hope.",
+    "HyperPlay is a game launcher for web3 games, built by a team spread across the US, Europe and Latin America. I joined the design team in 2022 as a product designer and stayed almost four years — long enough to see the same decisions come back around, which is the difference between working on a product and working on a deliverable.",
+    "The design side was the full practice, not just screens: user research, interviews, prototypes, and the component library we built from. I was responsible for the design system within the design team.",
+    "In late 2024 I moved into the engineering team as a front-end developer on the same product, writing my share of it by hand, before I used AI for any of my work. Same interface, same system, different side of the hand-off. It is the clearest thing on my CV about how I like to work: I would rather follow a decision all the way into the build than specify it and hope.",
   ],
 
   responsibilities: [
@@ -45,11 +45,11 @@ export const hyperplay: WorkEntry = {
     },
     {
       title: "Components and the design system",
-      body: "I built components and was responsible for the design system — token architecture, library and documented states — keeping it usable by the engineers consuming it, which was the actual job rather than a side effect of it.",
+      body: "Within the design team I was responsible for the design system — token architecture, library and documented states — and built components for it. Keeping it usable by the engineers consuming it was the actual job, rather than a side effect of it.",
     },
     {
-      title: "Then shipped it in React, by hand",
-      body: "As a front-end developer I refined the launcher interface in TypeScript and React. No AI — this was the year I learned what my own code looks like under review, which is why I can review an assistant's today.",
+      title: "Then built it with the engineering team",
+      body: "As a front-end developer I worked on the launcher interface in TypeScript and React alongside the rest of the engineering team. No AI in any of it — this was the year I learned what my own code looks like under someone else's review, which is why I can review an assistant's today.",
     },
     {
       title: "Supported the people using it",

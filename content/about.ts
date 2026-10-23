@@ -6,16 +6,16 @@
 export const about = {
   headline: "I design the thing, then I build the thing.",
   portrait: {
-    src: "", // TODO: add a portrait to /public/about/portrait.jpg
-    alt: "Portrait of Biliane Silva",
+    src: "/about/portrait.jpg",
+    alt: "Biliane Silva at her desk in Maceió, Brazil",
     aspect: "4/5",
   },
   bio: [
     "I'm a product designer and front-end developer from Maceió, Brazil. I've designed for a decade and I spent the last four years on game launchers — first as a product designer, then as the developer shipping the same interface.",
-    "At HyperPlay I was the product designer — research, interviews, prototypes, components — then joined the engineering team and shipped the same interface in React, by hand. At CoinFello I built the design system from scratch and implemented all of it myself. The through-line is the hand-off: I kept ending up on the other side of it, so eventually I stopped crossing back.",
+    "At HyperPlay I worked in the design team — research, interviews, prototypes, components, and responsibility for the design system — then joined the engineering team and worked on the same interface in React. At CoinFello I built the design system from scratch and implemented it myself. The through-line is the hand-off: I kept ending up on the other side of it, so eventually I stopped crossing back.",
     "I wrote production front-end for a year before I used AI for any of it. I use it daily now and review everything it produces, but that order matters — you can't review what an assistant writes if you've never built the thing yourself.",
     "The work I can show you in full is open source. In 2020 I led the validation research — desk research and interviews with Linux users — that established Heroic Games Launcher was worth building. It now has over 500,000 monthly users, and I've designed for it ever since, and written its front-end since 2025. Every decision I made there is a public pull request you can read, argue with, and check against what I say here.",
-    "Before that I did quality-of-life UI on Payday 2 at Starbreeze in Stockholm — and implemented my own icons into the game in Lua, which is where this whole habit started. Before that, years of freelance in Brazil building client sites on WordPress and Joomla — designing them and shipping them, which is where the habit started. I work in English, Portuguese and Spanish, remotely with US teams since 2022.",
+    "Before that I did quality-of-life UI on Payday 2 at Starbreeze in Stockholm — making the game's 2D assets in Photoshop and Illustrator and bringing them into the build myself, which is where this whole habit started. Before that, years of freelance in Brazil building client sites on WordPress and Joomla — designing them and shipping them, which is where the habit started. I work in English, Portuguese and Spanish, remotely since 2022 with teams spread across the US, Europe and Latin America.",
   ],
   principles: [
     {
@@ -52,7 +52,7 @@ export const about = {
     { year: "2025 — 2026", event: "Front-end Developer, CoinFello (US) — owned the design system" },
     { year: "2024 — 2026", event: "Front-end Developer, HyperPlay (Texas, US)" },
     { year: "2022 — 2025", event: "Product Designer, HyperPlay — owned the design system" },
-    { year: "2021 — 2022", event: "UI/UX Designer, Starbreeze Entertainment — Payday 2, Stockholm (design + Lua)" },
+    { year: "2021 — 2022", event: "UI/UX Designer, Starbreeze Entertainment — Payday 2, Stockholm" },
     { year: "2020 — now", event: "Validation research, design & front-end, Heroic Games Launcher — 500k+ monthly users" },
     { year: "2016 — 2018", event: "Freelance UI Designer, Alagoas" },
     { year: "2010 — 2012", event: "Graphic and web design, Brazil — where it started" },

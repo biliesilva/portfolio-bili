@@ -181,7 +181,7 @@ async function CaseStudyArticle({ params }: Props) {
             {study.responsibilities.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.05}>
                 <div className="hairline grid gap-6 py-8 md:grid-cols-12">
-                  <span className="label text-bone-faint md:col-span-1">
+                  <span className="holo-text font-display text-2xl font-medium leading-none tabular-nums md:col-span-1">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-title md:col-span-5">{item.title}</h3>
@@ -204,7 +204,7 @@ async function CaseStudyArticle({ params }: Props) {
           <div className="mt-16 grid gap-px bg-ink-line md:grid-cols-3">
             {study.research.map((finding, i) => (
               <Reveal key={finding.insight} delay={i * 0.08} className="bg-ink p-8">
-                <span className="label text-bone-faint">
+                <span className="holo-text font-display text-2xl font-medium leading-none tabular-nums">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-6 text-title">{finding.insight}</h3>
@@ -231,7 +231,7 @@ async function CaseStudyArticle({ params }: Props) {
               <Reveal key={decision.title} y={36}>
                 <div className="grid gap-12 md:grid-cols-12">
                   <div className="md:col-span-5">
-                    <span className="label text-accent">
+                    <span className="holo-text font-display text-xl font-medium">
                       Decision {String(i + 1).padStart(2, "0")}
                     </span>
                     <h3 className="mt-6 text-title">{decision.title}</h3>
@@ -351,7 +351,7 @@ async function CaseStudyArticle({ params }: Props) {
             </div>
             {study.outcome.quote ? (
               <blockquote className="md:col-span-5 md:col-start-8">
-                <p className="font-serif text-title italic">
+                <p className="font-display text-title italic">
                   &ldquo;{study.outcome.quote.text}&rdquo;
                 </p>
                 <footer className="label mt-6">

@@ -50,7 +50,7 @@ export function WorkIndex({ items }: { items: WorkEntry[] }) {
             onClick={() => setFilter(option)}
             aria-pressed={filter === option}
             className={cn(
-              "rounded-full border px-4 py-2 font-mono text-[0.6875rem] uppercase tracking-[0.12em] transition-colors duration-300",
+              "rounded-full border px-5 py-2 font-display text-lg font-medium tracking-[0.01em] transition-colors duration-300",
               filter === option
                 ? "border-bone bg-bone text-ink"
                 : "border-ink-line text-bone-dim hover:border-bone hover:text-bone"
@@ -72,7 +72,7 @@ export function WorkIndex({ items }: { items: WorkEntry[] }) {
               onFocus={() => setHovered(null)}
               className="group hairline grid grid-cols-12 items-baseline gap-4 py-7 transition-colors duration-500 hover:border-bone"
             >
-              <span className="label col-span-2 md:col-span-1">
+              <span className="holo-text col-span-2 font-display text-2xl font-medium leading-none tabular-nums md:col-span-1">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <span className="col-span-10 text-title transition-colors duration-500 group-hover:text-accent md:col-span-5">

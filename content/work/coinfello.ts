@@ -11,13 +11,13 @@ export const coinfello: WorkEntry = {
     "Built the design system from scratch and implemented it in code myself — then rebuilt my own workflow around AI without handing over the judgement.",
   disciplines: ["Design Systems", "Front-end", "UI/UX"],
   featured: true,
-  order: 3,
+  order: 2,
 
   disclosure:
     "Employed work under NDA. What follows is my scope and my practice — no product internals, no screens, no numbers.",
 
   role: "Front-end Developer — design system owner",
-  team: "Distributed US team",
+  team: "Distributed team — US, Europe and LATAM",
   timeline: "1 year 3 months",
   platforms: ["Web"],
   stack: ["TypeScript", "React", "Tailwind CSS", "Design tokens", "AI tooling"],
@@ -29,7 +29,7 @@ export const coinfello: WorkEntry = {
   },
 
   context: [
-    "I joined CoinFello as a front-end developer and built the design system from scratch — not inherited, not extended. Tokens, components, conventions, the lot. Then I implemented it in code myself.",
+    "I joined CoinFello, working with a distributed team, as a front-end developer, and built the design system from scratch — not inherited, not extended. Tokens, components, conventions, the lot. Then I implemented it in code myself.",
     "That combination is the whole point of how I work. There was no spec to hand over and no interpretation gap to argue about later, because the person deciding what a component should do was the person writing it.",
     "This is also where I started using AI seriously — after the system already existed and I already knew what good looked like in this codebase. That order matters to me.",
   ],

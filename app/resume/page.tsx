@@ -4,6 +4,7 @@ import { roles, earlier, education, skills, certifications } from "@/content/res
 import { Reveal, RevealWords } from "@/components/ui/reveal";
 import { SectionHead } from "@/components/ui/section-head";
 import { ButtonLink } from "@/components/ui/button-link";
+import { MoreExperience } from "@/components/sections/more-experience";
 
 export const metadata: Metadata = {
   title: "Résumé",
@@ -143,7 +144,7 @@ export default function ResumePage() {
         </ul>
       </section>
 
-      <section className="container-edge py-16 pb-32">
+      <section className="container-edge py-16">
         <SectionHead index="06" label="Languages" />
         <ul className="mt-12 md:max-w-xl">
           {site.languages.map((language) => (
@@ -157,6 +158,10 @@ export default function ResumePage() {
           ))}
         </ul>
       </section>
+
+      <div className="pb-24 print:hidden">
+        <MoreExperience note="Full employment history, recommendations and contact details." />
+      </div>
     </>
   );
 }

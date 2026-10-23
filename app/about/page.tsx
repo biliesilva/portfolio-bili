@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { about } from "@/content/about";
 import { site } from "@/content/site";
-import { MediaFrame } from "@/components/ui/media-frame";
+import { Portrait } from "@/components/ui/portrait";
 import { Reveal, RevealWords } from "@/components/ui/reveal";
 import { SectionHead } from "@/components/ui/section-head";
 import { ContactCta } from "@/components/sections/contact-cta";
@@ -30,7 +30,7 @@ export default function AboutPage() {
       <section className="container-edge pb-24">
         <div className="grid gap-16 md:grid-cols-12">
           <Reveal className="md:col-span-5">
-            <MediaFrame media={about.portrait} sizes="(min-width: 768px) 40vw, 100vw" />
+            <Portrait sizes="(min-width: 768px) 40vw, 100vw" />
             <dl className="mt-8">
               {[
                 { label: "Based in", value: site.location },
@@ -67,7 +67,7 @@ export default function AboutPage() {
           {about.principles.map((principle, i) => (
             <Reveal key={principle.title} delay={i * 0.05}>
               <div className="hairline grid gap-6 py-8 md:grid-cols-12">
-                <span className="label text-bone-faint md:col-span-1">
+                <span className="holo-text font-display text-2xl font-medium leading-none tabular-nums md:col-span-1">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="text-title md:col-span-5">{principle.title}</h3>

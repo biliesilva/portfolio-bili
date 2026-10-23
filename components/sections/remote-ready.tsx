@@ -18,9 +18,10 @@ export function RemoteReady() {
       <div className="mt-20 grid gap-16 md:grid-cols-12">
         <Reveal className="md:col-span-5">
           <p className="text-lead text-bone-dim">
-            I work remotely with teams in the US and Europe. Design reviews in
-            English, async written rationale by default, and code in the same
-            repository as the engineers I design for.
+            I have worked remotely since 2022 with teams spread across the
+            US, Europe and Latin America — several time zones in one standup.
+            Design reviews in English, async written rationale by default, and
+            code in the same repository as the engineers I design for.
           </p>
           <ul className="mt-10 space-y-4">
             {site.languages.map((language) => (

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter_Tight, Instrument_Serif, Geist_Mono } from "next/font/google";
+import { Barlow_Condensed, Barlow_Semi_Condensed } from "next/font/google";
 import "./globals.css";
 import { site } from "@/content/site";
 import { Header } from "@/components/layout/header";
@@ -8,22 +8,18 @@ import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { JsonLd } from "@/components/layout/json-ld";
 import { MotionProvider } from "@/components/layout/motion-provider";
 
-const sans = Inter_Tight({
-  variable: "--font-inter-tight",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const serif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  weight: "400",
+const display = Barlow_Condensed({
+  variable: "--font-barlow-condensed",
+  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
 });
 
-const mono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sans = Barlow_Semi_Condensed({
+  variable: "--font-barlow-semi-condensed",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -66,13 +62,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${sans.variable} ${serif.variable} ${mono.variable}`}
+      className={`${sans.variable} ${display.variable}`}
     >
       <body className="min-h-svh">
         <SmoothScroll />
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-accent focus:px-5 focus:py-2 focus:font-mono focus:text-xs focus:uppercase focus:text-ink"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-accent focus:px-5 focus:py-2 focus:font-condensed focus:text-base focus:text-ink"
         >
           Skip to content
         </a>

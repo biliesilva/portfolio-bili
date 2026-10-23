@@ -11,7 +11,7 @@ export const roles: ResumeRole[] = [
     period: "Aug 2025 — Oct 2026",
     location: "Remote — United States",
     summary:
-      "Built the design system from scratch and implemented it in code, on a distributed US team.",
+      "Built the design system from scratch and implemented it in code, on a team distributed across the US, Europe and LATAM.",
     highlights: [
       "Created the entire design system from zero — token architecture, component library and the conventions that keep an interface coherent across contributors.",
       "Implemented the system myself in typed React and Tailwind CSS, rather than specifying it for someone else to interpret.",
@@ -25,10 +25,10 @@ export const roles: ResumeRole[] = [
     period: "Nov 2024 — Apr 2026",
     location: "Remote — Texas, United States",
     summary:
-      "Moved from the design team into engineering on the same product, refining the HyperPlay Game Launcher interface.",
+      "Moved from the design team into engineering on the same product, working on the HyperPlay Game Launcher interface with the engineering team.",
     highlights: [
-      "Implemented in TypeScript and React the interface I had previously designed — written by hand, with no AI assistance.",
-      "Carried design-system ownership across the design/engineering boundary, which is where most systems quietly break.",
+      "Worked in TypeScript and React on the interface I had previously helped design — written by hand, with no AI assistance.",
+      "Carried design-system knowledge across the design/engineering boundary, which is where most systems quietly break.",
     ],
     stack: ["TypeScript", "React", "Design tokens"],
   },
@@ -41,7 +41,7 @@ export const roles: ResumeRole[] = [
       "Product design for a web3 game launcher inside a design team, with responsibility for the design system.",
     highlights: [
       "Ran user research and interviews, and turned the findings into flows and interactive prototypes the team could argue with before anything was built.",
-      "Built components and was responsible for the design system — token architecture, library and documented states — keeping it usable by the engineers consuming it.",
+      "Responsible for the design system within the design team — token architecture, library and documented states — and built components for it, keeping it usable by the engineers consuming it.",
       "Also ran content and player support for over a year, troubleshooting with players and game developers, which fed straight back into the design.",
     ],
     stack: ["Figma", "Design tokens", "Prototyping"],
@@ -72,10 +72,10 @@ export const roles: ResumeRole[] = [
     highlights: [
       "Proposed an accessibility improvement for players with motion sickness — a fixed centre-screen reference point — identified from my own experience rather than from a brief.",
       "Tested the game as a player to find real friction, and designed quality-of-life and menu improvements against a player base with a decade of habits.",
-      "Designed the 2D icons the interface needed, consistent with a visual language that predated me by eight years.",
-      "Implemented the assets into the game myself in Lua, in the studio's in-house engine — the first time I shipped my own design into a build rather than handing it over.",
+      "Made the game's 2D assets — icons and in-game items — primarily in Photoshop and Illustrator, consistent with a visual language that predated me by eight years.",
+      "Brought the assets into the build myself through the studio's in-house engine, rather than handing them over for someone else to integrate.",
     ],
-    stack: ["Figma", "Adobe CC", "Lua"],
+    stack: ["Photoshop", "Illustrator", "Figma", "In-house game engine"],
   },
   {
     company: "Freelance",

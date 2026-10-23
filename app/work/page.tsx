@@ -3,6 +3,7 @@ import { caseStudies } from "@/content/work";
 import { WorkIndex } from "@/components/work/work-index";
 import { RevealWords, Reveal } from "@/components/ui/reveal";
 import { ContactCta } from "@/components/sections/contact-cta";
+import { MoreExperience } from "@/components/sections/more-experience";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -15,7 +16,7 @@ export default function WorkPage() {
     <>
       <section className="container-edge pt-36 pb-16 md:pt-44">
         <div className="hairline pt-6">
-          <span className="label">Work — {caseStudies.length} projects</span>
+          <span className="label">Work — {caseStudies.length} selected</span>
           <RevealWords
             as="h1"
             text="Problems framed, interfaces built, code merged."
@@ -23,17 +24,19 @@ export default function WorkPage() {
           />
           <Reveal delay={0.2} className="mt-12 max-w-[52ch]">
             <p className="text-lead text-bone-dim">
-              Each case study follows the same shape: what the problem was, the
-              decisions I made, what I shipped, and what it changed. The ones
-              marked with code are projects where I also wrote the front end.
+              Four pieces of work, told at the depth each one allows. Open
+              source gets the full case study; employed work gets scope and
+              practice without client internals. Everything else is on LinkedIn.
             </p>
           </Reveal>
         </div>
       </section>
 
-      <section className="container-edge pb-24">
+      <section className="container-edge pb-16">
         <WorkIndex items={caseStudies} />
       </section>
+
+      <MoreExperience />
 
       <ContactCta heading="Want the version with the Figma files open?" />
     </>

@@ -14,7 +14,7 @@ export const heroic: WorkEntry = {
     "I ran the validation research that decided this was worth building. Five years later it has 500k+ monthly users, and I still design and ship its interface.",
   disciplines: ["Product Design", "Design Systems", "Front-end", "UI/UX"],
   featured: true,
-  order: 1,
+  order: 3,
 
   role: "Validation research · UX/UI design (2020—) · front-end (2025—)",
   team: "Open-source maintainers and contributors",

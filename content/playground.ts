@@ -24,6 +24,15 @@ export const playground: PlaygroundItem[] = [
     media: { src: "", alt: "The same component rendered across six themes", aspect: "4/3" },
   },
   {
+    title: "FlashFlow 2.0",
+    year: "2026",
+    blurb:
+      "A full-stack spaced-repetition app, designed and built end to end. Types shared between client and server, time-boxed review sessions, and every review action on the keyboard.",
+    tags: ["TypeScript", "React", "Full-stack"],
+    href: "https://github.com/biliesilva/FlashFlow-2.0",
+    media: { src: "", alt: "FlashFlow deck management and review session", aspect: "4/3" },
+  },
+  {
     title: "FlashCard",
     year: "2025",
     blurb:

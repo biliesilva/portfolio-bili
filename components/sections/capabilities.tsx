@@ -18,7 +18,7 @@ export function Capabilities() {
             delay={i * 0.08}
             className="bg-ink p-8 md:p-10"
           >
-            <span className="label text-bone-faint">
+            <span className="holo-text font-display text-3xl font-medium leading-none tabular-nums">
               {String(i + 1).padStart(2, "0")}
             </span>
             <h3 className="mt-6 text-title">{capability.title}</h3>

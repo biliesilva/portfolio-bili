@@ -19,7 +19,7 @@ export const site = {
     open: true,
     label: "Available for full-time & contract",
     detail:
-      "Open to full-time roles and contractor engagements with US and European teams. I have worked remotely for US companies since 2022.",
+      "Open to full-time roles and contractor engagements. Since 2022 I have worked remotely with distributed teams across the US, Europe and Latin America.",
   },
 
   languages: [
@@ -32,7 +32,11 @@ export const site = {
   remote: [
     { label: "Engagement", value: "Full-time · Contractor · PJ/B2B invoicing" },
     { label: "Overlap", value: "UTC-3 — a full shared workday with US Eastern" },
-    { label: "Track record", value: "Remote with US teams since 2022 (Texas, US)" },
+    {
+      label: "Track record",
+      value:
+        "Remote since 2022 with teams spread across the US (Texas, California, San Juan), Europe and Latin America",
+    },
     { label: "Languages", value: "English · Portuguese · Spanish" },
     { label: "Hand-off", value: "Figma to production React — no translation layer" },
   ],
@@ -50,17 +54,24 @@ export const site = {
     },
     {
       title: "Front-end Engineering",
-      body: "I build what I design. Typed React, design systems implemented from inside engineering, animation that respects reduced-motion, and AI in the workflow where it earns its place.",
-      items: ["React & TypeScript", "Next.js", "Tailwind CSS", "SCSS", "AI-assisted workflow"],
+      body: "I build what I design. Typed React, design systems implemented from inside engineering, and animation that respects reduced-motion. I wrote production front-end by hand for a year before I used AI for any of it — I work well either way, and I review what the assistant writes because I know what the work costs without it.",
+      items: [
+        "React & TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "SCSS",
+        "Hand-written, no AI",
+        "AI-assisted when it earns it",
+      ],
     },
   ],
 
   /** Verifiable numbers only — these are the first thing a recruiter scans. */
   proof: [
-    { value: "2010", label: "Designing since" },
-    { value: "1", label: "Design system built from scratch" },
-    { value: "500k+", label: "Monthly users of the app I design for" },
-    { value: "3", label: "Languages spoken" },
+    { value: "2010", label: "Designing since", note: "Graphic, then product" },
+    { value: "500k+", label: "Monthly users", note: "Heroic Games Launcher" },
+    { value: "1", label: "Design system from zero", note: "Built and shipped by me" },
+    { value: "3", label: "Languages", note: "English, Portuguese, Spanish" },
   ],
 
   socials: [

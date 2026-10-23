@@ -4,6 +4,7 @@ import { Marquee } from "@/components/ui/marquee";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Magnetic } from "@/components/ui/magnetic";
 import { Scrub } from "@/components/ui/scrub";
+import { Portrait } from "@/components/ui/portrait";
 
 export function Hero() {
   return (
@@ -21,19 +22,27 @@ export function Hero() {
             <RevealWords
               as="span"
               text="ship the code."
-              className="inline font-serif font-normal italic text-accent"
+              className="holo-text inline font-display font-normal italic"
               delay={0.26}
             />
           </span>
         </h1>
 
-        <div className="mt-16 grid gap-10 md:mt-24 md:grid-cols-12">
+        <div className="mt-12 grid items-end gap-10 md:mt-14 md:grid-cols-12">
+          <Reveal delay={0.45} className="md:col-span-3">
+            <Portrait
+              priority
+              className="w-36 md:w-full md:max-w-[14rem]"
+              sizes="(min-width: 768px) 14rem, 9rem"
+            />
+          </Reveal>
+
           <Reveal delay={0.35} className="md:col-span-6 md:col-start-7">
             <p className="max-w-[46ch] text-lead text-bone-dim">
               Product designer and front-end developer from Maceió, Brazil.
-              I&apos;ve owned the design system at two companies and shipped the
-              interface in React at both — most recently for US teams at
-              CoinFello and HyperPlay. Working in English, Portuguese and
+              I&apos;ve been responsible for the design system at two companies
+              and worked on the front-end at both — most recently with US teams
+              at CoinFello and HyperPlay. Working in English, Portuguese and
               Spanish.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">

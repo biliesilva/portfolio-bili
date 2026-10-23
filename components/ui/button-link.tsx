@@ -4,10 +4,10 @@ import { cn } from "@/lib/cn";
 type Variant = "primary" | "ghost";
 
 const base =
-  "group inline-flex items-center gap-3 rounded-full px-6 py-3 font-mono text-[0.6875rem] uppercase tracking-[0.12em] transition-colors duration-300";
+  "group inline-flex items-center gap-2.5 rounded-full px-7 py-3 font-display text-lg font-medium tracking-[0.01em] transition-[color,background-color,border-color,box-shadow] duration-300";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-accent text-ink hover:bg-bone",
+  primary: "holo-surface text-ink shadow-[0_0_28px_-6px_var(--color-holo-violet)] hover:shadow-[0_0_38px_-4px_var(--color-holo-cyan)]",
   ghost: "border border-ink-line text-bone hover:border-bone hover:bg-bone hover:text-ink",
 };
 
@@ -29,7 +29,7 @@ export function ButtonLink({
       {children}
       <span
         aria-hidden="true"
-        className="transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
+        className="text-xl leading-none transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
       >
         &#8599;
       </span>
