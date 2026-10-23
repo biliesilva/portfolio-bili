@@ -17,9 +17,9 @@ export const site = {
 
   availability: {
     open: true,
-    label: "Available for full-time & contract",
+    label: "Available for full-time & contract with US teams",
     detail:
-      "Open to full-time roles and contractor engagements. Since 2022 I have worked remotely with distributed teams across the US, Europe and Latin America.",
+      "I am looking for full-time roles or contractor engagements with US companies. Since 2022 I have worked remotely with US teams whose members sit across the US, Europe and Latin America — the time zones are a problem I have already solved.",
   },
 
   languages: [

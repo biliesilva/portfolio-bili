@@ -8,7 +8,7 @@ import { LocalTime } from "@/components/ui/local-time";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Get in touch with ${site.name} — ${site.availability.label.toLowerCase()}, working remotely with teams in the US and Europe.`,
+  description: `Get in touch with ${site.name} — ${site.availability.label.toLowerCase()}, working remotely with US teams.`,
   alternates: { canonical: "/contact" },
 };
 
@@ -49,7 +49,7 @@ export default function ContactPage() {
             <ul className="mt-10 space-y-5">
               {[
                 "Roles I'm a fit for: Product Designer, Product Designer (UI-heavy), Design Engineer, Front-end Developer.",
-                "Engagement: full-time employment, contractor, or contract-to-hire. I invoice as a business entity for contract work.",
+                "Engagement: full-time employment, contractor, or contract-to-hire with US companies. I invoice as a business entity for contract work.",
                 "I can share a portfolio walkthrough under NDA, and I'm happy to do a paid design exercise rather than an unpaid one.",
                 "References from past teams available on request.",
               ].map((line, i) => (

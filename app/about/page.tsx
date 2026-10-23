@@ -9,7 +9,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `${site.name} is a product designer and front-end developer with ${site.yearsOfExperience} years of experience, based in ${site.location} and working with teams in the US and Europe.`,
+  description: `${site.name} is a product designer and front-end developer with ${site.yearsOfExperience} years of experience, based in ${site.location} and working remotely with US teams.`,
   alternates: { canonical: "/about" },
 };
 

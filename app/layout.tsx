@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     default: `${site.name} — ${site.role}`,
     template: `%s — ${site.name}`,
   },
-  description: `${site.tagline} ${site.yearsOfExperience} years across product design, design systems and front-end engineering. Based in ${site.location}, working with teams in the US and Europe.`,
+  description: `${site.tagline} ${site.yearsOfExperience} years across product design, design systems and front-end engineering. Based in ${site.location}, working remotely with US teams.`,
   keywords: [
     "product designer",
     "UI UX designer",
