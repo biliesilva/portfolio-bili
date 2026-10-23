@@ -41,7 +41,7 @@ export const site = {
     {
       label: "Also",
       value:
-        "Qualified lawyer, non-practising — regulated products are familiar ground",
+        "Qualified lawyer, specialising in digital law — data protection, AI and blockchain",
     },
     { label: "Hand-off", value: "Figma to production React — no translation layer" },
   ],
@@ -86,9 +86,6 @@ export const site = {
     { label: "X", href: "https://x.com/biliane_silva" },
     { label: "Email", href: "mailto:bilianemoreira@gmail.com" },
   ],
-
-  /** TODO: swap for a real scheduling link (Cal.com / Google Calendar appointments). */
-  calendar: "https://cal.com/",
 
   nav: [
     { label: "Work", href: "/work" },

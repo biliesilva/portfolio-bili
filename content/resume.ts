@@ -154,7 +154,7 @@ export const education = [
   },
   {
     title:
-      "Bachelor of Laws (LL.B.) — passed the Brazilian bar exam (OAB) in my final year; licence active",
+      "Bachelor of Laws (LL.B.) — passed the Brazilian bar exam (OAB) in my final year. Licence active; focus on digital law, data protection, AI and blockchain",
     // TODO (Bili): add the university name.
     institution: "TODO — university",
     period: "2018",

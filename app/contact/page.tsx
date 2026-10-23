@@ -27,16 +27,23 @@ export default function ContactPage() {
           />
           <Reveal delay={0.2} className="mt-12 max-w-[52ch]">
             <p className="text-lead text-bone-dim">
-              {site.availability.detail} I reply to everything within two
-              business days — including the ones that turn out not to be a fit.
+              {site.availability.detail} Email or LinkedIn both reach me, and
+              I reply to everything within two business days — including the
+              ones that turn out not to be a fit.
             </p>
           </Reveal>
           <Reveal delay={0.3} className="mt-12 flex flex-wrap items-center gap-4">
             <Magnetic>
               <ButtonLink href={`mailto:${site.email}`}>{site.email}</ButtonLink>
             </Magnetic>
-            <ButtonLink href={site.calendar} variant="ghost" external>
-              Book a 30-minute call
+            <ButtonLink
+              href={
+                site.socials.find((s) => s.label === "LinkedIn")?.href ?? "#"
+              }
+              variant="ghost"
+              external
+            >
+              Message me on LinkedIn
             </ButtonLink>
           </Reveal>
         </div>
