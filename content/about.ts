@@ -58,6 +58,7 @@ export const about = {
     { year: "2021 — 2022", event: "UI/UX Designer, Starbreeze Entertainment — Payday 2, on-site in Stockholm" },
     { year: "2020 — now", event: "Validation research, design & front-end, Heroic Games Launcher — 500k+ monthly users" },
     { year: "2016 — 2018", event: "Freelance UI Designer, Alagoas — alongside law school" },
+    { year: "2012 — 2014", event: "Career break — full-time parenting, and the start of law school" },
     { year: "2018", event: "Law degree and Brazilian bar exam, passed in my final year" },
     { year: "2010 — 2012", event: "Graphic and web design, Brazil — where it started" },
   ],

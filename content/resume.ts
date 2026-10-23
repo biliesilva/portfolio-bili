@@ -101,6 +101,12 @@ export const roles: ResumeRole[] = [
  */
 export const earlier = [
   {
+    period: "2012 — 2014",
+    company: "Career break",
+    title: "Full-time parenting",
+    note: "Maceió, Brazil. Started law school in the same stretch.",
+  },
+  {
     period: "2011 — 2012",
     company: "COLET Sistemas de Gestão Empresarial",
     title: "Graphic Designer",
