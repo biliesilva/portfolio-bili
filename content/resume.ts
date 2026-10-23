@@ -158,6 +158,7 @@ export const education = [
     // TODO (Bili): add the university name.
     institution: "TODO — university",
     period: "2018",
+    note: "Internships: small claims courts, Regional Labour Court of Alagoas, Alagoas Public Prosecutor's Office",
   },
 ];
 

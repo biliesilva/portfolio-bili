@@ -118,13 +118,18 @@ export default function ResumePage() {
           {education.map((entry, i) => (
             <li
               key={`${entry.title}-${i}`}
-              className="hairline grid grid-cols-12 gap-4 py-6"
+              className="hairline grid grid-cols-12 gap-x-4 gap-y-2 py-6"
             >
               <span className="label col-span-4 md:col-span-2">{entry.period}</span>
               <span className="col-span-8 md:col-span-6">{entry.title}</span>
               <span className="col-span-12 text-bone-dim md:col-span-4">
                 {entry.institution}
               </span>
+              {"note" in entry && entry.note ? (
+                <span className="label col-span-12 text-bone-faint md:col-start-3 md:col-end-9">
+                  {entry.note}
+                </span>
+              ) : null}
             </li>
           ))}
         </ul>
