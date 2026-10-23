@@ -40,7 +40,8 @@ export const site = {
     { label: "Languages", value: "English · Portuguese · Spanish" },
     {
       label: "Also",
-      value: "Qualified lawyer (inactive) — regulated products are familiar ground",
+      value:
+        "Qualified lawyer, non-practising — regulated products are familiar ground",
     },
     { label: "Hand-off", value: "Figma to production React — no translation layer" },
   ],

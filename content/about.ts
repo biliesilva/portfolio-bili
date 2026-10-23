@@ -15,9 +15,9 @@ export const about = {
     "At HyperPlay I worked in the design team — research, interviews, prototypes, components, and responsibility for the design system — then joined the engineering team and worked on the same interface in React. At CoinFello I built the design system from scratch and implemented it myself. The through-line is the hand-off: I kept ending up on the other side of it, so eventually I stopped crossing back.",
     "I wrote production front-end for a year before I used AI for any of it. I use it daily now and review everything it produces, but that order matters — you can't review what an assistant writes if you've never built the thing yourself.",
     "The work I can show you in full is open source. In 2020 I led the validation research — desk research and interviews with Linux users — that established Heroic Games Launcher was worth building. It now has over 500,000 monthly users, and I've designed for it ever since, and written its front-end since 2025. Every decision I made there is a public pull request you can read, argue with, and check against what I say here.",
-    "I also hold a law degree and an active bar licence in Brazil. I don't practise. It is where I learned to read something dense and badly organised, work out what it actually commits you to, and then argue a position in writing to someone who starts out disagreeing — which turns out to be most of product design. It is also why regulated products feel familiar rather than frightening, which helped at a fintech and in web3.",
+    "I also hold a law degree, and passed the Brazilian bar exam in 2018 while I was still finishing it. I don't practise. It is where I learned to read something dense and badly organised, work out what it actually commits you to, and then argue a position in writing to someone who starts out disagreeing — which turns out to be most of product design. It is also why regulated products feel familiar rather than frightening, which helped at a fintech and in web3.",
     "Before that I did quality-of-life UI on Payday 2 at Starbreeze in Stockholm, making the game's 2D assets in Photoshop and Illustrator and bringing them into the build myself. And before that, years of freelance in Brazil building client sites on WordPress and Joomla — designing them and shipping them. That is where the habit started, and I have not managed to shake it.",
-    "I work in English, Portuguese and Spanish, remotely since 2022 with teams spread across the US, Europe and Latin America.",
+    "I lived in Europe until 2026 — Stockholm among other places — and work from Maceió now. English, Portuguese and Spanish, remote since 2022 with teams spread across the US, Europe and Latin America.",
   ],
   principles: [
     {
@@ -54,10 +54,10 @@ export const about = {
     { year: "2025 — 2026", event: "Front-end Developer, CoinFello (US) — owned the design system" },
     { year: "2024 — 2026", event: "Front-end Developer, HyperPlay (Texas, US)" },
     { year: "2022 — 2025", event: "Product Designer, HyperPlay — owned the design system" },
-    { year: "2021 — 2022", event: "UI/UX Designer, Starbreeze Entertainment — Payday 2, Stockholm" },
+    { year: "2021 — 2022", event: "UI/UX Designer, Starbreeze Entertainment — Payday 2, on-site in Stockholm" },
     { year: "2020 — now", event: "Validation research, design & front-end, Heroic Games Launcher — 500k+ monthly users" },
     { year: "2016 — 2018", event: "Freelance UI Designer, Alagoas — alongside law school" },
-    { year: "2018", event: "Law degree, Brazil — bar licence still active, never practised" },
+    { year: "2018", event: "Law degree and Brazilian bar exam, passed in my final year — never practised" },
     { year: "2010 — 2012", event: "Graphic and web design, Brazil — where it started" },
   ],
 } as const;
