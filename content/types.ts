@@ -61,7 +61,7 @@ export type WorkEntry = {
   /* Narrative — every section below is optional except context */
   context: string[];
   /** For role entries: what you owned, in your own words. */
-  responsibilities?: { title: string; body: string }[];
+  responsibilities?: { title: string; body: string; media?: Media }[];
   goal?: string;
   constraints?: string[];
   research?: { insight: string; detail: string }[];
@@ -78,15 +78,6 @@ export type WorkEntry = {
 
 /** Kept as an alias so older imports keep reading naturally. */
 export type CaseStudy = WorkEntry;
-
-export type PlaygroundItem = {
-  title: string;
-  year: string;
-  blurb: string;
-  tags: string[];
-  href?: string;
-  media?: Media;
-};
 
 export type ResumeRole = {
   company: string;

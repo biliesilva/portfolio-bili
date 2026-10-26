@@ -3,6 +3,7 @@ import { hyperplay } from "./hyperplay";
 import { coinfello } from "./coinfello";
 import { heroic } from "./heroic";
 import { starbreeze } from "./starbreeze";
+import { apps } from "./apps";
 
 /**
  * Four entries, deliberately. Everything else lives on LinkedIn — a portfolio
@@ -13,6 +14,7 @@ export const caseStudies: WorkEntry[] = [
   coinfello,
   heroic,
   starbreeze,
+  apps,
 ].sort((a, b) => a.order - b.order);
 
 export const featuredCaseStudies = caseStudies.filter((c) => c.featured);

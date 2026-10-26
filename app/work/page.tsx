@@ -24,9 +24,10 @@ export default function WorkPage() {
           />
           <Reveal delay={0.2} className="mt-12 max-w-[52ch]">
             <p className="text-lead text-bone-dim">
-              Four pieces of work, told at the depth each one allows. Open
-              source gets the full case study; employed work gets scope and
-              practice without client internals. Everything else is on LinkedIn.
+              Told at the depth each one allows. Open source gets the full
+              case study; employed work gets scope and practice without client
+              internals; the apps are mine to show in full. Everything else is
+              on LinkedIn.
             </p>
           </Reveal>
         </div>

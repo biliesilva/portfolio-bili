@@ -23,9 +23,10 @@ export const heroic: WorkEntry = {
   stack: ["TypeScript", "React", "SCSS", "Electron", "Lucide", "Figma"],
 
   cover: {
-    src: "",
-    alt: "Heroic Games Launcher library redesigned with the Heroic Theme",
-    aspect: "16/10",
+    src: "/work/heroic/library.jpg",
+    alt: "The Heroic Games Launcher library, redesigned — Heroic Theme, Outfit, and the Lucide icon set in the sidebar",
+    caption: "The library after the redesign, running the Heroic Theme",
+    aspect: "16/9",
   },
 
   disclosure:
@@ -108,7 +109,12 @@ export const heroic: WorkEntry = {
         "Introduced Panel, SettingsCard, SettingRow, Alert, Tabs and SpecCard, then rebuilt the game page as a hero with a tabbed panel over the cover art and settings as cards.",
       why:
         "Spacing and structure now live in one place. The next contributor changes a component, not four screens.",
-      media: { src: "", alt: "Game page rebuilt as hero plus tabbed panel", aspect: "16/10" },
+      media: {
+        src: "/work/heroic/game-page.jpg",
+        alt: "Heroic game page: a hero with the play actions over the cover art, and a tabbed panel below it",
+        caption: "Game page — hero over cover art, with Overview, Installation Info and System Requirements as tabs",
+        aspect: "16/9",
+      },
     },
     {
       title: "Outlined icon system",
@@ -127,7 +133,12 @@ export const heroic: WorkEntry = {
       "Alongside the structural work I designed and shipped a new default: Heroic Theme — dark, minimal, cyan accent (#22d3ee) — registered in the theme picker next to the community themes rather than replacing them.",
       "The point was never my taste winning. The token layer underneath it is what lets 15 other themes look deliberate too.",
     ],
-    media: { src: "", alt: "Heroic Theme applied across library, game page and settings", aspect: "16/9" },
+    media: {
+      src: "/work/heroic/settings.jpg",
+      alt: "Heroic settings rebuilt on cards, with Heroic Theme selected in the theme picker",
+      caption: "Settings rebuilt on cards. The theme picker is set to Heroic Theme — the one I designed",
+      aspect: "16/9",
+    },
   },
 
   build: {

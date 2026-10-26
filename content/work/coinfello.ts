@@ -14,7 +14,7 @@ export const coinfello: WorkEntry = {
   order: 2,
 
   disclosure:
-    "Employed work under NDA. What follows is my scope and my practice — no product internals, no screens, no numbers.",
+    "Employed work under NDA. What I can show is the design system itself — components with placeholder content, which say how the system is built without saying anything about the business — plus the public marketing site. No product screens, no customer data, no internal numbers.",
 
   role: "Front-end Developer — design system owner",
   team: "Distributed team — US, Europe and LATAM",
@@ -23,8 +23,9 @@ export const coinfello: WorkEntry = {
   stack: ["TypeScript", "React", "Tailwind CSS", "Design tokens", "AI tooling"],
 
   cover: {
-    src: "",
-    alt: "CoinFello — design system and front-end work",
+    src: "/work/coinfello/button.jpg",
+    alt: "The CoinFello button component in Figma: brand, secondary, tertiary, danger and gradient variants across every state",
+    caption: "The button, in every variant and state it ships with",
     aspect: "16/10",
   },
 
@@ -38,16 +39,41 @@ export const coinfello: WorkEntry = {
     {
       title: "Built the design system from zero",
       body: "Token architecture, component library, and the conventions that keep an interface coherent while several people change it at once. Starting from nothing is a different job from maintaining something: every decision is load-bearing, and the ones you get wrong early are the ones you pay for all year.",
+      media: {
+        src: "/work/coinfello/chip.jpg",
+        alt: "The CoinFello chip component in Figma, with selected, size and state variants laid out as a matrix",
+        caption: "Chip — selected, size and state, as a matrix rather than a list of examples",
+        aspect: "3/2",
+      },
     },
     {
       title: "Implemented it myself, in code",
       body: "I wrote the system rather than specifying it. Design-system ownership from inside engineering means the component settles the question — there is no document for anyone to interpret differently six months later.",
+      media: {
+        src: "/work/coinfello/alert-cards.jpg",
+        alt: "CoinFello alert cards in Figma: error, warning, success, info and brand tones, each with its own icon",
+        caption: "Alert cards. The tone is a property, not five separate components",
+        aspect: "3/2",
+      },
     },
     {
       title: "Brought AI into the loop, deliberately",
       body: "Once the system was established I started using AI daily, and I review everything it produces the way I would review a junior's pull request. It moves the slow parts — scaffolding, migrations, the fourth variant of a component. What to build, what the component should actually do, and what to refuse stays mine.",
     },
   ],
+
+  system: {
+    title: "The system, shipped",
+    body: [
+      "The product is public. The yellow on the Launch app button is the same token as the yellow on the chip and the button in the files above — which is the only proof a design system really works: the thing in the file and the thing in production are the same thing.",
+    ],
+    media: {
+      src: "/work/coinfello/site.jpg",
+      alt: "The CoinFello website: Your Always On DeFi Super Agent, with the yellow primary button from the design system",
+      caption: "coinfello.com — the same tokens, in production",
+      aspect: "16/10",
+    },
+  },
 
   build: {
     body: [

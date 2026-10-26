@@ -180,12 +180,24 @@ async function CaseStudyArticle({ params }: Props) {
           <div className="mt-16">
             {study.responsibilities.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.05}>
-                <div className="hairline grid gap-6 py-8 md:grid-cols-12">
-                  <span className="holo-text font-display text-2xl font-medium leading-none tabular-nums md:col-span-1">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="text-title md:col-span-5">{item.title}</h3>
-                  <p className="max-w-[54ch] text-bone-dim md:col-span-6">{item.body}</p>
+                <div className="hairline py-8">
+                  <div className="grid gap-6 md:grid-cols-12">
+                    <span className="holo-text font-display text-2xl font-medium leading-none tabular-nums md:col-span-1">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="text-title md:col-span-5">{item.title}</h3>
+                    <p className="max-w-[54ch] text-bone-dim md:col-span-6">
+                      {item.body}
+                    </p>
+                  </div>
+                  {item.media ? (
+                    <div className="mt-10 md:ml-[8.333%] md:w-[91.666%]">
+                      <MediaFrame
+                        media={item.media}
+                        sizes="(min-width: 768px) 85vw, 100vw"
+                      />
+                    </div>
+                  ) : null}
                 </div>
               </Reveal>
             ))}

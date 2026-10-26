@@ -1,58 +1,35 @@
 # Shot list
 
-Drop files here with exactly these names, then tell me and I'll wire up the
-`src` fields. Until a file exists its slot renders as a labelled placeholder —
-don't set `src` for a file you haven't added, or the image will 404.
+Most images are in. What is left:
 
-**Format:** JPG for photographs and screenshots, PNG only when you need
-transparency. Export at roughly 2× the display width — 2400px wide is plenty
-for anything full-bleed. Keep each file under ~500 KB; Next.js re-encodes and
-serves modern formats on top of whatever you provide.
-
----
-
-## 1. Heroic Games Launcher — `public/work/heroic/`
-Open source. Nothing here is restricted, so this is the set to do first:
-it carries the visual weight of the whole site on its own.
+## Payday 2 — `public/work/starbreeze/`
+You said the achievement icons and some menu icons between 2021 and 2022 are
+yours. I cannot identify which ones from the outside, and Steam is unreachable
+from here, so these have to come from you:
 
 | File | Ratio | What it shows |
 | --- | --- | --- |
-| `cover.jpg` | 16:10 | Library redesigned with the Heroic Theme |
-| `tokens.jpg` | 16:9 | The same component rendered across several of the 15 themes, side by side — this is the proof the token layer works |
-| `type-scale.jpg` | 4:3 | The type scale with its semantic token names |
-| `modal.jpg` | 16:9 | Modal anatomy: the size and tone variants together |
-| `game-page.jpg` | 16:10 | Game page as hero plus tabbed panel over the cover art |
-| `theme.jpg` | 16:9 | Heroic Theme across library, game page and settings |
+| `centre-dot.jpg` | 16:9 | **The most valuable image left.** HUD with the centre dot enabled — your accessibility feature, working, in a shipped AAA game |
+| `icons.jpg` | 16:10 | The achievement icons and menu icons you made, cropped into a grid on a neutral background |
+| `cover.jpg` | 16:10 | Main menu or the inventory screen |
 
-## 2. Starbreeze — Payday 2 — `public/work/starbreeze/`
-You don't need the source files. The game shipped; capture the retail build
-(Steam: F12). Confirm with Starbreeze if you're unsure about anything specific.
+How to capture: open the game and press F12 for in-game shots. For the
+achievement icons, open your own achievements page on Steam, crop the ones you
+made, and arrange them on a plain background. Credit them as Starbreeze work in
+the caption — that is the normal convention and it protects you.
 
+## Android apps — `public/work/apps/`
 | File | Ratio | What it shows |
 | --- | --- | --- |
-| `centre-dot.jpg` | 16:9 | **The most important image on the site.** HUD with the centre dot enabled — your accessibility feature, working, in a shipped AAA game |
-| `cover.jpg` | 16:10 | Main menu, or the inventory/mask screen |
-| *(optional)* `icons.jpg` | 16:10 | Your 2D icons and items cropped into a grid on a neutral background. Art directors look closely at this kind of sheet |
+| `cover.jpg` | 16:10 | One hero screen from Remote Work and one from HeavyMuscle, side by side |
 
-## 3. HyperPlay — `public/work/hyperplay/`
-Optional. The role format doesn't promise an image, so leave it empty if
-you'd rather not. If the launcher UI is publicly released, `cover.jpg` at 16:10.
+A screen recording turned into a still, or a plain device frame, both work.
+Avoid the glossy Play Store marketing templates: they read as advertising
+rather than as design work.
 
-## 4. CoinFello — `public/work/coinfello/`
-Optional, same reasoning. Under NDA, the honest answer is no image.
+## Format
+JPG, around 2400px wide, under ~500 KB. Next.js re-encodes and serves modern
+formats on top of whatever you provide.
 
-## 5. Playground — `public/playground/`
-All 4:3. Only add the ones you actually want to show.
-
-| File | What it shows |
-| --- | --- |
-| `heroic-modal.jpg` | Modal variants: default, destructive, error |
-| `heroic-tokens.jpg` | One component across six themes |
-| `flashflow.jpg` | FlashFlow deck management and a review session |
-| `flashcard.jpg` | The flip-card interaction |
-| `book-manager.jpg` | The responsive book management interface |
-| `letmeask.jpg` | The live Q&A room |
-| `happy.jpg` | Happy web and mobile screens |
-
-## 6. Portrait — already done
-`public/about/portrait.jpg` is in place and used on both the homepage and About.
+Do not set the `src` field for a file that does not exist yet — the image will
+break. Add the file, then tell me and I will wire it up.

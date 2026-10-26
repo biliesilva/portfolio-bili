@@ -11,7 +11,7 @@ export function FeaturedWork() {
       <SectionHead
         index="01"
         label="Selected work"
-        title="Four pieces of work, told properly."
+        title="Five pieces of work, told properly."
       />
 
       <div className="mt-20 space-y-28 md:space-y-40">

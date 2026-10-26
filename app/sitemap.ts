@@ -7,7 +7,7 @@ const lastModified = "2026-10-23";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
-  const staticRoutes = ["", "/work", "/about", "/playground", "/resume", "/contact"].map(
+  const staticRoutes = ["", "/work", "/about", "/resume", "/contact"].map(
     (path) => ({
       url: `${site.url}${path}`,
       lastModified,

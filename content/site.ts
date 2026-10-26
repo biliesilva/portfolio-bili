@@ -90,7 +90,6 @@ export const site = {
   nav: [
     { label: "Work", href: "/work" },
     { label: "About", href: "/about" },
-    { label: "Playground", href: "/playground" },
     { label: "Contact", href: "/contact" },
   ],
 } as const;
