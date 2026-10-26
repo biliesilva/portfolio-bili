@@ -21,7 +21,7 @@ export const apps: WorkEntry = {
   stack: ["Figma", "TypeScript", "React Native"],
 
   cover: {
-    src: "/work/apps/cover.jpg",
+    src: "/work/apps/both-apps.jpg",
     alt: "Remote Work and HeavyMuscle side by side: a filtered job list with applied status on each card, and a training day with muscle-recovery state above the exercise list",
     caption: "Both live on Google Play",
     aspect: "16/10",
@@ -37,7 +37,7 @@ export const apps: WorkEntry = {
       title: "Designed both apps",
       body: "Flows, interface and visual language for a job board and a training log — two products with no patterns in common.",
       media: {
-        src: "/work/apps/remotework.jpg",
+        src: "/work/apps/remotework-jobs.jpg",
         alt: "Remote Work job list: each card carries the role, company and date, with a save action, an overflow menu, and an Applied marker once you have applied",
         caption: "The job list. Applied state sits on the card, so you never apply twice",
         aspect: "9/16",
@@ -47,7 +47,7 @@ export const apps: WorkEntry = {
       title: "Built the front end",
       body: "Implemented both interfaces. HeavyMuscle is offline-first, so it stays usable in a gym with no signal.",
       media: {
-        src: "/work/apps/heavymuscle.jpg",
+        src: "/work/apps/heavymuscle-day.jpg",
         alt: "HeavyMuscle training day: a five-day split with the current day expanded, muscle-recovery state per muscle group, and each exercise carrying its sets, reps, rest and a coaching note",
         caption: "A training day, with recovery state above the work",
         aspect: "9/16",
