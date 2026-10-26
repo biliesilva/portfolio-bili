@@ -22,7 +22,7 @@ export const apps: WorkEntry = {
 
   cover: {
     src: "/work/apps/cover.jpg",
-    alt: "Remote Work and HeavyMuscle side by side: a job posting opened as a sheet, and a training day with muscle-recovery state above the exercise list",
+    alt: "Remote Work and HeavyMuscle side by side: a filtered job list with applied status on each card, and a training day with muscle-recovery state above the exercise list",
     caption: "Both live on Google Play",
     aspect: "16/10",
   },
@@ -38,8 +38,8 @@ export const apps: WorkEntry = {
       body: "Flows, interface and visual language for a job board and a training log — two products with no patterns in common.",
       media: {
         src: "/work/apps/remotework.jpg",
-        alt: "Remote Work: the full job posting opens as a sheet over the listings, with a single apply action pinned to the bottom",
-        caption: "Remote Work — the whole posting before you decide",
+        alt: "Remote Work job list: each card carries the role, company and date, with a save action, an overflow menu, and an Applied marker once you have applied",
+        caption: "The job list. Applied state sits on the card, so you never apply twice",
         aspect: "9/16",
       },
     },
