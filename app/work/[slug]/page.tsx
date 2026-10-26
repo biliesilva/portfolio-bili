@@ -144,7 +144,13 @@ async function CaseStudyArticle({ params }: Props) {
       {/* Context, goal, constraints */}
       <section className="container-edge py-16">
         <div className="grid gap-16 md:grid-cols-12">
-          <div className="md:col-span-7">
+          <div
+            className={
+              study.goal || study.constraints?.length
+                ? "md:col-span-7"
+                : "md:col-span-10"
+            }
+          >
             <SectionHead index={n()} label="Context" />
             <div className="mt-10 space-y-6">
               {study.context.map((paragraph, i) => (
@@ -263,12 +269,25 @@ async function CaseStudyArticle({ params }: Props) {
             {study.decisions.map((decision, i) => (
               <Reveal key={decision.title} y={36}>
                 <div className="grid gap-12 md:grid-cols-12">
-                  <div className="md:col-span-5">
+                  {/* Without an image there is no second column to balance, so
+                      the text spreads instead of leaving half the row empty. */}
+                  <div
+                    className={cn(
+                      decision.media ? "md:col-span-5" : "md:col-span-12"
+                    )}
+                  >
                     <span className="holo-text font-display text-xl font-medium">
                       Decision {String(i + 1).padStart(2, "0")}
                     </span>
                     <h3 className="mt-6 text-title">{decision.title}</h3>
-                    <dl className="mt-10 space-y-8">
+                    <dl
+                      className={cn(
+                        "mt-10",
+                        decision.media
+                          ? "space-y-8"
+                          : "grid gap-x-10 gap-y-8 md:grid-cols-3"
+                      )}
+                    >
                       <div>
                         <dt className="label">Problem</dt>
                         <dd className="mt-3 max-w-[48ch] text-bone-dim">
