@@ -47,7 +47,6 @@ export function Footer() {
             <span>
               &copy; <Year /> {site.name}
             </span>
-            <span>Built with Next.js — designed and coded by me</span>
           </div>
         </div>
       </div>
