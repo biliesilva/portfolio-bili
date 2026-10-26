@@ -3,7 +3,7 @@ import { site } from "@/content/site";
 import { caseStudies } from "@/content/work";
 
 /** Bump when the content changes — a prerendered `new Date()` would be a lie anyway. */
-const lastModified = "2026-10-23";
+const lastModified = "2026-10-26";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 

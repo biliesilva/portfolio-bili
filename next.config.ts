@@ -4,6 +4,12 @@ const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
+  // The OG route reads the brand font from disk at render time. File tracing
+  // does not follow a runtime readFile, so the font has to be declared or the
+  // route fails once deployed.
+  outputFileTracingIncludes: {
+    "/opengraph-image": ["./assets/**/*"],
+  },
   images: {
     // Next 16 only serves qualities on this list, and defaults to [75].
     // UI screenshots have fine text that 75 visibly smears.

@@ -37,7 +37,6 @@ export default function ResumePage() {
               .join(" · ")}
           </p>
           <Reveal delay={0.2} className="mt-10 flex flex-wrap gap-4 print:hidden">
-            {/* TODO: export a PDF and drop it at /public/biliane-silva-resume.pdf */}
             <ButtonLink href="/biliane-silva-resume.pdf" external>
               Download PDF
             </ButtonLink>
