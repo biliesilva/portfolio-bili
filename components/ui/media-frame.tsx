@@ -18,6 +18,9 @@ export function MediaFrame({
   priority?: boolean;
   sizes?: string;
 }) {
+  // Nothing to show is better than a labelled empty box.
+  if (!media.src) return null;
+
   const aspect = media.aspect ?? "16/10";
 
   return (
@@ -26,18 +29,15 @@ export function MediaFrame({
         className="relative w-full overflow-hidden rounded-sm bg-ink-raised"
         style={{ aspectRatio: aspect }}
       >
-        {media.src ? (
-          <Image
-            src={media.src}
-            alt={media.alt}
-            fill
-            sizes={sizes}
-            priority={priority}
-            className="object-cover"
-          />
-        ) : (
-          <Placeholder alt={media.alt} aspect={aspect} />
-        )}
+        <Image
+          src={media.src}
+          alt={media.alt}
+          fill
+          sizes={sizes}
+          priority={priority}
+          quality={92}
+          className="object-cover"
+        />
       </div>
       {media.caption ? (
         <figcaption className="label mt-3">{media.caption}</figcaption>
@@ -46,20 +46,3 @@ export function MediaFrame({
   );
 }
 
-function Placeholder({ alt, aspect }: { alt: string; aspect: string }) {
-  return (
-    <div
-      className="absolute inset-0 flex flex-col justify-between p-5"
-      style={{
-        backgroundImage:
-          "repeating-linear-gradient(135deg, transparent 0 11px, rgba(242,240,234,0.035) 11px 12px)",
-      }}
-      aria-hidden="true"
-    >
-      <span className="label text-bone-faint">Image pending · {aspect}</span>
-      <span className="max-w-[48ch] font-display text-base leading-relaxed text-bone-faint">
-        {alt}
-      </span>
-    </div>
-  );
-}

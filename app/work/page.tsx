@@ -39,7 +39,7 @@ export default function WorkPage() {
 
       <MoreExperience />
 
-      <ContactCta heading="Want the version with the Figma files open?" />
+      <ContactCta heading="Want to walk through any of it?" />
     </>
   );
 }

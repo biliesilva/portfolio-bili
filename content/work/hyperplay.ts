@@ -1,6 +1,5 @@
 import type { WorkEntry } from "../types";
 
-/** NDA-safe by construction: scope and practice, no product internals. */
 export const hyperplay: WorkEntry = {
   slug: "hyperplay",
   kind: "role",
@@ -8,13 +7,13 @@ export const hyperplay: WorkEntry = {
   client: "HyperPlay — Texas, United States",
   year: "2022 — 2026",
   summary:
-    "Three and a half years on a web3 game launcher — product design and research in the design team, then front-end work on the same interface in the engineering team.",
+    "Three and a half years on a web3 game launcher. Product design and research in the design team, then front-end work on the same interface in the engineering team.",
   disciplines: ["Product Design", "Design Systems", "Front-end", "UI/UX"],
   featured: true,
   order: 1,
 
   disclosure:
-    "Employed work, done inside teams. What follows is my part — the design team and the engineering team built this together, and I am not claiming the whole of it. The screens here are from the publicly released launcher; unreleased work, internal metrics and proprietary code stay out.",
+    "Employed work, done inside teams. This is my part, not the whole project. The screens below are from the publicly released launcher.",
 
   role: "Product Designer (2022—2025) → Front-end Developer (2024—2026)",
   team: "Design team, then engineering team — distributed across the US, Europe and LATAM",
@@ -25,67 +24,66 @@ export const hyperplay: WorkEntry = {
   cover: {
     src: "/work/hyperplay/discover.jpg",
     alt: "HyperPlay discover page: featured hero carousel, a ranked most-popular list, quests and new releases",
-    caption: "The discover page — hero, ranked list, quests, new releases",
+    caption: "The discover page",
     aspect: "4/5",
   },
 
   context: [
-    "HyperPlay is a game launcher for web3 games, built by a team spread across the US, Europe and Latin America. I joined the design team in 2022 as a product designer and stayed almost four years — long enough to see the same decisions come back around, which is the difference between working on a product and working on a deliverable.",
-    "The design side was the full practice, not just screens: user research, interviews, prototypes, and the component library we built from. I was responsible for the design system within the design team.",
-    "In late 2024 I moved into the engineering team as a front-end developer on the same product, writing my share of it by hand, before I used AI for any of my work. Same interface, same system, different side of the hand-off. It is the clearest thing on my CV about how I like to work: I would rather follow a decision all the way into the build than specify it and hope.",
+    "HyperPlay is a game launcher for web3 games, built by a team spread across the US, Europe and Latin America. I joined the design team in 2022 and stayed almost four years.",
+    "In late 2024 I moved to the engineering team as a front-end developer on the same product, working in TypeScript and React. I wrote all of it by hand — this was before I used AI for any of my work.",
   ],
 
   responsibilities: [
     {
       title: "Research and interviews",
-      body: "I ran user research and interviews rather than designing from assumptions — the part of product design that decides whether anything after it is worth building.",
+      body: "Ran user research and interviews, and turned the findings into flows and prototypes the team could review before anything was built.",
     },
     {
-      title: "Prototypes and flows",
-      body: "Flows and interactive prototypes used to settle questions before they became engineering cost, and to give the team something concrete to disagree with.",
+      title: "Product design for the launcher",
+      body: "Flows, screens and interactive prototypes — the store, the game pages, quests and the library.",
       media: {
         src: "/work/hyperplay/game-page.jpg",
         alt: "A HyperPlay game page: gallery, metadata, quests, on-chain assets, system requirements and changelog",
-        caption: "A game page end to end — gallery, quests, on-chain assets, requirements, changelog",
+        caption: "A game page end to end",
         aspect: "9/16",
       },
     },
     {
-      title: "Components and the design system",
-      body: "Within the design team I was responsible for the design system — token architecture, library and documented states — and built components for it. Keeping it usable by the engineers consuming it was the actual job, rather than a side effect of it.",
+      title: "The design system",
+      body: "Within the design team I was responsible for the design system: token architecture, component library and documented states, kept usable by the engineers consuming it.",
       media: {
         src: "/work/hyperplay/combobox.jpg",
-        alt: "The HyperPlay Combobox component in Figma: every combination of type, state, open, valid and required",
-        caption: "One component, every state it can be in. Single and multiple, hover through disabled, open and closed, valid and not, required and optional",
+        alt: "The HyperPlay Combobox component in Figma, with every combination of type, state, open, valid and required",
+        caption: "Combobox — single and multiple, every state, open and closed, valid and not",
         aspect: "4/3",
       },
     },
     {
-      title: "Then built it with the engineering team",
-      body: "As a front-end developer I worked on the launcher interface in TypeScript and React alongside the rest of the engineering team. No AI in any of it — this was the year I learned what my own code looks like under someone else's review, which is why I can review an assistant's today.",
+      title: "Front-end in the engineering team",
+      body: "TypeScript and React on the launcher interface, alongside the rest of the engineering team. No AI in any of it.",
     },
     {
-      title: "Supported the people using it",
-      body: "For over a year I also did content and player support — testing games, troubleshooting with players and game developers. Unglamorous, and the fastest feedback loop I have ever had on my own design decisions.",
+      title: "Content and player support",
+      body: "For over a year I also tested games and troubleshot with players and game developers.",
     },
   ],
 
   system: {
-    title: "Components that had to survive a platform",
+    title: "One header, five platform states",
     body: [
-      "The launcher runs as a desktop client and as a website, signed in and signed out, on desktop and on mobile. A navigation header is four different components if you let it become four — so it stayed one, with the platform as a property.",
+      "The launcher runs as a desktop client and as a website, signed in and signed out, on desktop and on mobile. The navigation header covers all of it as one component, with the platform as a property.",
     ],
     media: {
       src: "/work/hyperplay/navigation.jpg",
       alt: "The HyperPlay navigation header in Figma, with variants for desktop client, website, and mobile signed in, signed out and open",
-      caption: "One navigation header, five platform states",
+      caption: "Navigation header — all platform variants",
       aspect: "16/9",
     },
   },
 
   build: {
     body: [
-      "The craft here is the same craft you can inspect in full in my open-source work on Heroic Games Launcher, where every pull request, review conversation and decision is public on GitHub.",
+      "The same craft is public in my open-source work on Heroic Games Launcher, where every pull request and review conversation can be read on GitHub.",
     ],
     notes: [
       { value: "3y 8m", label: "On the same product" },

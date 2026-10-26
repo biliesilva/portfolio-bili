@@ -34,6 +34,7 @@ export function Portrait({
           width={1450}
           height={1800}
           priority={priority}
+          quality={92}
           sizes={sizes}
           className="aspect-[4/5] h-auto w-full object-cover"
         />

@@ -12,7 +12,7 @@ export const about = {
   },
   bio: [
     "I'm a product designer and front-end developer from Maceió, Brazil. I've designed for a decade and I spent the last four years on game launchers — first as a product designer, then as the developer shipping the same interface.",
-    "At HyperPlay I worked in the design team — research, interviews, prototypes, components, and responsibility for the design system — then joined the engineering team and worked on the same interface in React. At CoinFello I built the design system from scratch and implemented it myself. The through-line is the hand-off: I kept ending up on the other side of it, so eventually I stopped crossing back.",
+    "At HyperPlay I worked in the design team — research, interviews, prototypes, components, and responsibility for the design system — then joined the engineering team and worked on the same interface in React. At CoinFello I built the design system and implemented it myself. The through-line is the hand-off: I kept ending up on the other side of it, so eventually I stopped crossing back.",
     "I wrote production front-end for a year before I used AI for any of it. I use it daily now and review everything it produces, but that order matters — you can't review what an assistant writes if you've never built the thing yourself.",
     "The work I can show you in full is open source. In 2020 I led the validation research — desk research and interviews with Linux users — that established Heroic Games Launcher was worth building. It now has over 500,000 monthly users, and I've designed for it ever since, and written its front-end since 2025. Every decision I made there is a public pull request you can read, argue with, and check against what I say here.",
     "In 2021 and 2022 I was at Starbreeze in Stockholm, doing quality-of-life UI on Payday 2 and making the game's 2D assets in Photoshop and Illustrator, then bringing them into the build myself. Before design was anyone's job title for me, there were years of freelance in Brazil building client sites on WordPress and Joomla — designing them and shipping them. That is where the habit started, and I have not managed to shake it.",
@@ -52,7 +52,7 @@ export const about = {
     { group: "Process", items: ["Git & code review", "AI-assisted workflow", "Design systems", "Analytics", "Async writing"] },
   ],
   timeline: [
-    { year: "2025 — 2026", event: "Front-end Developer, CoinFello (US) — built the design system from scratch" },
+    { year: "2025 — 2026", event: "Front-end Developer, CoinFello (US) — built and implemented the design system" },
     { year: "2024 — 2026", event: "Front-end Developer, HyperPlay (Texas, US)" },
     { year: "2022 — 2025", event: "Product Designer, HyperPlay — responsible for the design system" },
     { year: "2021 — 2022", event: "UI/UX Designer, Starbreeze Entertainment — Payday 2, on-site in Stockholm" },

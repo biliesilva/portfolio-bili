@@ -9,10 +9,18 @@ import {
   kindLabel,
 } from "@/content/work";
 import { MediaFrame } from "@/components/ui/media-frame";
+import { cn } from "@/lib/cn";
 import { Reveal, RevealWords } from "@/components/ui/reveal";
 import { SectionHead } from "@/components/ui/section-head";
 
 type Props = { params: Promise<{ slug: string }> };
+
+/** "9/16" and the like — taller than it is wide. */
+function isPortrait(aspect?: string) {
+  if (!aspect) return false;
+  const [w, h] = aspect.split("/").map(Number);
+  return Boolean(w && h && h > w);
+}
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
@@ -191,10 +199,23 @@ async function CaseStudyArticle({ params }: Props) {
                     </p>
                   </div>
                   {item.media ? (
-                    <div className="mt-10 md:ml-[8.333%] md:w-[91.666%]">
+                    <div
+                      className={cn(
+                        "mt-10 md:ml-[8.333%]",
+                        // A phone screenshot blown up to full width is both odd
+                        // and soft; portrait media gets a narrow column.
+                        isPortrait(item.media.aspect)
+                          ? "md:w-[34%]"
+                          : "md:w-[91.666%]"
+                      )}
+                    >
                       <MediaFrame
                         media={item.media}
-                        sizes="(min-width: 768px) 85vw, 100vw"
+                        sizes={
+                          isPortrait(item.media.aspect)
+                            ? "(min-width: 768px) 32vw, 100vw"
+                            : "(min-width: 768px) 85vw, 100vw"
+                        }
                       />
                     </div>
                   ) : null}
@@ -294,10 +315,20 @@ async function CaseStudyArticle({ params }: Props) {
               ))}
             </div>
             {study.system.media ? (
-              <div className="md:col-span-7">
+              <div
+                className={cn(
+                  isPortrait(study.system.media.aspect)
+                    ? "md:col-span-4 md:col-start-8"
+                    : "md:col-span-7"
+                )}
+              >
                 <MediaFrame
                   media={study.system.media}
-                  sizes="(min-width: 768px) 58vw, 100vw"
+                  sizes={
+                    isPortrait(study.system.media.aspect)
+                      ? "(min-width: 768px) 32vw, 100vw"
+                      : "(min-width: 768px) 58vw, 100vw"
+                  }
                 />
               </div>
             ) : null}
@@ -308,11 +339,7 @@ async function CaseStudyArticle({ params }: Props) {
       {/* Build */}
       {study.build ? (
         <section className="container-edge py-16">
-          <SectionHead
-            index={n()}
-            label="Build"
-            title="The part that only exists because I write code."
-          />
+          <SectionHead index={n()} label="Build" title={study.build.title} />
           <div className="mt-16 grid gap-12 md:grid-cols-12">
             <div className="space-y-6 md:col-span-6">
               {study.build.body.map((paragraph, i) => (

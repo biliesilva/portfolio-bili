@@ -28,16 +28,16 @@ export function Hero() {
           </span>
         </h1>
 
-        <div className="mt-12 grid items-end gap-10 md:mt-14 md:grid-cols-12">
+        <div className="mt-12 grid items-end gap-8 md:mt-14 md:grid-cols-12 md:gap-10">
           <Reveal delay={0.45} className="md:col-span-3">
             <Portrait
               priority
-              className="w-36 md:w-full md:max-w-[14rem]"
-              sizes="(min-width: 768px) 14rem, 9rem"
+              className="w-32 sm:w-40 md:w-full md:max-w-[15rem]"
+              sizes="(min-width: 768px) 15rem, 10rem"
             />
           </Reveal>
 
-          <Reveal delay={0.35} className="md:col-span-6 md:col-start-7">
+          <Reveal delay={0.35} className="md:col-span-8 md:col-start-5">
             <p className="max-w-[46ch] text-lead text-bone-dim">
               Product designer and front-end developer from Maceió, Brazil.
               I&apos;ve been responsible for the design system at two companies

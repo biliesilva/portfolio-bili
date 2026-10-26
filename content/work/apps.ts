@@ -1,9 +1,5 @@
 import type { WorkEntry } from "../types";
 
-/**
- * Two shipped Android apps, built with her husband: she did the design and the
- * front end. Public on Google Play, so everything here is verifiable.
- */
 export const apps: WorkEntry = {
   slug: "android-apps",
   kind: "project",
@@ -11,59 +7,71 @@ export const apps: WorkEntry = {
   client: "Independent — with my husband",
   year: "2025 — 2026",
   summary:
-    "Two Android apps built as a pair: I did the design and the front end. Remote Work is past 100,000 installs.",
+    "Two Android apps built as a pair: I did the design and the front end, he did the back end. Remote Work is past 100,000 installs.",
   disciplines: ["Product Design", "Front-end", "UI/UX"],
   featured: true,
   order: 5,
 
-  disclosure:
-    "Ours, start to finish. Both are live on Google Play — install them and you are looking at the work.",
+  disclosure: "Ours. Both are live on Google Play.",
 
   role: "Product design & front-end",
-  team: "Two people — my husband on the back end, me on design and front end",
+  team: "Two people",
   timeline: "Ongoing",
   platforms: ["Android"],
   stack: ["Figma", "TypeScript", "React Native"],
 
   cover: {
     src: "/work/apps/cover.jpg",
-    alt: "Remote Work and HeavyMuscle side by side: a job posting detail sheet, and the AI coach building a workout",
-    caption: "Remote Work and HeavyMuscle, both live on Google Play",
+    alt: "Remote Work and HeavyMuscle side by side: a job posting opened as a sheet, and a training day with muscle-recovery state above the exercise list",
+    caption: "Both live on Google Play",
     aspect: "16/10",
   },
 
   context: [
-    "Two products, built with my husband, where I owned the design and the front end and he owned the back end. Small team, no brief, no stakeholders — which means every interface decision was mine to make and mine to answer for when the reviews came in.",
-    "Remote Work aggregates remote job listings from Remote OK, We Work Remotely, Remotive, Remote.co and Web3.career into one app across 30+ categories, with a CV builder inside it. It is past 100,000 installs.",
-    "HeavyMuscle is a gym app with an AI coach that builds a plan from a single sentence and reshapes each session around your injuries, equipment and recovery. It shows the plates to load before you touch the bar, generates warm-up sets, pre-fills every set with your last numbers, and detects PRs automatically. 873 animated exercises, six languages, fully offline.",
+    "Remote Work pulls remote job listings from Remote OK, We Work Remotely, Remotive, Remote.co and Web3.career into one app, across 30+ categories, with a CV builder inside it. It is past 100,000 installs.",
+    "HeavyMuscle is a gym app. An AI coach builds a plan from one sentence and adjusts each session to your injuries, equipment and recovery. It shows the plates to load, generates warm-up sets, pre-fills every set with your last numbers and detects PRs. 873 animated exercises, six languages, fully offline.",
   ],
 
   responsibilities: [
     {
-      title: "Designed both products",
-      body: "Flows, interface and the visual language for two apps with nothing in common except the person designing them — a job board and a training log pull in opposite directions, and neither could borrow the other's patterns.",
+      title: "Designed both apps",
+      body: "Flows, interface and visual language for a job board and a training log — two products with no patterns in common.",
       media: {
         src: "/work/apps/remotework.jpg",
         alt: "Remote Work: the full job posting opens as a sheet over the listings, with a single apply action pinned to the bottom",
-        caption: "Remote Work — the whole posting, before you decide",
+        caption: "Remote Work — the whole posting before you decide",
         aspect: "9/16",
       },
     },
     {
       title: "Built the front end",
-      body: "Implemented the interfaces myself. On HeavyMuscle that meant an offline-first app that stays usable in a gym with no signal, which is a constraint that changes almost every screen.",
+      body: "Implemented both interfaces. HeavyMuscle is offline-first, so it stays usable in a gym with no signal.",
       media: {
         src: "/work/apps/heavymuscle.jpg",
-        alt: "HeavyMuscle: the AI coach turns one sentence into a full session, with sets, reps and rest already filled in",
-        caption: "HeavyMuscle — a full workout from a sentence",
+        alt: "HeavyMuscle training day: a five-day split with the current day expanded, muscle-recovery state per muscle group, and each exercise carrying its sets, reps, rest and a coaching note",
+        caption: "A training day, with recovery state above the work",
         aspect: "9/16",
       },
     },
     {
-      title: "Shipped to real users, and read the reviews",
-      body: "Store listings, screenshots and release notes included. Public ratings are the least forgiving usability test there is, and the only one that never stops running.",
+      title: "Shipped and maintained them",
+      body: "Store listings, screenshots and release notes included. Public ratings are the feedback loop.",
     },
   ],
+
+  system: {
+    title: "The screen that runs forty times a session",
+    body: [
+      "Logging a set happens constantly, standing up, often with no signal. Every control is thumb-sized and pre-filled with your last numbers, so the common case is two taps.",
+      "Time elapsed, sets left and estimated calories stay pinned while you scroll.",
+    ],
+    media: {
+      src: "/work/apps/heavymuscle-session.jpg",
+      alt: "HeavyMuscle live session: elapsed and remaining time, sets completed and calories pinned at the top, each set logged as weight by reps with a confirm circle, and swap, skip, rest and notes controls under the exercise",
+      caption: "Mid-session — weight by reps, one tap to confirm",
+      aspect: "9/16",
+    },
+  },
 
   outcome: {
     metrics: [
@@ -72,7 +80,7 @@ export const apps: WorkEntry = {
       { value: "6", label: "Languages supported" },
     ],
     body: [
-      "Both are live on Google Play. Remote Work has passed 100,000 installs; HeavyMuscle is newer and currently rated 5.0.",
+      "Remote Work has passed 100,000 installs. HeavyMuscle is newer and currently rated 5.0.",
     ],
   },
 };

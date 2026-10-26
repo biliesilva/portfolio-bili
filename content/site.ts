@@ -54,7 +54,7 @@ export const site = {
     },
     {
       title: "Design Systems",
-      body: "Responsible for the design system at two companies — and at CoinFello I built it from scratch and implemented it in code myself. Tokens, components, documented states, kept usable by the engineers consuming it.",
+      body: "Responsible for the design system at two companies. At CoinFello I built it and implemented it in code myself. Tokens, components, documented states, kept usable by the engineers consuming it.",
       items: ["Design tokens", "Component libraries", "Figma architecture", "Documentation", "WCAG 2.2 AA"],
     },
     {
@@ -75,7 +75,7 @@ export const site = {
   proof: [
     { value: "2010", label: "Designing since", note: "Graphic, then product" },
     { value: "500k+", label: "Monthly users", note: "Heroic Games Launcher" },
-    { value: "1", label: "Design system from zero", note: "Built and shipped by me" },
+    { value: "2", label: "Design systems owned", note: "One of them built by me" },
     { value: "3", label: "Languages", note: "English, Portuguese, Spanish" },
   ],
 

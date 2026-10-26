@@ -67,7 +67,7 @@ export type WorkEntry = {
   research?: { insight: string; detail: string }[];
   decisions?: Decision[];
   system?: { title: string; body: string[]; media?: Media };
-  build?: { body: string[]; notes: Metric[] };
+  build?: { title?: string; body: string[]; notes: Metric[] };
   outcome?: {
     metrics?: Metric[];
     body: string[];
