@@ -280,26 +280,157 @@
 }
 
 /* ---------------------------------------------------------------
-   Print — the résumé has to survive being printed to PDF
+   Print — the résumé is what gets attached to an application, so it
+   has to survive export to PDF: ink on white, no gradients, no
+   decoration, and short enough that someone reads all of it.
    --------------------------------------------------------------- */
 @media print {
+  @page {
+    size: A4;
+    margin: 12mm 13mm 13mm;
+  }
+
   html,
   body {
     background: #fff !important;
-    color: #000 !important;
+    color: #111 !important;
+    font-size: 9.5pt;
+    line-height: 1.35;
   }
+
   header,
   footer,
   .grain,
   [data-print-hide] {
     display: none !important;
   }
+
   main {
     padding: 0 !important;
   }
-  a[href^="http"]::after {
+
+  .container-edge {
+    max-width: none;
+    padding-inline: 0 !important;
+  }
+
+  /* Sections must not reserve a page each — only the smallest units are
+     protected from splitting. */
+  section {
+    padding-block: 0 !important;
+    margin: 0 0 5mm !important;
+    break-inside: auto;
+  }
+
+  section > * {
+    margin-top: 0 !important;
+  }
+
+  article,
+  li,
+  dt,
+  dd {
+    break-inside: avoid;
+  }
+
+  article {
+    margin-bottom: 3.5mm !important;
+    padding-top: 2.5mm !important;
+  }
+
+  h2 {
+    break-after: avoid;
+  }
+
+  /* Gradient text renders as nothing on paper. */
+  .holo-text,
+  .holo-surface {
+    background: none !important;
+    animation: none !important;
+    color: #111 !important;
+    -webkit-text-fill-color: #111 !important;
+  }
+
+  .text-bone-dim,
+  .text-bone-faint,
+  .label {
+    color: #4a4a4a !important;
+  }
+
+  .hairline,
+  [class*="border-ink-line"] {
+    border-color: #d4d4d4 !important;
+  }
+
+  /* The hairline-grid trick paints a dark sheet behind a 1px gap. */
+  [class*="bg-ink-line"] {
+    background: #d4d4d4 !important;
+    gap: 1px !important;
+  }
+
+  [class*="bg-ink-raised"],
+  .bg-ink {
+    background: #fff !important;
+  }
+
+  [class*="bg-ink-line"] > * {
+    padding: 3mm !important;
+  }
+
+  h1,
+  .text-display,
+  .text-hero {
+    font-size: 20pt !important;
+    line-height: 1.02 !important;
+    margin: 0 0 1mm !important;
+  }
+
+  h2,
+  .text-headline {
+    font-size: 12pt !important;
+    line-height: 1.1 !important;
+  }
+
+  h3,
+  .text-title {
+    font-size: 10.5pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .text-lead {
+    font-size: 9.5pt !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Tighten the generous screen rhythm. */
+  [class*="mt-1"],
+  [class*="mt-2"],
+  [class*="pt-1"],
+  [class*="py-1"],
+  [class*="py-2"],
+  [class*="space-y-"] > * + * {
+    margin-top: 1.6mm !important;
+  }
+
+  ul,
+  ol {
+    margin-top: 1.6mm !important;
+  }
+
+  li + li {
+    margin-top: 1mm !important;
+  }
+
+  a[href^="http"]::after,
+  a[href^="mailto"]::after {
     content: " (" attr(href) ")";
-    font-size: 0.75em;
-    color: #555;
+    font-size: 0.8em;
+    color: #666;
+    word-break: break-all;
+  }
+
+  a[href^="/"]::after,
+  a[href^="#"]::after {
+    content: none;
   }
 }

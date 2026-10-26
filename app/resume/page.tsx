@@ -26,6 +26,16 @@ export default function ResumePage() {
           <p className="mt-6 text-lead text-bone-dim">
             {site.role} · {site.location} · {site.usOverlap}
           </p>
+
+          {/* On screen the contact details are buttons below; on paper a CV
+              without an address on page one is a dead end. */}
+          <p className="label mt-3 hidden print:block">
+            {site.email} ·{" "}
+            {site.socials
+              .filter((social) => !social.href.startsWith("mailto:"))
+              .map((social) => social.href.replace(/^https?:\/\/(www\.)?/, ""))
+              .join(" · ")}
+          </p>
           <Reveal delay={0.2} className="mt-10 flex flex-wrap gap-4 print:hidden">
             {/* TODO: export a PDF and drop it at /public/biliane-silva-resume.pdf */}
             <ButtonLink href="/biliane-silva-resume.pdf" external>
@@ -44,14 +54,14 @@ export default function ResumePage() {
           {roles.map((role, i) => (
             <Reveal key={`${role.company}-${role.period}-${i}`}>
               <article className="hairline grid gap-6 pt-8 md:grid-cols-12">
-                <div className="md:col-span-3">
+                <div className="md:col-span-3 print:col-span-2">
                   <p className="label">{role.period}</p>
                   <p className="label mt-2 text-bone-faint">{role.location}</p>
                 </div>
                 <div className="md:col-span-9">
                   <h3 className="text-title">{role.title}</h3>
                   <p className="mt-2 text-bone-dim">{role.company}</p>
-                  <p className="mt-6 max-w-[62ch]">{role.summary}</p>
+                  <p className="mt-6 max-w-[62ch] print:hidden">{role.summary}</p>
                   <ul className="mt-6 space-y-3">
                     {role.highlights.map((highlight, h) => (
                       <li

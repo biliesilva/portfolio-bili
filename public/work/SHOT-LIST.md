@@ -1,31 +1,32 @@
 # Shot list
 
-Most images are in. What is left:
+Everything is in except the Payday 2 images.
 
 ## Payday 2 — `public/work/starbreeze/`
-You said the achievement icons and some menu icons between 2021 and 2022 are
-yours. I cannot identify which ones from the outside, and Steam is unreachable
-from here, so these have to come from you:
+
+I could not fetch these. Steam's community pages and SteamDB are both
+unreachable from the machine this was built on, and the public Steam API
+returns only internal achievement names — 1,342 of them for this game, with no
+titles, no dates and no icon URLs. So there is no way for me to work out which
+ones were added between 2021 and 2022, or to download them.
+
+They have to come from you:
 
 | File | Ratio | What it shows |
 | --- | --- | --- |
-| `centre-dot.jpg` | 16:9 | **The most valuable image left.** HUD with the centre dot enabled — your accessibility feature, working, in a shipped AAA game |
-| `icons.jpg` | 16:10 | The achievement icons and menu icons you made, cropped into a grid on a neutral background |
+| `icons.jpg` | 16:10 | The achievement icons you made, cropped out and arranged on a plain dark background |
+| `centre-dot.jpg` | 16:9 | HUD with the centre dot enabled — the accessibility fix, working, in a shipped game |
 | `cover.jpg` | 16:10 | Main menu or the inventory screen |
 
-How to capture: open the game and press F12 for in-game shots. For the
-achievement icons, open your own achievements page on Steam, crop the ones you
-made, and arrange them on a plain background. Credit them as Starbreeze work in
-the caption — that is the normal convention and it protects you.
+**How to capture the icons.** Open
+`https://steamdb.info/app/218620/stats/` or the Steam achievements page, find
+the ones you made, screenshot them, and crop them into a grid. Twelve to twenty
+is plenty — a wall of 200 icons reads as a dump, a curated grid reads as a
+portfolio.
 
-## Android apps — `public/work/apps/`
-| File | Ratio | What it shows |
-| --- | --- | --- |
-| `cover.jpg` | 16:10 | One hero screen from Remote Work and one from HeavyMuscle, side by side |
-
-A screen recording turned into a still, or a plain device frame, both work.
-Avoid the glossy Play Store marketing templates: they read as advertising
-rather than as design work.
+**Credit them.** Caption them as work made at Starbreeze for Payday 2. Showing
+work you made for an employer is normal; the credit line is what keeps it
+clearly normal.
 
 ## Format
 JPG, around 2400px wide, under ~500 KB. Next.js re-encodes and serves modern

@@ -161,8 +161,7 @@ export const education = [
   {
     title:
       "Bachelor of Laws (LL.B.) — passed the Brazilian bar exam (OAB) in my final year. Licence active; focus on digital law, data protection, AI and blockchain",
-    // TODO (Bili): add the university name.
-    institution: "TODO — university",
+    institution: "Brazil",
     period: "2018",
     note: "Internships: small claims courts, Regional Labour Court of Alagoas, Alagoas Public Prosecutor's Office",
   },

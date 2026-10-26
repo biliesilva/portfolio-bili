@@ -26,8 +26,9 @@ export const apps: WorkEntry = {
   stack: ["Figma", "TypeScript", "React Native"],
 
   cover: {
-    src: "",
-    alt: "Remote Work and HeavyMuscle — Play Store listings and app screens. Shot list: one hero screen from each app, side by side.",
+    src: "/work/apps/cover.jpg",
+    alt: "Remote Work and HeavyMuscle side by side: a job posting detail sheet, and the AI coach building a workout",
+    caption: "Remote Work and HeavyMuscle, both live on Google Play",
     aspect: "16/10",
   },
 
@@ -41,10 +42,22 @@ export const apps: WorkEntry = {
     {
       title: "Designed both products",
       body: "Flows, interface and the visual language for two apps with nothing in common except the person designing them — a job board and a training log pull in opposite directions, and neither could borrow the other's patterns.",
+      media: {
+        src: "/work/apps/remotework.jpg",
+        alt: "Remote Work: the full job posting opens as a sheet over the listings, with a single apply action pinned to the bottom",
+        caption: "Remote Work — the whole posting, before you decide",
+        aspect: "9/16",
+      },
     },
     {
       title: "Built the front end",
       body: "Implemented the interfaces myself. On HeavyMuscle that meant an offline-first app that stays usable in a gym with no signal, which is a constraint that changes almost every screen.",
+      media: {
+        src: "/work/apps/heavymuscle.jpg",
+        alt: "HeavyMuscle: the AI coach turns one sentence into a full session, with sets, reps and rest already filled in",
+        caption: "HeavyMuscle — a full workout from a sentence",
+        aspect: "9/16",
+      },
     },
     {
       title: "Shipped to real users, and read the reviews",
