@@ -37,6 +37,14 @@ export const starbreeze: WorkEntry = {
 
   decisions: [
     {
+      title: "Played the DLC before drawing the achievement",
+      problem:
+        "An achievement illustration has to say what the player did, at icon size, to someone who has not read the description.",
+      decision:
+        "For each one I played the DLC it belonged to, read the achievement description, and built the illustration around the specific action it rewards. Drawn in Illustrator and added straight into the game.",
+      why: "An illustration made from the description alone tends to show the subject. Playing it first shows the moment.",
+    },
+    {
       title: "A fixed point at the centre of the screen",
       problem:
         "First-person movement makes part of the player base motion sick. They do not report it; they stop playing.",

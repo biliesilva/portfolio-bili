@@ -28,6 +28,47 @@ export const hyperplay: WorkEntry = {
     aspect: "4/5",
   },
 
+  goal:
+    "Make a web3 game launcher that someone who has never used web3 would trust and find easy to use.",
+  constraints: [
+    "Players are not only playing — they earn and trade items, so a confusing screen costs more than usual",
+    "Most of the audience we wanted had never used a web3 product",
+    "The launcher is only worth using if studios choose to host their games on it",
+    "Desktop client and website, signed in and signed out, desktop and mobile",
+  ],
+
+  research: [
+    {
+      insight: "We interviewed game developers, not only players",
+      detail:
+        "The design team ran interviews with game creators about the problems they had — distribution, reaching players, and what they needed from a launcher. The launcher only works if the games are on it, so the developer side had to be designed for as deliberately as the player side.",
+    },
+    {
+      insight: "Trust was the thing we were short of",
+      detail:
+        "New players were being asked to use a launcher where items have real value, in a category most of them associated with risk. Being easy to use was not enough on its own; the interface had to look like something you could leave your account in.",
+    },
+  ],
+
+  decisions: [
+    {
+      title: "Designed for two audiences at once",
+      problem:
+        "A launcher with no games is worth nothing, and the studios deciding whether to publish on it had their own problems — distribution, visibility, reaching players.",
+      decision:
+        "We treated game developers as users too, interviewed them about those problems, and designed the launcher around what they needed as well as what players needed.",
+      why: "It changed what got built. The developer side was the half nobody else was asking about.",
+    },
+    {
+      title: "Built it for people who had never touched web3",
+      problem:
+        "The people we most wanted to reach were unfamiliar with web3, and the category's reputation meant a wrong-looking screen would end the session.",
+      decision:
+        "The launcher had to read as a games launcher first, and earn trust before asking anyone to approve anything.",
+      why: "Someone who does not understand what an action is doing will not take it, however good the game library is.",
+    },
+  ],
+
   context: [
     "HyperPlay is a game launcher for web3 games, built by a team spread across the US, Europe and Latin America. I joined the design team in 2022 and stayed almost four years.",
     "In late 2024 I moved to the engineering team as a front-end developer on the same product, working in TypeScript and React. I wrote all of it by hand — this was before I used AI for any of my work.",

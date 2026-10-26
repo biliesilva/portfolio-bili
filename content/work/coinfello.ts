@@ -28,6 +28,41 @@ export const coinfello: WorkEntry = {
     aspect: "16/10",
   },
 
+  goal:
+    "Keep a product that ships features every day consistent — in its components, its behaviour and its layout at every screen size.",
+  constraints: [
+    "Features shipped daily",
+    "Tablet and mobile had to work on everything, not just desktop",
+    "I designed the components and implemented them, so there was no hand-off to catch mistakes",
+  ],
+
+  decisions: [
+    {
+      title: "Consistency had to be structural, not reviewed",
+      problem:
+        "We released features every day. At that pace an interface cannot be kept consistent by reviewing screens — something always ships before anyone looks at it.",
+      decision:
+        "I built the design system so the component is the fastest way to build a screen, and implemented every component myself.",
+      why: "When using the system is less work than going around it, consistency stops depending on anyone remembering.",
+    },
+    {
+      title: "Responsiveness in the component, not the page",
+      problem:
+        "Every feature had to work on tablet and mobile, and features arrived faster than anyone could retrofit layouts.",
+      decision:
+        "Each component handles its own breakpoints, so a screen assembled from components is responsive before anyone thinks about it.",
+      why: "It moves the work to the place it is done once instead of the place it is done every time.",
+    },
+    {
+      title: "I implemented what I designed",
+      problem:
+        "A design system described in a file and a design system in the codebase drift apart, and nobody notices until a screen looks wrong.",
+      decision:
+        "I owned both ends: the components in the file and the components in the app were the same work.",
+      why: "There was no specification to interpret, so there was nothing to interpret differently.",
+    },
+  ],
+
   context: [
     "CoinFello is a DeFi agent: it answers questions about assets and protocols, executes swaps and staking, and runs recurring strategies inside limits the user sets.",
     "I joined as a front-end developer and built the design system: tokens, components and conventions. There was nothing to inherit. Then I implemented it in code.",
