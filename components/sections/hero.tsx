@@ -29,7 +29,18 @@ export function Hero() {
         </h1>
 
         <div className="mt-10 grid items-end gap-10 md:mt-8 md:grid-cols-12">
-          <Reveal delay={0.35} className="md:col-span-6">
+          <Reveal
+            delay={0.45}
+            className="order-first md:order-none md:col-span-5 md:col-start-8 lg:-mt-56 xl:-mt-64"
+          >
+            <Portrait
+              priority
+              className="w-[66vw] max-w-[19rem] sm:w-[52vw] md:ml-auto md:w-full md:max-w-[21rem] lg:max-w-[25rem] xl:max-w-[28rem]"
+              sizes="(min-width: 1280px) 28rem, (min-width: 1024px) 25rem, (min-width: 768px) 21rem, 66vw"
+            />
+          </Reveal>
+
+          <Reveal delay={0.35} className="md:col-span-6 md:col-start-1 md:row-start-1">
             <p className="max-w-[46ch] text-lead text-bone-dim">
               Product designer and front-end developer from Maceió, Brazil.
               I&apos;ve been responsible for the design system at two companies
@@ -47,13 +58,6 @@ export function Hero() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.45} className="md:col-span-5 md:col-start-8">
-            <Portrait
-              priority
-              className="w-40 sm:w-52 md:ml-auto md:w-full md:max-w-[16rem] lg:max-w-[17.5rem]"
-              sizes="(min-width: 768px) 17.5rem, 13rem"
-            />
-          </Reveal>
         </div>
       </Scrub>
 
