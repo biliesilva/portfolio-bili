@@ -15,7 +15,7 @@ export function Proof() {
             <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-ink-line bg-ink-raised/40 p-7 transition-colors duration-500 hover:border-bone-faint">
               <div
                 aria-hidden="true"
-                className="holo-surface pointer-events-none absolute inset-x-0 top-0 h-px opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                className="holo-ring opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
               <dt className="text-headline font-medium leading-none">
                 {item.value}

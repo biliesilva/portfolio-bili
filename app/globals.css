@@ -235,6 +235,27 @@
   }
 }
 
+/* Holographic border ring. Two masks cancel out the middle, leaving only the
+   1px frame painted — which is what lets a gradient follow rounded corners. */
+@utility holo-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background-image: var(--gradient-holo);
+  background-size: 220% 100%;
+  animation: holo-drift 11s ease-in-out infinite alternate;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 /* Organic blob mask. The radii drift so the silhouette never settles into a
    shape the eye can name — frozen at the first frame under reduced motion. */
 @utility blob {
