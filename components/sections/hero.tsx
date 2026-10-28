@@ -8,7 +8,7 @@ import { Portrait } from "@/components/ui/portrait";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-svh flex-col justify-between pt-32 pb-10">
+    <section className="relative flex min-h-svh flex-col justify-between pt-28 pb-10">
       <Scrub y={-80} className="container-edge flex-1">
         <div className="hairline flex flex-wrap items-baseline justify-between gap-4 pt-6">
           <span className="label">{site.role}</span>
@@ -28,16 +28,8 @@ export function Hero() {
           </span>
         </h1>
 
-        <div className="mt-12 grid items-end gap-8 md:mt-14 md:grid-cols-12 md:gap-10">
-          <Reveal delay={0.45} className="md:col-span-3">
-            <Portrait
-              priority
-              className="w-32 sm:w-40 md:w-full md:max-w-[15rem]"
-              sizes="(min-width: 768px) 15rem, 10rem"
-            />
-          </Reveal>
-
-          <Reveal delay={0.35} className="md:col-span-8 md:col-start-5">
+        <div className="mt-10 grid items-end gap-10 md:mt-8 md:grid-cols-12">
+          <Reveal delay={0.35} className="md:col-span-6">
             <p className="max-w-[46ch] text-lead text-bone-dim">
               Product designer and front-end developer from Maceió, Brazil.
               I&apos;ve been responsible for the design system at two companies
@@ -53,6 +45,14 @@ export function Hero() {
                 Résumé
               </ButtonLink>
             </div>
+          </Reveal>
+
+          <Reveal delay={0.45} className="md:col-span-5 md:col-start-8">
+            <Portrait
+              priority
+              className="w-40 sm:w-52 md:ml-auto md:w-full md:max-w-[16rem] lg:max-w-[17.5rem]"
+              sizes="(min-width: 768px) 17.5rem, 13rem"
+            />
           </Reveal>
         </div>
       </Scrub>

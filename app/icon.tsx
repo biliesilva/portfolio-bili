@@ -6,12 +6,13 @@ export const size = { width: 64, height: 64 };
 export const contentType = "image/png";
 
 /**
- * A written serif B on the holographic tile. Rendered at 64 so the stroke
- * contrast still holds when the browser scales it down to 16.
+ * A written serif B on the site's ink. Lora's italic has even stroke weight,
+ * which is what survives the browser scaling this to 16px — a high-contrast
+ * serif loses its hairlines at that size.
  */
 export default async function Icon() {
   const serif = await readFile(
-    join(process.cwd(), "assets/InstrumentSerif-Italic.ttf")
+    join(process.cwd(), "assets/Lora-SemiBoldItalic.ttf")
   );
 
   return new ImageResponse(
@@ -23,13 +24,12 @@ export default async function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundImage:
-            "linear-gradient(135deg, #ff6ec7 0%, #a78bfa 35%, #60a5fa 65%, #22d3ee 100%)",
-          color: "#0a0a0b",
-          fontFamily: "Instrument Serif",
-          fontSize: 66,
+          background: "#0a0a0b",
+          color: "#f2f0ea",
+          fontFamily: "Lora",
+          fontSize: 46,
           fontStyle: "italic",
-          paddingBottom: 6,
+          paddingBottom: 3,
         }}
       >
         B
@@ -38,7 +38,7 @@ export default async function Icon() {
     {
       ...size,
       fonts: [
-        { name: "Instrument Serif", data: serif, weight: 400, style: "italic" },
+        { name: "Lora", data: serif, weight: 600, style: "italic" },
       ],
     }
   );
