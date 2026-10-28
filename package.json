@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "images": "node scripts/build-images.mjs",
-    "preview": "node .context/serve-like-firebase.mjs"
+    "preview": "node scripts/preview.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
