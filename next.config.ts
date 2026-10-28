@@ -1,26 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
-  // The OG route reads the brand font from disk at render time. File tracing
-  // does not follow a runtime readFile, so the font has to be declared or the
-  // route fails once deployed.
-  outputFileTracingIncludes: {
-    "/opengraph-image": ["./assets/**/*"],
-    "/icon": ["./assets/**/*"],
-    "/apple-icon": ["./assets/**/*"],
-  },
+  // Static export: the whole site is prerendered HTML, which is what Firebase
+  // Hosting serves. Nothing here needs a server at request time.
+  output: "export",
+
   images: {
-    // Next 16 only serves qualities on this list, and defaults to [75].
-    // UI screenshots have fine text that 75 visibly smears.
-    qualities: [75, 92],
-    // Images here get replaced in place, keeping the same path. With a long
-    // max-age the browser never asks whether the bytes changed. A short TTL
-    // means it revalidates and gets a cheap 304 when nothing moved.
-    minimumCacheTTL: 60,
+    // The optimiser is a server feature. Responsive WebP variants are built
+    // ahead of time by scripts/build-images.mjs instead.
+    unoptimized: true,
   },
+
   turbopack: {
     rules: {
       "*.css": {

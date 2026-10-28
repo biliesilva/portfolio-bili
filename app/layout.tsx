@@ -49,12 +49,18 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} — ${site.role}`,
     description: site.tagline,
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: `${site.name} — ${site.role}` }],
   },
   twitter: {
     card: "summary_large_image",
     creator: "@biliane_silva",
+    images: ["/opengraph-image.png"],
   },
   alternates: { canonical: "/" },
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   robots: { index: true, follow: true },
 };
 

@@ -1,7 +1,9 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element -- hover preview, static export */
+
 import Link from "next/link";
-import Image from "next/image";
+
 import { useState } from "react";
 import {
   AnimatePresence,
@@ -116,12 +118,10 @@ export function WorkIndex({ items }: { items: WorkEntry[] }) {
           >
             <div className="relative aspect-[16/10]">
               {hovered.cover.src ? (
-                <Image
-                  src={hovered.cover.src}
+                <img
+                  src={hovered.cover.src.replace(/\.(jpe?g|png)$/i, "-640.webp")}
                   alt=""
-                  fill
-                  sizes="352px"
-                  className="object-cover"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               ) : (
                 <div

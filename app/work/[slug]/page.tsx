@@ -27,7 +27,6 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  "use cache";
   const { slug } = await params;
   const study = getCaseStudy(slug);
   if (!study) return {};
@@ -71,7 +70,6 @@ function CaseStudySkeleton() {
 }
 
 async function CaseStudyArticle({ params }: Props) {
-  "use cache";
   const { slug } = await params;
   const study = getCaseStudy(slug);
   if (!study) notFound();

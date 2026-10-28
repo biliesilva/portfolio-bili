@@ -6,9 +6,33 @@ Components), React 19, Tailwind CSS v4, Motion, GSAP ScrollTrigger and Lenis.
 ```bash
 pnpm install
 pnpm dev     # http://localhost:3000
-pnpm build   # production build — every route prerenders
+pnpm build   # static export into out/
+pnpm images  # regenerate the WebP ladder after adding or replacing an image
 pnpm lint
 ```
+
+## Hosting
+
+The site is a static export (`output: "export"`), so `pnpm build` writes plain
+HTML, CSS, JS and images into `out/`. Firebase Hosting serves that directory
+directly — `firebase.json` sets `cleanUrls`, so `/about` resolves to
+`about.html`, and `404.html` is picked up automatically.
+
+```bash
+firebase deploy --only hosting
+```
+
+### Images
+
+Static export has no image optimiser, so the work happens at build time
+instead. `scripts/build-images.mjs` reads every JPEG and PNG in `public/`,
+writes a WebP ladder beside it (640 / 1024 / 1600 / 2400 and the native
+width), and records what exists in `content/image-manifest.json`.
+`ResponsiveImage` reads that manifest and emits a `srcset`, so the browser
+still downloads only the size it needs.
+
+**After adding or replacing any image, run `pnpm images` and commit the
+variants.** They are checked in so the deploy does not depend on sharp.
 
 ## Pages
 

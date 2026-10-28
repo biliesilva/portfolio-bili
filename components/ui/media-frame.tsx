@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ResponsiveImage } from "./responsive-image";
 import { cn } from "@/lib/cn";
 import type { Media } from "@/content/types";
 
@@ -29,14 +29,12 @@ export function MediaFrame({
         className="relative w-full overflow-hidden rounded-sm bg-ink-raised"
         style={{ aspectRatio: aspect }}
       >
-        <Image
+        <ResponsiveImage
           src={media.src}
           alt={media.alt}
-          fill
           sizes={sizes}
           priority={priority}
-          quality={92}
-          className="object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
         />
       </div>
       {media.caption ? (

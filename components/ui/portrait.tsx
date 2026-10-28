@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ResponsiveImage } from "./responsive-image";
 import { about } from "@/content/about";
 import { cn } from "@/lib/cn";
 
@@ -18,14 +18,11 @@ export function Portrait({
   return (
     <div className={cn("relative", className)}>
       <div className="blob relative overflow-hidden">
-        <Image
+        <ResponsiveImage
           src={about.portrait.src}
           alt={about.portrait.alt}
-          width={1450}
-          height={1800}
-          priority={priority}
-          quality={92}
           sizes={sizes}
+          priority={priority}
           className="aspect-[4/5] h-auto w-full object-cover"
         />
       </div>

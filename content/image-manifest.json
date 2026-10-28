@@ -1,0 +1,170 @@
+{
+  "/about/portrait.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1611
+    ],
+    "width": 1611,
+    "height": 2000
+  },
+  "/work/apps/both-apps.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      3200
+    ],
+    "width": 3200,
+    "height": 2000
+  },
+  "/work/apps/heavymuscle-day.jpg": {
+    "widths": [
+      640,
+      682
+    ],
+    "width": 682,
+    "height": 1126
+  },
+  "/work/apps/heavymuscle-session.jpg": {
+    "widths": [
+      630
+    ],
+    "width": 630,
+    "height": 1092
+  },
+  "/work/apps/remotework-jobs.jpg": {
+    "widths": [
+      632
+    ],
+    "width": 632,
+    "height": 1196
+  },
+  "/work/coinfello/alert-cards.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1916
+    ],
+    "width": 1916,
+    "height": 1672
+  },
+  "/work/coinfello/button.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      2788
+    ],
+    "width": 2788,
+    "height": 1696
+  },
+  "/work/coinfello/chip.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      2528
+    ],
+    "width": 2528,
+    "height": 1700
+  },
+  "/work/coinfello/site.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      3200
+    ],
+    "width": 3200,
+    "height": 2000
+  },
+  "/work/heroic/game-page.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      3400
+    ],
+    "width": 3400,
+    "height": 1938
+  },
+  "/work/heroic/library.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      3400
+    ],
+    "width": 3400,
+    "height": 1944
+  },
+  "/work/heroic/settings.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      3400
+    ],
+    "width": 3400,
+    "height": 1934
+  },
+  "/work/hyperplay/combobox.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2198
+    ],
+    "width": 2198,
+    "height": 1582
+  },
+  "/work/hyperplay/discover.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1818
+    ],
+    "width": 1818,
+    "height": 1664
+  },
+  "/work/hyperplay/game-page.jpg": {
+    "widths": [
+      496
+    ],
+    "width": 496,
+    "height": 1342
+  },
+  "/work/hyperplay/navigation.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      2744
+    ],
+    "width": 2744,
+    "height": 1402
+  },
+  "/work/starbreeze/achievements.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      3200
+    ],
+    "width": 3200,
+    "height": 1240
+  }
+}
