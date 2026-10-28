@@ -4,18 +4,18 @@ export const apps: WorkEntry = {
   slug: "android-apps",
   kind: "project",
   title: "Remote Work & HeavyMuscle",
-  client: "Independent — with my husband",
+  client: "Independent · Google Play",
   year: "2025 — 2026",
   summary:
-    "Two Android apps my husband started. I came in to rework the UI and UX and build the components they did not have. Remote Work is past 100,000 installs.",
+    "Two Android apps on Google Play. I helped improve the UI and UX, and built the components they did not have. Remote Work is past 100,000 installs.",
   disciplines: ["Product Design", "Front-end", "UI/UX"],
   featured: true,
   order: 5,
 
-  disclosure: "Ours. Both are live on Google Play.",
+  disclosure: "Both are live on Google Play — install them and you are looking at the work.",
 
-  role: "UI/UX and front-end — joined after the apps existed",
-  team: "Two people — he started them, I took over the interface",
+  role: "UI/UX and front-end",
+  team: "Small team",
   timeline: "Ongoing",
   platforms: ["Android"],
   stack: ["Figma", "TypeScript", "React Native"],
@@ -28,15 +28,15 @@ export const apps: WorkEntry = {
   },
 
   context: [
-    "My husband built both apps and I joined once they were running, to fix the parts that were holding them back: the interface, and the fact that there were no shared components to build screens from.",
+    "I joined both apps once they were running, to improve the parts that were holding them back: the interface, and the fact that there were no shared components to build screens from.",
     "Remote Work pulls remote job listings from Remote OK, We Work Remotely, Remotive, Remote.co and Web3.career into one app, across 30+ categories, with a CV builder inside it. It is past 100,000 installs.",
     "HeavyMuscle is a gym app. An AI coach builds a plan from one sentence and adjusts each session to your injuries, equipment and recovery. It shows the plates to load, generates warm-up sets, pre-fills every set with your last numbers and detects PRs. 873 animated exercises, six languages, fully offline.",
   ],
 
   responsibilities: [
     {
-      title: "Reworked the UI and UX",
-      body: "Both apps worked before I joined. I took the interface apart and rebuilt it — flows, layout and visual language for a job board and a training log, two products with no patterns in common.",
+      title: "Improved the UI and UX",
+      body: "Both apps worked already. I reworked the interface — flows, layout and visual language for a job board and a training log, two products with no patterns in common.",
       media: {
         src: "/work/apps/remotework-jobs.jpg",
         alt: "Remote Work job list: each card carries the role, company and date, with a save action, an overflow menu, and an Applied marker once you have applied",
