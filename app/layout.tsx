@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    creator: "@biliane_silva",
+    creator: "@bili_mds",
     images: ["/opengraph-image.png"],
   },
   alternates: { canonical: "/" },

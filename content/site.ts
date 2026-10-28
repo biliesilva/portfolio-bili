@@ -83,7 +83,7 @@ export const site = {
     { label: "LinkedIn", href: "https://www.linkedin.com/in/bilianesilva/" },
     { label: "GitHub", href: "https://github.com/biliesilva" },
     { label: "Behance", href: "https://www.behance.net/bilianemoreira" },
-    { label: "X", href: "https://x.com/biliane_silva" },
+    { label: "X", href: "https://x.com/bili_mds" },
     { label: "Email", href: "mailto:bilianemoreira@gmail.com" },
   ],
 
