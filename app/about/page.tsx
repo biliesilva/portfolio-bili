@@ -31,10 +31,7 @@ export default function AboutPage() {
       <section className="container-edge pb-24">
         <div className="grid gap-16 md:grid-cols-12">
           <Reveal className="md:col-span-5">
-            <Portrait
-              sizes="(min-width: 768px) 40vw, 100vw"
-              halo="opacity-25 blur-3xl"
-            />
+            <Portrait sizes="(min-width: 768px) 40vw, 100vw" />
             <dl className="mt-8 overflow-hidden rounded-2xl border border-ink-line bg-ink-raised/40">
               {[
                 { label: "Based in", value: site.location },

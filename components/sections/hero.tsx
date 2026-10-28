@@ -12,7 +12,7 @@ export function Hero() {
       <Scrub y={-80} className="container-edge flex-1">
         <div className="hairline flex flex-wrap items-baseline justify-between gap-4 pt-6">
           <span className="label">{site.role}</span>
-          <span className="label">{site.location} · {site.usOverlap}</span>
+          <span className="label">{site.location}</span>
         </div>
 
         <h1 className="mt-14 max-w-[16ch] text-display font-medium md:mt-20">
@@ -28,7 +28,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <div className="mt-10 grid items-end gap-10 md:mt-8 md:grid-cols-12">
+        <div className="mt-10 grid items-start gap-10 md:mt-8 md:grid-cols-12">
           <Reveal
             delay={0.45}
             className="order-first md:order-none md:col-span-5 md:col-start-8 lg:-mt-56 xl:-mt-64"
