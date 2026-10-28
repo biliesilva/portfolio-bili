@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
   // route fails once deployed.
   outputFileTracingIncludes: {
     "/opengraph-image": ["./assets/**/*"],
+    "/icon": ["./assets/**/*"],
+    "/apple-icon": ["./assets/**/*"],
   },
   images: {
     // Next 16 only serves qualities on this list, and defaults to [75].

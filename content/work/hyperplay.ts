@@ -10,7 +10,7 @@ export const hyperplay: WorkEntry = {
     "Three and a half years on a web3 game launcher. Product design and research in the design team, then front-end work on the same interface in the engineering team.",
   disciplines: ["Product Design", "Design Systems", "Front-end", "UI/UX"],
   featured: true,
-  order: 1,
+  order: 2,
 
   disclosure:
     "Employed work, done inside teams. This is my part, not the whole project. The screens below are from the publicly released launcher.",

@@ -10,7 +10,7 @@ export const coinfello: WorkEntry = {
     "Built the design system and implemented it in code. A DeFi product with an AI agent at the centre of it.",
   disciplines: ["Design Systems", "Front-end", "UI/UX"],
   featured: true,
-  order: 2,
+  order: 1,
 
   disclosure:
     "Employed work under NDA. What I can show is the design system itself — components with placeholder content — and the public site. No product screens, no customer data, no internal numbers.",
