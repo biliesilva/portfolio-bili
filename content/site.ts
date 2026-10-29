@@ -85,7 +85,7 @@ export const site = {
     },
     {
       value: "2",
-      label: "Design systems I was responsible for",
+      label: "Design systems owned and implemented",
       note: "At HyperPlay and CoinFello",
     },
     {
