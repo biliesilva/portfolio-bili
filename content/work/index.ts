@@ -3,10 +3,11 @@ import { hyperplay } from "./hyperplay";
 import { coinfello } from "./coinfello";
 import { heroic } from "./heroic";
 import { starbreeze } from "./starbreeze";
-import { apps } from "./apps";
+import { remoteWork } from "./remote-work";
+import { heavyMuscle } from "./heavy-muscle";
 
 /**
- * Four entries, deliberately. Everything else lives on LinkedIn — a portfolio
+ * Six entries, deliberately. Everything else lives on LinkedIn — a portfolio
  * that gives equal weight to a 2010 internship is a portfolio nobody finishes.
  */
 export const caseStudies: WorkEntry[] = [
@@ -14,7 +15,8 @@ export const caseStudies: WorkEntry[] = [
   coinfello,
   heroic,
   starbreeze,
-  apps,
+  remoteWork,
+  heavyMuscle,
 ].sort((a, b) => a.order - b.order);
 
 export const featuredCaseStudies = caseStudies.filter((c) => c.featured);

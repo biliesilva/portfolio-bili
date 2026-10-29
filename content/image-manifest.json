@@ -9,39 +9,6 @@
     "width": 1611,
     "height": 2000
   },
-  "/work/apps/both-apps.jpg": {
-    "widths": [
-      640,
-      1024,
-      1600,
-      2400,
-      3200
-    ],
-    "width": 3200,
-    "height": 2000
-  },
-  "/work/apps/heavymuscle-day.jpg": {
-    "widths": [
-      640,
-      682
-    ],
-    "width": 682,
-    "height": 1126
-  },
-  "/work/apps/heavymuscle-session.jpg": {
-    "widths": [
-      630
-    ],
-    "width": 630,
-    "height": 1092
-  },
-  "/work/apps/remotework-jobs.jpg": {
-    "widths": [
-      632
-    ],
-    "width": 632,
-    "height": 1196
-  },
   "/work/coinfello/alert-cards.jpg": {
     "widths": [
       640,
@@ -84,6 +51,55 @@
     ],
     "width": 3200,
     "height": 2000
+  },
+  "/work/heavy-muscle/coach.jpg": {
+    "widths": [
+      524
+    ],
+    "width": 524,
+    "height": 1158
+  },
+  "/work/heavy-muscle/cover.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      3200
+    ],
+    "width": 3200,
+    "height": 2000
+  },
+  "/work/heavy-muscle/day.jpg": {
+    "widths": [
+      524
+    ],
+    "width": 524,
+    "height": 1158
+  },
+  "/work/heavy-muscle/design.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1954
+    ],
+    "width": 1954,
+    "height": 806
+  },
+  "/work/heavy-muscle/library.jpg": {
+    "widths": [
+      524
+    ],
+    "width": 524,
+    "height": 1158
+  },
+  "/work/heavy-muscle/session.jpg": {
+    "widths": [
+      524
+    ],
+    "width": 524,
+    "height": 1158
   },
   "/work/heroic/game-page.jpg": {
     "widths": [
@@ -155,6 +171,59 @@
     ],
     "width": 2744,
     "height": 1402
+  },
+  "/work/remote-work/applications.jpg": {
+    "widths": [
+      640,
+      682
+    ],
+    "width": 682,
+    "height": 1490
+  },
+  "/work/remote-work/cover.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      3200
+    ],
+    "width": 3200,
+    "height": 2000
+  },
+  "/work/remote-work/design.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2192
+    ],
+    "width": 2192,
+    "height": 1070
+  },
+  "/work/remote-work/filters.jpg": {
+    "widths": [
+      640,
+      682
+    ],
+    "width": 682,
+    "height": 1490
+  },
+  "/work/remote-work/jobs.jpg": {
+    "widths": [
+      640,
+      682
+    ],
+    "width": 682,
+    "height": 1490
+  },
+  "/work/remote-work/resume.jpg": {
+    "widths": [
+      640,
+      682
+    ],
+    "width": 682,
+    "height": 1490
   },
   "/work/starbreeze/achievements.jpg": {
     "widths": [
