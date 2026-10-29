@@ -9,6 +9,9 @@ import { Reveal } from "@/components/ui/reveal";
 export function Proof() {
   return (
     <section className="container-edge pb-8">
+      <p className="label mb-6 max-w-[62ch]">
+        A few numbers, so the rest of the page has something to stand on.
+      </p>
       <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {site.proof.map((item, i) => (
           <Reveal key={item.label} delay={i * 0.06} className="h-full">

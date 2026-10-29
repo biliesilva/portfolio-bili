@@ -73,10 +73,26 @@ export const site = {
 
   /** Verifiable numbers only — these are the first thing a recruiter scans. */
   proof: [
-    { value: "2010", label: "Designing since", note: "Graphic, then product and front-end" },
-    { value: "500k+", label: "Monthly users", note: "Heroic Games Launcher" },
-    { value: "2", label: "Design systems owned", note: "One of them built by me" },
-    { value: "3", label: "Languages", note: "English, Portuguese, Spanish" },
+    {
+      value: "2010",
+      label: "Designing since",
+      note: "Graphic, then product and front-end",
+    },
+    {
+      value: "500k+",
+      label: "People using what I design",
+      note: "Heroic Games Launcher, the open-source app I design and build for",
+    },
+    {
+      value: "2",
+      label: "Design systems I was responsible for",
+      note: "At HyperPlay and CoinFello",
+    },
+    {
+      value: "3",
+      label: "Languages I work in",
+      note: "English, Portuguese, Spanish",
+    },
   ],
 
   socials: [
