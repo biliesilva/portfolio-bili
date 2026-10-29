@@ -7,8 +7,8 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { MoreExperience } from "@/components/sections/more-experience";
 
 export const metadata: Metadata = {
-  title: "Résumé",
-  description: `Résumé of ${site.name} — ${site.role} with ${site.yearsOfExperience} years of experience across product design, design systems and front-end engineering.`,
+  title: "CV",
+  description: `CV of ${site.name} — ${site.role} with ${site.yearsOfExperience} years of experience across product design, design systems and front-end engineering.`,
   alternates: { canonical: "/resume" },
 };
 
@@ -17,7 +17,7 @@ export default function ResumePage() {
     <>
       <section className="container-edge pt-36 pb-16 md:pt-44">
         <div className="hairline pt-6">
-          <span className="label">Résumé — updated October 2026</span>
+          <span className="label">CV — updated October 2026</span>
           <RevealWords
             as="h1"
             text={site.name}

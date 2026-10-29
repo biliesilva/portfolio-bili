@@ -53,7 +53,7 @@ export function Hero() {
                 <ButtonLink href="/work">See the work</ButtonLink>
               </Magnetic>
               <ButtonLink href="/resume" variant="ghost">
-                Résumé
+                CV
               </ButtonLink>
             </div>
           </Reveal>

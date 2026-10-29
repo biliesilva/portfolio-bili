@@ -66,7 +66,7 @@ export default function AboutPage() {
             ))}
             <Reveal className="pt-4">
               <ButtonLink href="/resume" variant="ghost">
-                Full résumé
+                Full CV
               </ButtonLink>
             </Reveal>
           </div>

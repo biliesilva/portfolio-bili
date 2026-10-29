@@ -28,7 +28,7 @@ export function Footer() {
         <div className="md:col-span-4">
           <p className="label">Pages</p>
           <ul className="mt-4 space-y-1">
-            {[...site.nav, { label: "Résumé", href: "/resume" }].map((item) => (
+            {[...site.nav, { label: "CV", href: "/resume" }].map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="link-wipe text-lead">
                   {item.label}
