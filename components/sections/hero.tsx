@@ -42,11 +42,11 @@ export function Hero() {
 
           <Reveal delay={0.35} className="md:col-span-6 md:col-start-1 md:row-start-1">
             <p className="max-w-[46ch] text-lead text-bone-dim">
-              Product designer and front-end developer from Maceió, Brazil.
+              Product designer and front-end developer from Brazil.
               I&apos;ve been responsible for the design system at two companies
               and worked on the front-end at both — most recently with US teams
-              at CoinFello and HyperPlay. Working in English, Portuguese and
-              Spanish.
+              at CoinFello and HyperPlay, and before that on Payday 2 at
+              Starbreeze.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Magnetic>
