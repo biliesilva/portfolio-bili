@@ -19,17 +19,7 @@ export function FeaturedWork() {
           <Reveal key={study.slug} y={40}>
             <article>
               <Link href={`/work/${study.slug}`} className="group block">
-                <div className="overflow-hidden rounded-sm">
-                  <div className="transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]">
-                    <MediaFrame
-                      media={study.cover}
-                      priority={i === 0}
-                      sizes="(min-width: 1024px) 90vw, 100vw"
-                    />
-                  </div>
-                </div>
-
-                <div className="mt-8 grid gap-6 md:grid-cols-12">
+                <div className="grid gap-6 md:grid-cols-12">
                   <div className="md:col-span-7">
                     <div className="flex items-baseline gap-4">
                       <span className="holo-text font-display text-3xl font-medium leading-none tabular-nums">
@@ -48,6 +38,16 @@ export function FeaturedWork() {
                       {study.summary}
                     </p>
                     <p className="label mt-6">{study.disciplines.join(" · ")}</p>
+                  </div>
+                </div>
+
+                <div className="mt-10 overflow-hidden rounded-sm">
+                  <div className="transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]">
+                    <MediaFrame
+                      media={study.cover}
+                      priority={i === 0}
+                      sizes="(min-width: 1024px) 90vw, 100vw"
+                    />
                   </div>
                 </div>
               </Link>
