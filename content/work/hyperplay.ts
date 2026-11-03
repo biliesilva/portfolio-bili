@@ -19,7 +19,7 @@ export const hyperplay: WorkEntry = {
   team: "Design team, then engineering team — distributed across the US, Europe and LATAM",
   timeline: "3 years 8 months",
   platforms: ["Desktop game launcher", "Web"],
-  stack: ["Figma", "TypeScript", "React", "Design tokens"],
+  stack: ["Figma", "TypeScript", "React", "SCSS", "Design tokens"],
 
   cover: {
     src: "/work/hyperplay/discover.jpg",

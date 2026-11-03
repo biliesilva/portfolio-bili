@@ -19,7 +19,7 @@ export const coinfello: WorkEntry = {
   team: "Distributed team — US, Europe and LATAM",
   timeline: "1 year 3 months",
   platforms: ["Web"],
-  stack: ["TypeScript", "React", "Tailwind CSS", "Design tokens", "AI tooling"],
+  stack: ["TypeScript", "React", "SCSS", "Design tokens", "AI tooling"],
 
   cover: {
     src: "/work/coinfello/button.jpg",
@@ -82,7 +82,7 @@ export const coinfello: WorkEntry = {
     },
     {
       title: "Implemented it in code",
-      body: "I wrote the system rather than specifying it. 55 components, built in React and Tailwind on top of Mantine.",
+      body: "I wrote the system rather than specifying it. 55 components, built in React and SCSS on top of Mantine.",
       media: {
         src: "/work/coinfello/alert-cards.jpg",
         alt: "CoinFello alert cards in Figma: error, warning, success, info and brand tones, each with its own icon",
