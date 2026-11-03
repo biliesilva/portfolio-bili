@@ -1,6 +1,7 @@
 import { site } from "@/content/site";
 import { about } from "@/content/about";
 import { caseStudies, kindLabel } from "@/content/work";
+import { faq } from "@/content/faq";
 
 // Static export: emitted as out/llms.txt at build time.
 export const dynamic = "force-static";
@@ -56,6 +57,10 @@ ${work}
 ## Facts
 
 ${facts}
+
+## Questions and answers
+
+${faq.map((item) => `### ${item.question}\n${item.answer}`).join("\n\n")}
 
 ## Pages
 
