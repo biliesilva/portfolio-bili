@@ -57,9 +57,14 @@ export const metadata: Metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: { canonical: "/" },
+  // Google's favicon crawler probes /favicon.ico at the root and wants a square
+  // whose side is a multiple of 48 — a 64px PNG alone got us a generic globe.
   icons: {
-    icon: "/icon.png",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
   },
   robots: { index: true, follow: true },
 };

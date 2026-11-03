@@ -12,8 +12,51 @@ import { MediaFrame } from "@/components/ui/media-frame";
 import { cn } from "@/lib/cn";
 import { Reveal, RevealWords } from "@/components/ui/reveal";
 import { SectionHead } from "@/components/ui/section-head";
+import { PageJsonLd, ids } from "@/components/layout/json-ld";
+import { site } from "@/content/site";
+import type { WorkEntry } from "@/content/types";
 
 type Props = { params: Promise<{ slug: string }> };
+
+/**
+ * `CreativeWork` rather than `Article` — these are projects, not posts. The
+ * breadcrumb is what puts "Work › CoinFello" under the result instead of a
+ * bare URL, and `author` ties every project back to the one Person node.
+ */
+function workSchema(study: WorkEntry) {
+  const url = `${site.url}/work/${study.slug}`;
+  const [startYear] = study.year.split(/\s*—\s*/);
+
+  return {
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": `${url}#work`,
+        url,
+        name: study.title,
+        headline: `${study.title} — ${kindLabel[study.kind]}`,
+        description: study.summary,
+        abstract: study.summary,
+        author: { "@id": ids.person },
+        creator: { "@id": ids.person },
+        isPartOf: { "@id": ids.website },
+        inLanguage: "en",
+        ...(study.cover.src ? { image: `${site.url}${study.cover.src}` } : {}),
+        ...(/^\d{4}$/.test(startYear) ? { dateCreated: startYear } : {}),
+        keywords: [...study.disciplines, ...study.stack, ...study.platforms].join(", "),
+        about: study.disciplines.map((name) => ({ "@type": "Thing", name })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+          { "@type": "ListItem", position: 2, name: "Work", item: `${site.url}/work` },
+          { "@type": "ListItem", position: 3, name: study.title, item: url },
+        ],
+      },
+    ],
+  };
+}
 
 /** "9/16" and the like — taller than it is wide. */
 function isPortrait(aspect?: string) {
@@ -39,7 +82,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${study.title} — ${kindLabel[study.kind]}`,
       description: study.summary,
       type: "article",
+      url: `/work/${study.slug}`,
+      // The project's own cover, so a shared link shows the work rather than
+      // the same generic card six times over.
+      ...(study.cover.src
+        ? { images: [{ url: study.cover.src, alt: study.cover.alt }] }
+        : {}),
     },
+    ...(study.cover.src
+      ? { twitter: { card: "summary_large_image" as const, images: [study.cover.src] } }
+      : {}),
   };
 }
 
@@ -90,6 +142,8 @@ async function CaseStudyArticle({ params }: Props) {
 
   return (
     <article>
+      <PageJsonLd data={workSchema(study)} />
+
       {/* Hero */}
       <header className="container-edge pt-36 pb-12 md:pt-44">
         <div className="hairline pt-6">

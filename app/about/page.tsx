@@ -7,6 +7,7 @@ import { Reveal, RevealWords } from "@/components/ui/reveal";
 import { SectionHead } from "@/components/ui/section-head";
 import { ContactCta } from "@/components/sections/contact-cta";
 import { ButtonLink } from "@/components/ui/button-link";
+import { PageJsonLd, ids } from "@/components/layout/json-ld";
 
 export const metadata: Metadata = {
   title: "About",
@@ -14,9 +15,22 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
+/** `ProfilePage` is the type search engines expect on an "about the person" page. */
+const profileSchema = {
+  "@type": "ProfilePage",
+  "@id": `${site.url}/about#profile`,
+  url: `${site.url}/about`,
+  name: `About ${site.name}`,
+  isPartOf: { "@id": ids.website },
+  about: { "@id": ids.person },
+  mainEntity: { "@id": ids.person },
+  inLanguage: "en",
+};
+
 export default function AboutPage() {
   return (
     <>
+      <PageJsonLd data={profileSchema} />
       <section className="container-edge pt-36 pb-16 md:pt-44">
         <div className="hairline pt-6">
           <span className="label">About — {site.role}</span>
