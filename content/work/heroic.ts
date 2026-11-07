@@ -118,12 +118,12 @@ export const heroic: WorkEntry = {
 
   build: {
     body: [
-      "I designed and implemented every change myself, in TypeScript and SCSS, and defended each one in public review. The work arrived as four pull requests, each reviewable on its own.",
+      "I designed and implemented every change myself, in TypeScript and SCSS, and defended each one in public review. Seven pull requests, each reviewable on its own: the library redesign, an atomic modal component with every modal rebuilt on top of it, the Wine Manager, the downloads page, accessibility on the settings cards, and the game page and settings rebuilt on shared components.",
     ],
     notes: [
-      { value: "~14k", label: "Lines of UI code contributed" },
-      { value: "~500", label: "Files touched across 4 PRs" },
-      { value: "15", label: "Themes kept working" },
+      { value: "7", label: "Pull requests merged" },
+      { value: "~14k", label: "Lines of UI code added" },
+      { value: "158", label: "Commits" },
     ],
   },
 
@@ -134,11 +134,12 @@ export const heroic: WorkEntry = {
       { value: "5 yrs", label: "From research to shipping code" },
     ],
     body: [
-      "The first pull request — tab navigation, theme colours and spacing on the game info page — was merged in March 2025. The library redesign and the game page and settings rebuild are public and in review.",
+      "The first pull request — tab navigation, theme colours and spacing on the game info page — was merged in May 2025. The library redesign, the modal system, the Wine Manager, the downloads page and the settings cards followed, and the game page and settings rebuild merged in November 2026.",
     ],
   },
 
   reflection: [
-    "I opened the library redesign before the token layer existed, which made the review harder than it needed to be. The structural change should ship first.",
+    "I was on this product before it was a product. In 2020 the question was whether to build it at all, and I answered it with desk research and by asking the Linux community directly — what came back is what decided it.",
+    "Five years later I am still designing the same thing for the same people, and now shipping its code too. Most design work never gets that: you hand it off, and you never find out whether you were right.",
   ],
 };

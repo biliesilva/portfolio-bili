@@ -479,7 +479,7 @@ async function CaseStudyArticle({ params }: Props) {
           <SectionHead
             index={n()}
             label="Reflection"
-            title="What I would do differently."
+            title="Five years on one product."
           />
           <div className="mt-12 max-w-[62ch] space-y-6">
             {study.reflection.map((paragraph, i) => (
