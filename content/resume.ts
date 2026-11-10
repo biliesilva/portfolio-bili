@@ -58,7 +58,7 @@ export const roles: ResumeRole[] = [
       "Introduced surface-aware colour tokens and a semantic type scale that keep text legible across all 15 bundled themes.",
       "Built an atomic Modal component and restyled every modal in the app on top of it — 1,189 lines added, 1,248 deleted across 58 files.",
       "Rebuilt the game page and settings on shared layout primitives (Panel, SettingsCard, SettingRow, Alert, Tabs, SpecCard) across 266 files.",
-      "Shipped the library redesign, the modal system, the Wine Manager, the downloads page, accessibility on the settings cards, and the game page and settings rebuild — ~14,000 lines of TypeScript and SCSS, each change defended in open review.",
+      "Shipped the library redesign, the modal system, the Wine Manager, the downloads page, accessibility on the settings cards, and the game page and settings rebuild — each audited against the token system, designed in Figma on existing tokens, implemented in TypeScript and SCSS, and defended in public review.",
     ],
     stack: ["TypeScript", "React", "SCSS", "Electron", "Figma"],
   },
@@ -68,11 +68,11 @@ export const roles: ResumeRole[] = [
     period: "2025 — present",
     location: "Independent — Google Play",
     summary:
-      "Two Android apps on Google Play, both live. UI/UX and front-end on each.",
+      "Two Android apps on Google Play, both live. Designer and front-end on each since before either existed, including the store graphics, and part of deciding what gets built.",
     highlights: [
       "Remote Work — remote jobs from five boards in one list, with an application tracker and a CV builder inside the app. Past 100,000 installs, eight languages.",
       "HeavyMuscle — a gym app with an AI coach that writes the plan, 873 animated exercises, and an offline-first logging screen designed to be used standing up with no signal.",
-      "Designed every screen in Figma first, then built the component layer neither app had and rebuilt the screens on top of it.",
+      "Designed every screen in Figma first and built the component layer underneath, produced the graphic material for both store listings, and iterate on the product with the team — which features ship and what they do."
     ],
     stack: ["Figma", "TypeScript", "React Native"],
   },

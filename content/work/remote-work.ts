@@ -14,7 +14,7 @@ export const remoteWork: WorkEntry = {
 
   disclosure: "Live on Google Play — install it and you are looking at the work.",
 
-  role: "UI/UX and front-end",
+  role: "Design and front-end, from the first screen",
   team: "Small team",
   timeline: "Ongoing",
   platforms: ["Android"],
@@ -28,7 +28,7 @@ export const remoteWork: WorkEntry = {
   },
 
   context: [
-    "I joined once the app was running. It worked, but the interface was holding it back and there were no shared components to build screens from.",
+    "I have been the designer and front-end on this since it did not exist yet — the first screens, the component layer underneath them, and the graphic material that carries the app on the store. I also work on the product itself: which features earn their place, and what each one should do once it is there.",
     "Remote Work pulls listings from Remote OK, We Work Remotely, Remotive, Remote.co and Web3.career into one list, across 30+ categories. It is past 100,000 installs.",
   ],
 
@@ -44,7 +44,7 @@ export const remoteWork: WorkEntry = {
       },
     },
     {
-      title: "Improved the UI and UX",
+      title: "Designed the list the whole app runs on",
       body: "The list is the whole app, so it carries everything you need to decide: role, company, date, a save action, and an Applied marker once you have applied. You never open a job twice by accident.",
       media: {
         src: "/work/remote-work/jobs.jpg",
@@ -64,8 +64,8 @@ export const remoteWork: WorkEntry = {
       },
     },
     {
-      title: "Built the components that did not exist",
-      body: "There was no component layer, so every screen had been built on its own. I designed the components, implemented them, and rebuilt the screens on top of them — filters, alerts and settings included.",
+      title: "Built the component layer",
+      body: "An app this size drifts fast if every screen owns its own styling. I designed the components and implemented them, so filters, alerts and settings are assembled from the same parts rather than drawn again each time.",
       media: {
         src: "/work/remote-work/filters.jpg",
         alt: "Remote Work filter sheet: filter by date posted, by applied status, and by tag, with tags like remote work and digital nomad selected",

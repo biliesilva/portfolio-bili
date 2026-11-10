@@ -14,7 +14,7 @@ export const heavyMuscle: WorkEntry = {
 
   disclosure: "Live on Google Play — install it and you are looking at the work.",
 
-  role: "UI/UX and front-end",
+  role: "Design and front-end, from the first screen",
   team: "Small team",
   timeline: "Ongoing",
   platforms: ["Android", "Wear OS"],
@@ -28,7 +28,7 @@ export const heavyMuscle: WorkEntry = {
   },
 
   context: [
-    "Same arrangement as Remote Work: I came in once it was running, improved the UI and UX, and worked on the front-end.",
+    "Same arrangement as Remote Work: designer and front-end from the start, responsible for the interface, the component layer and the graphic material — and part of deciding what the product does, not only how it looks.",
     "An AI coach builds a plan from one sentence and adjusts each session to your injuries, equipment and recovery. It shows the plates to load, generates warm-up sets, pre-fills every set with your last numbers and detects PRs. 873 animated exercises, six languages, fully offline.",
   ],
 
@@ -44,7 +44,7 @@ export const heavyMuscle: WorkEntry = {
       },
     },
     {
-      title: "Improved the UI and UX",
+      title: "Designed the screen that answers the first question",
       body: "The home screen answers one question — what am I training today — before anything else. Muscle recovery sits above the exercise list, so the plan and the reason for it are read together.",
       media: {
         src: "/work/heavy-muscle/day.jpg",
@@ -64,8 +64,8 @@ export const heavyMuscle: WorkEntry = {
       },
     },
     {
-      title: "Built the components that did not exist",
-      body: "No component layer, so every screen had been built on its own. I designed the components, implemented them and rebuilt the screens on top of them. It is offline-first, so it stays usable in a gym with no signal.",
+      title: "Built the component layer",
+      body: "I designed the components and implemented them, so the library, the coach and the session screen are assembled from the same parts. It is offline-first, so it stays usable in a gym with no signal.",
       media: {
         src: "/work/heavy-muscle/library.jpg",
         alt: "HeavyMuscle exercise library: a searchable list grouped by difficulty, each exercise tagged with its muscle group and the equipment it needs",

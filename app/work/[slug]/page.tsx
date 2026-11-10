@@ -412,24 +412,33 @@ async function CaseStudyArticle({ params }: Props) {
         <section className="container-edge py-16">
           <SectionHead index={n()} label="Build" title={study.build.title} />
           <div className="mt-16 grid gap-12 md:grid-cols-12">
-            <div className="space-y-6 md:col-span-6">
+            <div
+              className={cn(
+                "space-y-6",
+                // No figures to sit beside, so the prose takes the width
+                // rather than leaving half the row empty.
+                study.build.notes?.length ? "md:col-span-6" : "md:col-span-10"
+              )}
+            >
               {study.build.body.map((paragraph, i) => (
                 <p key={i} className="text-lead">
                   {paragraph}
                 </p>
               ))}
             </div>
-            <dl className="md:col-span-5 md:col-start-8">
-              {study.build.notes.map((note) => (
-                <div
-                  key={note.label}
-                  className="hairline flex items-baseline justify-between gap-4 py-5"
-                >
-                  <dt className="label">{note.label}</dt>
-                  <dd className="text-title">{note.value}</dd>
-                </div>
-              ))}
-            </dl>
+            {study.build.notes?.length ? (
+              <dl className="md:col-span-5 md:col-start-8">
+                {study.build.notes.map((note) => (
+                  <div
+                    key={note.label}
+                    className="hairline flex items-baseline justify-between gap-4 py-5"
+                  >
+                    <dt className="label">{note.label}</dt>
+                    <dd className="text-title">{note.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            ) : null}
           </div>
         </section>
       ) : null}

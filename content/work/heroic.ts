@@ -129,13 +129,11 @@ export const heroic: WorkEntry = {
   },
 
   build: {
+    title: "Designed in the open, shipped in pieces",
     body: [
-      "I designed and implemented every change myself, in TypeScript and SCSS, and defended each one in public review. Seven pull requests, each reviewable on its own: the library redesign, an atomic modal component with every modal rebuilt on top of it, the Wine Manager, the downloads page, accessibility on the settings cards, and the game page and settings rebuilt on shared components.",
-    ],
-    notes: [
-      { value: "7", label: "Pull requests merged" },
-      { value: "~14k", label: "Lines of UI code added" },
-      { value: "158", label: "Commits" },
+      "Nobody asked for a redesign, so I could not arrive with one. Every change had to be small enough for a maintainer to review on a weekend, and worth having on its own if the next one never landed.",
+      "The method was the same each time. Audit the screen against the token system and write down exactly what breaks and for whom \u2014 which theme, which surface, which contributor would hit it next. Design the fix in Figma on tokens that already exist, so the change is a subtraction from the mess rather than an addition to it. Where a pattern repeated across screens, it became a primitive before it became code.",
+      "Then I implemented it myself, in TypeScript and SCSS, and defended it in public review against maintainers who had lived with the codebase far longer than I had \u2014 and who were right often enough to change what shipped. That is the part a private design file never teaches you.",
     ],
   },
 
