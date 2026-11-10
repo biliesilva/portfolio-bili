@@ -55,12 +55,12 @@ export const site = {
   capabilities: [
     {
       title: "Product Design",
-      body: "Framing the problem before the pixels: user research and interviews, flows, prototypes, and four years of living with the same product rather than handing it off.",
+      body: "Framing the problem before the pixels: user research and interviews, flows, prototypes, and living with the same product rather than handing it off.",
       items: ["User research & interviews", "Discovery & framing", "User flows", "Prototyping", "Game & launcher UI"],
     },
     {
       title: "Design Systems",
-      body: "Responsible for the design system at two companies. At CoinFello I built it and implemented it in code myself. Tokens, components, documented states, kept usable by the engineers consuming it.",
+      body: "Responsible for the design system at two startups. At CoinFello I built it and implemented it in code myself. Tokens, components, documented states, kept usable by the engineers consuming it.",
       items: ["Design tokens", "Component libraries", "Figma architecture", "Documentation", "WCAG 2.2 AA"],
     },
     {

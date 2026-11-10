@@ -48,7 +48,7 @@ export function Hero() {
           <Reveal delay={0.35} className="md:col-span-6 md:col-start-1 md:row-start-1">
             <p className="max-w-[46ch] text-lead text-bone-dim">
               I&apos;m a product designer who builds what I design. I&apos;ve
-              owned the design system at two US companies, CoinFello and
+              owned the design system at two US startups, CoinFello and
               HyperPlay, and implemented both in code. At CoinFello I turned the
               design system into context for AI agents, so new components came
               out of Figma and into production React already matching the

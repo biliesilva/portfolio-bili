@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { JsonLd } from "@/components/layout/json-ld";
+import { Backdrop } from "@/components/layout/backdrop";
 import { MotionProvider } from "@/components/layout/motion-provider";
 
 const display = Barlow_Condensed({
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${sans.variable} ${display.variable}`}
     >
       <body className="min-h-svh">
+        <Backdrop />
         <SmoothScroll />
         <a
           href="#main"

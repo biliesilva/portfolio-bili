@@ -16,7 +16,7 @@ export const coinfello: WorkEntry = {
     "Employed work under NDA. What I can show is the design system itself — components with placeholder content — and the public site. No product screens, no customer data, no internal numbers.",
 
   role: "Front-end Developer — design system owner",
-  team: "Distributed team — US, Europe and LATAM",
+  team: "Distributed team — US and Europe",
   timeline: "1 year 3 months",
   platforms: ["Web"],
   stack: ["TypeScript", "React", "SCSS", "Design tokens", "AI tooling"],

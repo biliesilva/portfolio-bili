@@ -11,7 +11,7 @@ export const roles: ResumeRole[] = [
     period: "Aug 2025 — Oct 2026",
     location: "Remote — United States",
     summary:
-      "Built the design system and implemented it in code, on a team distributed across the US, Europe and LATAM.",
+      "Built the design system and implemented it in code, on a team distributed across the US and Europe.",
     highlights: [
       "Built the design system — token architecture, component library and the conventions that keep an interface coherent across contributors. 55 components, ready for dev.",
       "Implemented the system myself in typed React and SCSS, rather than specifying it for someone else to interpret.",
