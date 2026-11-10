@@ -15,7 +15,7 @@ export const roles: ResumeRole[] = [
     highlights: [
       "Built the design system — token architecture, component library and the conventions that keep an interface coherent across contributors. 55 components, ready for dev.",
       "Implemented the system myself in typed React and SCSS, rather than specifying it for someone else to interpret.",
-      "Adopted AI tooling into the daily workflow after the system was established, reviewing everything it produced as I would a junior's pull request.",
+      "Turned the design system into context an AI agent could build from — a rulebook committed to the repository, and components read straight from Figma through the MCP rather than guessed from a screenshot. Around 90–95% of a generated component matched the system first pass; I reviewed every one as I would a junior's pull request.",
     ],
     stack: ["TypeScript", "React", "SCSS", "Design tokens"],
   },
@@ -56,11 +56,25 @@ export const roles: ResumeRole[] = [
     highlights: [
       "Led the validation research in 2020 — desk research plus interviews with Linux users — which established that the product was worth building. It now has 500,000+ monthly users.",
       "Introduced surface-aware colour tokens and a semantic type scale that keep text legible across all 15 bundled themes.",
-      "Built an atomic Modal and Button system and migrated every modal in the app to it — 1,250 lines added, 1,127 deleted across 60 files.",
+      "Built an atomic Modal component and restyled every modal in the app on top of it — 1,189 lines added, 1,248 deleted across 58 files.",
       "Rebuilt the game page and settings on shared layout primitives (Panel, SettingsCard, SettingRow, Alert, Tabs, SpecCard) across 266 files.",
-      "Contributed ~14,000 lines of TypeScript and SCSS across four public pull requests, each defended in open review.",
+      "Seven pull requests merged — the library redesign, the modal system, the Wine Manager, the downloads page, accessibility on the settings cards, and the game page and settings rebuild. ~14,000 lines added and ~10,600 removed across 158 commits, each change defended in open review.",
     ],
     stack: ["TypeScript", "React", "SCSS", "Electron", "Figma"],
+  },
+  {
+    company: "Remote Work & HeavyMuscle",
+    title: "Product Designer & Front-end Developer",
+    period: "2025 — present",
+    location: "Independent — Google Play",
+    summary:
+      "Two Android apps on Google Play, both live. UI/UX and front-end on each.",
+    highlights: [
+      "Remote Work — remote jobs from five boards in one list, with an application tracker and a CV builder inside the app. Past 100,000 installs, eight languages.",
+      "HeavyMuscle — a gym app with an AI coach that writes the plan, 873 animated exercises, and an offline-first logging screen designed to be used standing up with no signal.",
+      "Designed every screen in Figma first, then built the component layer neither app had and rebuilt the screens on top of it.",
+    ],
+    stack: ["Figma", "TypeScript", "React Native"],
   },
   {
     company: "Starbreeze Entertainment",

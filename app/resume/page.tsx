@@ -17,7 +17,7 @@ export default function ResumePage() {
     <>
       <section className="container-edge pt-36 pb-16 md:pt-44">
         <div className="hairline pt-6">
-          <span className="label">CV — updated October 2026</span>
+          <span className="label">CV — updated November 2026</span>
           <RevealWords
             as="h1"
             text={site.name}
