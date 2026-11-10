@@ -5,13 +5,19 @@ import { Reveal } from "@/components/ui/reveal";
 import { MediaFrame } from "@/components/ui/media-frame";
 import { ButtonLink } from "@/components/ui/button-link";
 
+/** Written out, because "6 pieces of work" reads like a spreadsheet. */
+const COUNT = ["no", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"];
+
 export function FeaturedWork() {
+  // Counted, not typed. It said "Five" for a week after the sixth was added.
+  const count = COUNT[featuredCaseStudies.length] ?? featuredCaseStudies.length;
+
   return (
     <section id="work" className="container-edge py-24 md:py-36">
       <SectionHead
         index="01"
         label="Selected work"
-        title="Five pieces of work, told properly."
+        title={`${count} pieces of work, told properly.`}
       />
 
       <div className="mt-20 space-y-28 md:space-y-40">

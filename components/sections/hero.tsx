@@ -31,7 +31,11 @@ export function Hero() {
         <div className="mt-10 grid items-start gap-10 md:mt-8 md:grid-cols-12">
           <Reveal
             delay={0.45}
-            className="order-first md:order-none md:col-span-5 md:col-start-8 lg:-mt-56 xl:-mt-64"
+            // The portrait tucks up beside the headline from xl on. It used to
+            // start rising at lg too, where the column is narrow enough that
+            // "ship the code." ran into her shoulder — so below 1280 it sits
+            // under the headline instead.
+            className="order-first md:order-none md:col-span-5 md:col-start-8 xl:-mt-64"
           >
             <Portrait
               priority

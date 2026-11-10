@@ -10,7 +10,9 @@
   --color-ink-line: #26262a;
   --color-bone: #f2f0ea;
   --color-bone-dim: #a3a09a;
-  --color-bone-faint: #6b6965;
+  /* 4.95:1 on the ink canvas. The old #6b6965 was 3.61:1, which failed WCAG AA
+     for the 15px labels it is used on — on a site that claims WCAG 2.2 AA. */
+  --color-bone-faint: #817f7b;
   /* Holographic accent. Every stop clears 6:1 against the ink background, so
      the gradient can carry text as well as surfaces. */
   --color-accent: #a78bfa;
