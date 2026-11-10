@@ -58,7 +58,7 @@ export const roles: ResumeRole[] = [
       "Introduced surface-aware colour tokens and a semantic type scale that keep text legible across all 15 bundled themes.",
       "Built an atomic Modal component and restyled every modal in the app on top of it — 1,189 lines added, 1,248 deleted across 58 files.",
       "Rebuilt the game page and settings on shared layout primitives (Panel, SettingsCard, SettingRow, Alert, Tabs, SpecCard) across 266 files.",
-      "Seven pull requests merged — the library redesign, the modal system, the Wine Manager, the downloads page, accessibility on the settings cards, and the game page and settings rebuild. ~14,000 lines added and ~10,600 removed across 158 commits, each change defended in open review.",
+      "Shipped the library redesign, the modal system, the Wine Manager, the downloads page, accessibility on the settings cards, and the game page and settings rebuild — ~14,000 lines of TypeScript and SCSS, each change defended in open review.",
     ],
     stack: ["TypeScript", "React", "SCSS", "Electron", "Figma"],
   },
