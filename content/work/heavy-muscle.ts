@@ -50,7 +50,7 @@ export const heavyMuscle: WorkEntry = {
         src: "/work/heavy-muscle/day.jpg",
         alt: "HeavyMuscle training day: a five-day split with the current day expanded, muscle recovery per muscle group, and each exercise carrying its sets, reps, rest and a coaching note",
         caption: "Recovery state sits above the work it explains",
-        aspect: "524/1158",
+        aspect: "513/1151",
       },
     },
     {
@@ -60,7 +60,7 @@ export const heavyMuscle: WorkEntry = {
         src: "/work/heavy-muscle/coach.jpg",
         alt: "HeavyMuscle AI coach in builder mode: a request for a knee-friendly session, and the generated plan listed day by day with sets and reps, waiting to be saved",
         caption: "Builder mode — the plan is proposed, then saved",
-        aspect: "524/1158",
+        aspect: "513/1151",
       },
     },
     {
@@ -70,7 +70,7 @@ export const heavyMuscle: WorkEntry = {
         src: "/work/heavy-muscle/library.jpg",
         alt: "HeavyMuscle exercise library: a searchable list grouped by difficulty, each exercise tagged with its muscle group and the equipment it needs",
         caption: "The library, filtered by equipment and level",
-        aspect: "524/1158",
+        aspect: "513/1151",
       },
     },
   ],
@@ -85,7 +85,7 @@ export const heavyMuscle: WorkEntry = {
       src: "/work/heavy-muscle/session.jpg",
       alt: "HeavyMuscle live session: elapsed and remaining time, sets completed and calories pinned at the top, each set logged as weight by reps with a confirm circle, and swap, skip, rest and notes controls under the exercise",
       caption: "Mid-session — weight by reps, one tap to confirm",
-      aspect: "524/1158",
+      aspect: "513/1151",
     },
   },
 

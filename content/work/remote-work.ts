@@ -50,7 +50,7 @@ export const remoteWork: WorkEntry = {
         src: "/work/remote-work/jobs.jpg",
         alt: "Remote Work job list: each card carries the role, company and date, with a save action, an overflow menu, and an Applied marker once you have applied",
         caption: "Applied state sits on the card, so you never apply twice",
-        aspect: "682/1490",
+        aspect: "666/1480",
       },
     },
     {
@@ -60,7 +60,7 @@ export const remoteWork: WorkEntry = {
         src: "/work/remote-work/applications.jpg",
         alt: "Remote Work application tracker: two applications, each with applied, interviewing, offer and rejected stages, dated, with a notes field",
         caption: "Each stage dated, so the history is the status",
-        aspect: "682/1490",
+        aspect: "666/1480",
       },
     },
     {
@@ -70,7 +70,7 @@ export const remoteWork: WorkEntry = {
         src: "/work/remote-work/filters.jpg",
         alt: "Remote Work filter sheet: filter by date posted, by applied status, and by tag, with tags like remote work and digital nomad selected",
         caption: "Filters by date, applied status and tag",
-        aspect: "682/1490",
+        aspect: "666/1480",
       },
     },
   ],
@@ -85,7 +85,7 @@ export const remoteWork: WorkEntry = {
       src: "/work/remote-work/resume.jpg",
       alt: "Remote Work CV builder: tabs for personal info, experience, education, skills and languages, a form with name, title and email filled in, and save and export actions",
       caption: "Built and exported without leaving the app",
-      aspect: "682/1490",
+      aspect: "666/1480",
     },
   },
 
