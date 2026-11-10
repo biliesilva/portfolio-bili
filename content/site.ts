@@ -6,6 +6,12 @@ export const site = {
   name: "Biliane Silva",
   initials: "BS",
   role: "Product Designer & Front-end Developer",
+  /**
+   * Shown above the hero headline. Kept separate from `role`, which carries the
+   * page title and the schema jobTitle — those need the plain job names people
+   * actually search for, not a positioning line.
+   */
+  positioning: "Product Designer · Design Systems · AI-native workflow",
   tagline: "I design products and ship the code.",
   location: "Maceió, Brazil",
   timezone: "America/Maceio",
@@ -59,14 +65,14 @@ export const site = {
     },
     {
       title: "Front-end Engineering",
-      body: "I build what I design. Typed React, design systems implemented from inside engineering, and animation that respects reduced-motion. I wrote production front-end by hand for a year before I used AI for any of it — I work well either way, and I review what the assistant writes because I know what the work costs without it.",
+      body: "I build what I design. Typed React, design systems implemented from inside engineering, and animation that respects reduced-motion. At CoinFello I turned the design system into context an agent could read, so components came out of Figma already matching it. I wrote production front-end by hand before AI tools were in my workflow, which is exactly why I can review what they produce.",
       items: [
         "React & TypeScript",
         "Next.js",
-        "Tailwind CSS",
         "SCSS",
-        "Hand-written, no AI",
-        "AI-assisted when it earns it",
+        "Tailwind CSS",
+        "AI-assisted, human-reviewed",
+        "Figma MCP",
       ],
     },
   ],
@@ -89,9 +95,9 @@ export const site = {
       note: "At HyperPlay and CoinFello",
     },
     {
-      value: "3",
-      label: "Languages I work in",
-      note: "English, Portuguese, Spanish",
+      value: "100k+",
+      label: "Installs on Remote Work",
+      note: "An Android app I designed and built",
     },
   ],
 

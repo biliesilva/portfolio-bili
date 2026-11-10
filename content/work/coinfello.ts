@@ -110,12 +110,16 @@ export const coinfello: WorkEntry = {
   },
 
   build: {
+    title: "Design system as AI context",
     body: [
-      "I wrote production front-end by hand for a year at HyperPlay before I used AI for any of it. I work either way.",
+      "Most teams use AI to write code faster. I used it to keep a product that ships daily consistent with itself.",
+      "Once the design system existed, I wrote it down for the machine as well as for people. A CLAUDE.md file in the repository described the tokens, the naming rules, the component structure and the responsive conventions. Through the Figma MCP the agent could read a component straight from the design file, rather than guessing from a screenshot.",
+      "The loop: I design the component and its states in Figma, on the system's tokens. The agent reads it through the MCP, with CLAUDE.md as the rulebook, and generates the React component and its variants. I review what comes back the way I would review a junior developer's pull request, and fix what it missed. Around 90 to 95% of a generated component matched the system on the first pass.",
+      "That moved my time from typing variants to reviewing decisions. AI is fast, but it does not know what is right for this product — the design system is what told it what right meant, and the review is what made sure it got there. I wrote production front-end by hand for a year at HyperPlay before any of this, which is exactly why I can judge what it hands back.",
     ],
     notes: [
-      { value: "55", label: "Components, ready for dev" },
-      { value: "55", label: "Components I designed and built" },
+      { value: "90–95%", label: "Generated components matching the system first pass" },
+      { value: "55", label: "Components designed, built and documented" },
       { value: "1y 3m", label: "Duration" },
     ],
   },

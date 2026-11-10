@@ -10,9 +10,10 @@ export function Hero() {
   return (
     <section className="relative flex min-h-svh flex-col justify-between pt-28 pb-10">
       <Scrub y={-80} className="container-edge flex-1">
+        {/* The location used to sit on the right here, but the header clock
+            already says it two lines up. */}
         <div className="hairline flex flex-wrap items-baseline justify-between gap-4 pt-6">
-          <span className="label">{site.role}</span>
-          <span className="label">{site.location}</span>
+          <span className="label">{site.positioning}</span>
         </div>
 
         <h1 className="mt-14 max-w-[16ch] text-display font-medium md:mt-20">
@@ -46,11 +47,14 @@ export function Hero() {
 
           <Reveal delay={0.35} className="md:col-span-6 md:col-start-1 md:row-start-1">
             <p className="max-w-[46ch] text-lead text-bone-dim">
-              Product designer and front-end developer from Brazil.
-              I&apos;ve been responsible for the design system at two companies
-              and worked on the front-end at both — most recently with US teams
-              at CoinFello and HyperPlay, and before that on Payday 2 at
-              Starbreeze.
+              I&apos;m a product designer who builds what she designs. I&apos;ve
+              owned the design system at two US companies, CoinFello and
+              HyperPlay, and implemented both in code. At CoinFello I turned the
+              design system into context for AI agents, so new components came
+              out of Figma and into production React already matching the
+              system. Before that I worked on Payday 2 at Starbreeze, and
+              I&apos;ve designed the open-source Heroic Games Launcher since
+              2020.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Magnetic>
