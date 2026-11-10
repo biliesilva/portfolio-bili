@@ -99,13 +99,13 @@ export const coinfello: WorkEntry = {
   system: {
     title: "The system in production",
     body: [
-      "The product is public. The yellow on the Launch app button is the same token as the yellow on the chip and the button in the files above.",
+      "The product is public. The yellow on the Ask Fello button is the same token as the yellow on the chip and the button in the files above, and the strategy cards are the component library doing its job on real data.",
     ],
     media: {
-      src: "/work/coinfello/site.jpg",
-      alt: "The CoinFello website: Your Always On DeFi Super Agent, with the yellow primary button from the design system",
-      caption: "coinfello.com — the same tokens, shipped",
-      aspect: "16/10",
+      src: "/work/coinfello/app.jpg",
+      alt: "The CoinFello app: a portfolio balance and strategy list in the sidebar, an Ask Fello prompt field with the yellow primary button, and strategy template cards showing fee APR, risk level and TVL",
+      caption: "The app in production — the same tokens, on real data",
+      aspect: "3448/1812",
     },
   },
 
