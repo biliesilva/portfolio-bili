@@ -65,7 +65,7 @@ export const coinfello: WorkEntry = {
 
   context: [
     "CoinFello is a DeFi agent: it answers questions about assets and protocols, executes swaps and staking, and runs recurring strategies inside limits the user sets.",
-    "I joined as a front-end developer and built the design system: tokens, components and conventions. There was nothing to inherit. Then I implemented it in code.",
+    "I came to it straight from HyperPlay — same group, new startup, new product, no gap. I joined as a front-end developer and built the design system: tokens, components and conventions. There was nothing to inherit. Then I implemented it in code.",
     "This is also where I started using AI daily, after the system existed and I already knew what good looked like in the codebase.",
   ],
 

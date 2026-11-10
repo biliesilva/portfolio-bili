@@ -70,7 +70,7 @@ export const hyperplay: WorkEntry = {
   ],
 
   context: [
-    "HyperPlay is a game launcher for web3 games, built by a team spread across the US, Europe and Latin America. I joined the design team in 2022 and stayed until 2025, when the studio wound down and the team started again on a new product in the same group — CoinFello.",
+    "HyperPlay is a game launcher for web3 games, built by a team spread across the US, Europe and Latin America. I joined the design team in 2022 and stayed until 2025, when the studio wound down and the same group started again on a new product. I moved straight across to it — CoinFello — with no break in between.",
     "In late 2024 I moved to the engineering team as a front-end developer on the same product, working in TypeScript and React. I wrote all of it by hand — this was before I used AI for any of my work.",
   ],
 
