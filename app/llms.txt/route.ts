@@ -46,7 +46,7 @@ ${site.availability.label}. ${site.availability.detail}
 - Languages: ${languages}
 - Contact: ${site.email}
 
-## What she does
+## What I do
 
 ${capabilities}
 
