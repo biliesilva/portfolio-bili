@@ -112,6 +112,17 @@
     "width": 3400,
     "height": 1938
   },
+  "/work/heroic/icons.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      3432
+    ],
+    "width": 3432,
+    "height": 1974
+  },
   "/work/heroic/library.jpg": {
     "widths": [
       640,
@@ -133,6 +144,17 @@
     ],
     "width": 3400,
     "height": 1934
+  },
+  "/work/heroic/type-scale.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2400,
+      3422
+    ],
+    "width": 3422,
+    "height": 1970
   },
   "/work/hyperplay/combobox.jpg": {
     "widths": [

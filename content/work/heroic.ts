@@ -77,6 +77,12 @@ export const heroic: WorkEntry = {
       decision:
         "Outfit as the single app font, and a 12/14/16/18/20/24/32/40/48 scale exposed as semantic tokens.",
       why: "Contributors pick a role instead of a pixel value.",
+      media: {
+        src: "/work/heroic/type-scale.jpg",
+        alt: "Heroic settings: card titles, row labels, helper text under a toggle, and dropdown values, each at a different step of the type scale",
+        caption: "Five roles on one ramp — card title, row label, helper text, value, section heading",
+        aspect: "3422/1970",
+      },
     },
     {
       title: "Shared layout primitives",
@@ -99,6 +105,12 @@ export const heroic: WorkEntry = {
       decision:
         "Migrated the library, sidebar, header, search, action icons and filters to Lucide outlined icons.",
       why: "One icon weight across the app.",
+      media: {
+        src: "/work/heroic/icons.jpg",
+        alt: "Heroic library: every sidebar entry, the search field, the category and filter controls and the view toggles carrying the same outlined icon weight",
+        caption: "Sidebar, search, filters and view controls — one weight, one set",
+        aspect: "3432/1974",
+      },
     },
   ],
 
