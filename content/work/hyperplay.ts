@@ -5,9 +5,9 @@ export const hyperplay: WorkEntry = {
   kind: "role",
   title: "HyperPlay",
   client: "HyperPlay — Texas, United States",
-  year: "2022 — 2026",
+  year: "2022 — 2025",
   summary:
-    "Three and a half years on a web3 game launcher. Product design and research in the design team, then front-end work on the same interface in the engineering team.",
+    "Just under three years on a web3 game launcher. Product design and research in the design team, then front-end work on the same interface in the engineering team.",
   disciplines: ["Product Design", "Design Systems", "Front-end", "UI/UX"],
   featured: true,
   order: 2,
@@ -15,9 +15,9 @@ export const hyperplay: WorkEntry = {
   disclosure:
     "Employed work, done inside teams. This is my part, not the whole project. The screens below are from the publicly released launcher.",
 
-  role: "Product Designer (2022—2025) → Front-end Developer (2024—2026)",
+  role: "Product Designer (2022—2024) → Front-end Developer (2024—2025)",
   team: "Design team, then engineering team — distributed across the US, Europe and LATAM",
-  timeline: "3 years 8 months",
+  timeline: "2 years 11 months",
   platforms: ["Desktop game launcher", "Web"],
   stack: ["Figma", "TypeScript", "React", "SCSS", "Design tokens"],
 
@@ -70,7 +70,7 @@ export const hyperplay: WorkEntry = {
   ],
 
   context: [
-    "HyperPlay is a game launcher for web3 games, built by a team spread across the US, Europe and Latin America. I joined the design team in 2022 and stayed almost four years.",
+    "HyperPlay is a game launcher for web3 games, built by a team spread across the US, Europe and Latin America. I joined the design team in 2022 and stayed until 2025, when the studio wound down and the team started again on a new product in the same group — CoinFello.",
     "In late 2024 I moved to the engineering team as a front-end developer on the same product, working in TypeScript and React. I wrote all of it by hand — this was before I used AI for any of my work.",
   ],
 

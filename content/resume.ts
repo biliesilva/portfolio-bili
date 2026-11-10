@@ -22,7 +22,7 @@ export const roles: ResumeRole[] = [
   {
     company: "HyperPlay",
     title: "Front-end Developer",
-    period: "Nov 2024 — Apr 2026",
+    period: "Nov 2024 — Jul 2025",
     location: "Remote — Texas, United States",
     summary:
       "Moved from the design team into engineering on the same product, working on the HyperPlay Game Launcher interface with the engineering team.",
@@ -35,7 +35,7 @@ export const roles: ResumeRole[] = [
   {
     company: "HyperPlay",
     title: "Product Designer",
-    period: "Sep 2022 — Jan 2025",
+    period: "Sep 2022 — Nov 2024",
     location: "Remote — Texas, United States",
     summary:
       "Product design for a web3 game launcher inside a design team, with responsibility for the design system.",
