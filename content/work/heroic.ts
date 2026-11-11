@@ -15,7 +15,7 @@ export const heroic: WorkEntry = {
   disclosure:
     "Open source. Every pull request, review conversation and decision below is public on GitHub.",
 
-  role: "Validation research · UX/UI design (2020—) · front-end (2025—)",
+  role: "Validation research · Brand and UI (2020—) · Front-end (2025—) · UI pull request review",
   team: "Open-source maintainers and contributors",
   timeline: "5+ years, ongoing",
   platforms: ["Linux", "Windows", "macOS", "Steam Deck"],
@@ -31,7 +31,8 @@ export const heroic: WorkEntry = {
   context: [
     "Heroic Games Launcher lets more than 500,000 people a month play GOG, Amazon and Epic games on Linux, Windows, macOS and Steam Deck. It is free and open source.",
     "In 2020 I ran the validation research that came before it: desk research plus interviews with Linux users, to find out whether it was worth building at all.",
-    "I have contributed as a UX/UI designer since then, and as a front-end developer since 2025. The interface had grown one contribution at a time — three fonts, Material UI mixed with custom SCSS, and 15 bundled themes that each broke somewhere. Nobody asked for a redesign; I opened one as a series of pull requests.",
+    "I created the brand identity and all of the UI components, and have contributed as a designer since then and as a front-end developer since 2025. I am also the person who reviews and approves UI pull requests — other people's, not only my own — which is how the interface stays coherent in a project anyone can contribute to.",
+    "The interface had still grown one contribution at a time — three fonts, Material UI mixed with custom SCSS, and 15 bundled themes that each broke somewhere. Nobody asked for a redesign; I opened one as a series of pull requests.",
   ],
 
   goal:

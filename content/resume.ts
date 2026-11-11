@@ -55,6 +55,8 @@ export const roles: ResumeRole[] = [
       "Validation research, design and front-end on an open-source game launcher with 500,000+ monthly users across Linux, Windows, macOS and Steam Deck. Everything here is public.",
     highlights: [
       "Led the validation research in 2020 — desk research plus interviews with Linux users — which established that the product was worth building. It now has 500,000+ monthly users.",
+      "Created the brand identity and all of the UI components.",
+      "Primarily responsible for reviewing and approving UI pull requests, which is what keeps the interface coherent across contributors.",
       "Introduced surface-aware colour tokens and a semantic type scale that keep text legible across all 15 bundled themes.",
       "Built an atomic Modal component and restyled every modal in the app on top of it — 1,189 lines added, 1,248 deleted across 58 files.",
       "Rebuilt the game page and settings on shared layout primitives (Panel, SettingsCard, SettingRow, Alert, Tabs, SpecCard) across 266 files.",
