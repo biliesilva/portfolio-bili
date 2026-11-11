@@ -7,11 +7,11 @@ import type { ResumeRole } from "./types";
 export const roles: ResumeRole[] = [
   {
     company: "CoinFello",
-    title: "Front-end Developer",
+    title: "Front-end Developer & Design System Owner",
     period: "Aug 2025 — Oct 2026",
     location: "Remote — United States",
     summary:
-      "Built the design system and implemented it in code, on a team distributed across the US and Europe. Continued directly from HyperPlay — the same group, starting again on a new product.",
+      "Owned the design system end to end: designed it and implemented it in code, on a team distributed across the US and Europe. Continued directly from HyperPlay — the same group, starting again on a new product.",
     highlights: [
       "Built the design system — token architecture, component library and the conventions that keep an interface coherent across contributors. 55 components, ready for dev.",
       "Implemented the system myself in typed React and SCSS, rather than specifying it for someone else to interpret.",

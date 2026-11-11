@@ -7,7 +7,7 @@ export const coinfello: WorkEntry = {
   client: "CoinFello — United States",
   year: "2025 — 2026",
   summary:
-    "Built the design system and implemented it in code. A DeFi product with an AI agent at the centre of it.",
+    "Owned the design system end to end — designed it, then implemented it in code. A DeFi product with an AI agent at the centre of it.",
   disciplines: ["Design Systems", "Front-end", "UI/UX"],
   featured: true,
   order: 1,
@@ -15,7 +15,7 @@ export const coinfello: WorkEntry = {
   disclosure:
     "Employed work under NDA. What I can show is the design system itself — components with placeholder content — and the public site. No product screens, no customer data, no internal numbers.",
 
-  role: "Front-end Developer — design system owner",
+  role: "Front-end Developer & Design System Owner",
   team: "Distributed team — US and Europe",
   timeline: "1 year 3 months",
   platforms: ["Web"],
