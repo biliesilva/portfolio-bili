@@ -15,7 +15,7 @@ export const roles: ResumeRole[] = [
     highlights: [
       "Built the design system — token architecture, component library and the conventions that keep an interface coherent across contributors. 55 components, ready for dev.",
       "Implemented the system myself in typed React and SCSS, rather than specifying it for someone else to interpret.",
-      "Turned the design system into context an AI agent could build from — a rulebook committed to the repository, and components read straight from Figma through the MCP rather than guessed from a screenshot. Around 90–95% of a generated component matched the system first pass; I reviewed every one as I would a junior's pull request.",
+      "Turned the design system into context an AI agent could build from — a rulebook committed to the repository, and components read straight from Figma through the MCP rather than guessed from a screenshot. Around 70–85% of a generated component matched the system first pass; I reviewed every one as I would a junior's pull request.",
     ],
     stack: ["TypeScript", "React", "SCSS", "Design tokens"],
   },
