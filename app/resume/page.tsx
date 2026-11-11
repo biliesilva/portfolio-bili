@@ -37,8 +37,8 @@ export default function ResumePage() {
               .join(" · ")}
           </p>
           <Reveal delay={0.2} className="mt-10 flex flex-wrap gap-4 print:hidden">
-            <ButtonLink href="/biliane-silva-resume.pdf" external>
-              Download PDF
+            <ButtonLink href="/biliane-silva-cv.pdf" external>
+              Download CV
             </ButtonLink>
             <ButtonLink href={`mailto:${site.email}`} variant="ghost">
               {site.email}
