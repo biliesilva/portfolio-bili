@@ -4,7 +4,7 @@ export type Discipline = "Product Design" | "UI/UX" | "Front-end" | "Design Syst
  * Three kinds of entry, because not every piece of work can be told the same way:
  * - "case-study": public work, told in full — problem, decisions, outcome.
  * - "role":       employed work under NDA. Scope and practice, no client internals.
- * - "project":    personal work, free to show.
+ * - "project":    independent apps, free to show.
  */
 export type WorkKind = "case-study" | "role" | "project";
 
@@ -15,6 +15,7 @@ export type Media = {
   caption?: string;
   /** CSS aspect-ratio, e.g. "16/10" */
   aspect?: string;
+  mobileSrc?: string;
 };
 
 export type Metric = {
@@ -22,17 +23,62 @@ export type Metric = {
   label: string;
 };
 
+export type ProofLink = { label: string; href: string };
+
 export type Decision = {
   title: string;
   problem: string;
   decision: string;
   why: string;
+  links?: ProofLink[];
   media?: Media;
 };
+
+export type ChapterTone =
+  | "heroic"
+  | "coinfello"
+  | "hyperplay"
+  | "starbreeze"
+  | "remote-work"
+  | "heavy-muscle";
+
+export type Brief = {
+  problem: string;
+  contribution: string;
+  outcome: string;
+};
+
+export type ThemeSurface = { name: string; surface: string };
+
+export type Comparison = { title: string; note: string; before: Media; after: Media };
+
+export type Block =
+  | { type: "compare"; title: string; intro: string; items: Comparison[] }
+  | {
+      type: "code";
+      title: string;
+      body: string[];
+      code: string;
+      caption: string;
+      themes: ThemeSurface[];
+      links?: ProofLink[];
+    }
+  | { type: "text"; title?: string; body: string[]; links?: ProofLink[]; media?: Media }
+  | { type: "figure"; media: Media }
+  | { type: "gallery"; title?: string; intro?: string; media: Media[] }
+  | { type: "decisions"; title: string; items: Decision[] }
+  | {
+      type: "list";
+      title: string;
+      items: { title: string; body: string; links?: ProofLink[] }[];
+    }
+  | { type: "quote"; text: string; body?: string[] }
+  | { type: "stats"; title: string; items: Metric[]; body?: string[] };
 
 export type WorkEntry = {
   slug: string;
   kind: WorkKind;
+  tone: ChapterTone;
   title: string;
   client: string;
   year: string;
@@ -48,6 +94,7 @@ export type WorkEntry = {
    * Saying so is more credible than quietly having nothing to show.
    */
   disclosure?: string;
+  links?: ProofLink[];
 
   /* Meta bar */
   role: string;
@@ -57,23 +104,9 @@ export type WorkEntry = {
   stack: string[];
 
   cover: Media;
-
-  /* Narrative — every section below is optional except context */
-  context: string[];
-  /** For role entries: what you owned, in your own words. */
-  responsibilities?: { title: string; body: string; media?: Media }[];
-  goal?: string;
-  constraints?: string[];
-  research?: { insight: string; detail: string }[];
-  decisions?: Decision[];
-  system?: { title: string; body: string[]; media?: Media };
-  build?: { title?: string; body: string[]; notes?: Metric[] };
-  outcome?: {
-    metrics?: Metric[];
-    body: string[];
-    quote?: { text: string; author: string; role: string };
-  };
-  reflection?: string[];
+  panel?: Media;
+  brief: Brief;
+  blocks: Block[];
 };
 
 /** Kept as an alias so older imports keep reading naturally. */

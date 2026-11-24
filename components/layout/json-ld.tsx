@@ -89,7 +89,7 @@ export function personNode() {
     },
     workLocation: {
       "@type": "Place",
-      name: "Remote — working with teams in the United States",
+      name: "Remote, working with teams in the United States",
     },
   };
 }
@@ -99,7 +99,7 @@ function websiteNode() {
     "@type": "WebSite",
     "@id": ids.website,
     url: site.url,
-    name: `${site.name} — ${site.role}`,
+    name: `${site.name} | ${site.role}`,
     description: site.tagline,
     inLanguage: "en",
     publisher: { "@id": ids.person },

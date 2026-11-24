@@ -1,7 +1,7 @@
 # Biliane Silva — Portfolio
 
-Product designer & front-end developer portfolio. Next.js 16 (App Router, Cache
-Components), React 19, Tailwind CSS v4, Motion, GSAP ScrollTrigger and Lenis.
+Product designer & front-end developer portfolio. Next.js 16 (App Router),
+React 19, Tailwind CSS v4 and Motion.
 
 ```bash
 pnpm install
@@ -40,9 +40,8 @@ variants.** They are checked in so the deploy does not depend on sharp.
 | --- | --- |
 | `/` | Hero, proof numbers, featured work, capabilities, remote-work block, CTA |
 | `/work` | Filterable index of every case study |
-| `/work/[slug]` | Case study: context → decisions → system → build → outcome → reflection |
+| `/work/[slug]` | Case study: brief, then blocks in the order each story needs |
 | `/about` | Bio, principles, tools, timeline |
-| `/playground` | Components and experiments, with links to the real code |
 | `/resume` | Résumé, print-ready, plus PDF download |
 | `/contact` | Email, calendar, "for hiring teams" block |
 | `/404`, `/sitemap.xml`, `/robots.txt`, `/opengraph-image` | Generated automatically |
@@ -68,7 +67,6 @@ content/
   site.ts          profile, availability, languages, capabilities, nav, socials
   about.ts         bio, principles, tools, timeline
   resume.ts        roles, education, skills
-  playground.ts    experiments
   work/
     index.ts       registry — add new case studies here
     heroic.ts      one file per case study
@@ -102,8 +100,6 @@ Search the repo for `TODO` — every placeholder is marked. The ones that matter
 - **Accessibility**: reduced motion is handled once, at the root, by
   `<MotionConfig reducedMotion="user">` plus a CSS fallback — no component
   branches its markup on it, so there are no hydration mismatches.
-- **Smooth scroll**: Lenis runs on the GSAP ticker so ScrollTrigger and Lenis
-  read the same frame, and is switched off entirely under reduced motion.
 - **Images**: `MediaFrame` renders a placeholder instead of a broken image when
   `src` is empty.
 - **SEO**: per-page metadata, Person JSON-LD, generated sitemap and OG image.

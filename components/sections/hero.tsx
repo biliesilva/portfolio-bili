@@ -1,87 +1,47 @@
 import { site } from "@/content/site";
-import { Reveal, RevealWords } from "@/components/ui/reveal";
-import { Marquee } from "@/components/ui/marquee";
+import { getCaseStudy } from "@/content/work";
+import { RevealWords } from "@/components/ui/reveal";
 import { ButtonLink } from "@/components/ui/button-link";
-import { Magnetic } from "@/components/ui/magnetic";
-import { Scrub } from "@/components/ui/scrub";
-import { Portrait } from "@/components/ui/portrait";
+import { MediaFrame } from "@/components/ui/media-frame";
 
 export function Hero() {
-  return (
-    <section className="relative flex min-h-svh flex-col justify-between pt-28 pb-10">
-      <Scrub y={-80} className="container-edge flex-1">
-        {/* The location used to sit on the right here, but the header clock
-            already says it two lines up. */}
-        <div className="hairline flex flex-wrap items-baseline justify-between gap-4 pt-6">
-          <span className="label">{site.positioning}</span>
-        </div>
+  const lead = getCaseStudy("heroic-games-launcher");
 
-        <h1 className="mt-14 max-w-[16ch] text-display font-medium md:mt-20">
+  return (
+    <section className="pt-28 md:pt-32">
+      <div className="container-edge grid gap-8 pb-12 md:grid-cols-12 md:items-end">
+        <h1 className="text-display font-medium md:col-span-8">
           <RevealWords as="span" text="I design products" className="block" />
           <span className="block">
-            <RevealWords as="span" text="and" className="inline" delay={0.18} />{" "}
-            <RevealWords
-              as="span"
-              text="ship the code."
-              className="holo-text inline font-display font-normal italic"
-              delay={0.26}
-            />
+            and <span className="holo-text italic">ship the code.</span>
           </span>
         </h1>
-
-        <div className="mt-10 grid items-start gap-10 md:mt-8 md:grid-cols-12">
-          <Reveal
-            delay={0.45}
-            // The portrait tucks up beside the headline from xl on. It used to
-            // start rising at lg too, where the column is narrow enough that
-            // "ship the code." ran into her shoulder — so below 1280 it sits
-            // under the headline instead.
-            className="order-first md:order-none md:col-span-5 md:col-start-8 xl:-mt-64"
-          >
-            <Portrait
-              priority
-              className="w-[66vw] max-w-[19rem] sm:w-[52vw] md:ml-auto md:w-full md:max-w-[21rem] lg:max-w-[25rem] xl:max-w-[28rem]"
-              sizes="(min-width: 1280px) 28rem, (min-width: 1024px) 25rem, (min-width: 768px) 21rem, 66vw"
-            />
-          </Reveal>
-
-          <Reveal delay={0.35} className="md:col-span-6 md:col-start-1 md:row-start-1">
-            <p className="max-w-[46ch] text-lead text-bone-dim">
-              I&apos;m a product designer who builds what I design. I&apos;ve
-              owned the design system at two US startups, CoinFello and
-              HyperPlay, and implemented both in code. At CoinFello I turned the
-              design system into context for AI agents, so new components came
-              out of Figma and into production React already matching the
-              system. Before that I worked on Payday 2 at Starbreeze, and
-              I&apos;ve designed the open-source Heroic Games Launcher since
-              2020.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Magnetic>
-                <ButtonLink href="/work">See the work</ButtonLink>
-              </Magnetic>
-              <ButtonLink href="/resume" variant="ghost">
-                CV
-              </ButtonLink>
-            </div>
-          </Reveal>
-
+        <div className="md:col-span-4">
+          <p className="max-w-[44ch] text-lead">
+            {site.name}. Product designer with six years in product design,
+            specialised in design systems, who also writes the front-end.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <ButtonLink href="/work">See the work</ButtonLink>
+            <ButtonLink href="/resume" variant="ghost">
+              CV
+            </ButtonLink>
+          </div>
         </div>
-      </Scrub>
-
-      <Reveal delay={0.5} className="mt-20">
-        <Marquee
-          items={[
-            "Product design",
-            "Design systems",
-            "React & Next.js",
-            "TypeScript",
-            "Accessibility",
-            "Motion",
-            "Open source",
-          ]}
-        />
-      </Reveal>
+      </div>
+      {lead ? (
+        <div className="container-edge">
+          <MediaFrame
+            media={{
+              ...lead.cover,
+              mobileSrc: "/work/heroic/library-mobile.jpg",
+              caption: "Heroic Games Launcher: validated and designed by me from the start, now with 500k+ monthly users",
+            }}
+            priority
+            sizes="(max-width: 767px) 62vw, (min-width: 1600px) 100rem, 94vw"
+          />
+        </div>
+      ) : null}
     </section>
   );
 }

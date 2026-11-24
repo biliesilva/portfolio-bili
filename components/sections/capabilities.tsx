@@ -1,39 +1,24 @@
 import { site } from "@/content/site";
-import { SectionHead } from "@/components/ui/section-head";
-import { Reveal } from "@/components/ui/reveal";
 
 export function Capabilities() {
   return (
-    <section className="container-edge py-24 md:py-36">
-      <SectionHead
-        index="02"
-        label="Capabilities"
-        title="One person across the whole hand-off."
-      />
-
-      <div className="mt-20 grid gap-px bg-ink-line md:grid-cols-3">
-        {site.capabilities.map((capability, i) => (
-          <Reveal
-            key={capability.title}
-            delay={i * 0.08}
-            className="bg-ink p-8 md:p-10"
-          >
-            <span className="holo-text font-display text-3xl font-medium leading-none tabular-nums">
-              {String(i + 1).padStart(2, "0")}
-            </span>
-            <h3 className="mt-6 text-title">{capability.title}</h3>
-            <p className="mt-5 text-bone-dim">{capability.body}</p>
-            <ul className="mt-8 space-y-2">
-              {capability.items.map((item) => (
-                <li key={item} className="label flex items-center gap-3">
-                  <span className="size-1 rounded-full bg-accent" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
+    <section aria-labelledby="capabilities-title" className="container-edge py-10 md:py-14">
+      <h2 id="capabilities-title" className="label">
+        What I do
+      </h2>
+      <ul className="mt-6">
+        {site.capabilities.map((capability) => (
+          <li key={capability.title} className="hairline grid gap-6 py-10 md:grid-cols-12">
+            <h3 className="text-hero font-medium leading-none md:col-span-7">
+              {capability.title}
+            </h3>
+            <div className="md:col-span-5">
+              <p className="max-w-[52ch]">{capability.body}</p>
+              <p className="label mt-4">{capability.items.join(", ")}</p>
+            </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

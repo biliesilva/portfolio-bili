@@ -15,8 +15,8 @@ export function Footer() {
                 <a
                   href={social.href}
                   target={social.href.startsWith("mailto:") ? undefined : "_blank"}
-                  rel="noreferrer"
-                  className="link-wipe text-lead"
+                  rel="noopener noreferrer"
+                  className="link-wipe min-w-11 py-1 text-lead"
                 >
                   {social.label}
                 </a>
@@ -28,9 +28,9 @@ export function Footer() {
         <div className="md:col-span-4">
           <p className="label">Pages</p>
           <ul className="mt-4 space-y-1">
-            {[...site.nav, { label: "CV", href: "/resume" }].map((item) => (
+            {site.nav.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="link-wipe text-lead">
+                <Link href={item.href} className="link-wipe min-w-11 py-1 text-lead">
                   {item.label}
                 </Link>
               </li>

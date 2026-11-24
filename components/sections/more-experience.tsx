@@ -10,7 +10,7 @@ const linkedin =
  * kind of completeness actually belongs.
  */
 export function MoreExperience({
-  note = "This portfolio covers the work worth reading in full. The complete history — earlier roles, freelance and where it started — is on LinkedIn.",
+  note = "This portfolio covers the work worth reading in full. The complete history, with earlier roles and freelance, is on LinkedIn.",
 }: {
   note?: string;
 }) {
@@ -19,7 +19,7 @@ export function MoreExperience({
       <a
         href={linkedin}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         className="group hairline block pt-6"
       >
         <span className="label">More experience</span>

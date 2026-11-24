@@ -3,133 +3,105 @@ import type { WorkEntry } from "../types";
 export const hyperplay: WorkEntry = {
   slug: "hyperplay",
   kind: "role",
+  tone: "hyperplay",
   title: "HyperPlay",
-  client: "HyperPlay — Texas, United States",
-  year: "2022 — 2025",
+  client: "HyperPlay, Texas, United States",
+  year: "2022 to 2025",
   summary:
-    "Just under three years on a web3 game launcher. Product design and research in the design team, then front-end work on the same interface in the engineering team.",
+    "One of the first designers on a web3 game launcher, there from the start. I worked on it in design, front-end and player support, and saw the whole product.",
   disciplines: ["Product Design", "Design Systems", "Front-end", "UI/UX"],
   featured: true,
-  order: 2,
+  order: 3,
 
   disclosure:
-    "Employed work, done inside teams. This is my part, not the whole project. The screens below are from the publicly released launcher.",
+    "Contract work, done inside teams. The screens come from the released launcher and from its design system. Other results and internal material are confidential.",
 
-  role: "Product Designer (2022—2024) → Front-end Developer (2024—2025)",
-  team: "Design team, then engineering team — distributed across the US, Europe and LATAM",
+  role: "One of the first designers (2022), then design team, front-end (2024 to 2025) and player support",
+  team: "Mostly in the US, with a few people in Europe. I worked remotely as a full-time contractor",
   timeline: "2 years 11 months",
   platforms: ["Desktop game launcher", "Web"],
   stack: ["Figma", "TypeScript", "React", "SCSS", "Design tokens"],
 
   cover: {
-    src: "/work/hyperplay/discover.jpg",
-    alt: "HyperPlay discover page: featured hero carousel, a ranked most-popular list, quests and new releases",
-    caption: "The discover page",
-    aspect: "4/5",
+    src: "/work/hyperplay/store.jpg",
+    alt: "The HyperPlay store: a ranked list of the most popular games with genre tags, and a row of new quests",
+    caption: "The store: ranked games and quests",
+    aspect: "826/700",
   },
 
-  goal:
-    "Make a web3 game launcher that someone who has never used web3 would trust and find easy to use.",
-  constraints: [
-    "Players are not only playing — they earn and trade items, so a confusing screen costs more than usual",
-    "Most of the audience we wanted had never used a web3 product",
-    "The launcher is only worth using if studios choose to host their games on it",
-    "Desktop client and website, signed in and signed out, desktop and mobile",
-  ],
+  brief: {
+    problem:
+      "Developers wanted players who came for the game, not people who were there only to make money. Players did not trust what they saw.",
+    contribution:
+      "I was one of the first designers. I ran interviews, designed flows and screens, was responsible for the design system in the design team, and later implemented part of it in code.",
+    outcome:
+      "The team redesigned the entire store, with more description and information for each game and a more attractive presentation.",
+  },
 
-  research: [
+  blocks: [
     {
-      insight: "We interviewed game developers, not only players",
-      detail:
-        "The design team ran interviews with game creators about the problems they had — distribution, reaching players, and what they needed from a launcher. The launcher only works if the games are on it, so the developer side had to be designed for as deliberately as the player side.",
+      type: "text",
+      title: "From the start, and from every side",
+      body: [
+        "I was at HyperPlay from the beginning, as one of its first designers. Then I was part of the design team, and later a front-end developer on the same interface.",
+        "I also did player support. Between designing the product, building it and helping the people who used it, I came to understand it as a whole, and not only the part in my own file.",
+      ],
     },
     {
-      insight: "Trust was the thing we were short of",
-      detail:
-        "New players were being asked to use a launcher where items have real value, in a category most of them associated with risk. Being easy to use was not enough on its own; the interface had to look like something you could leave your account in.",
-    },
-  ],
-
-  decisions: [
-    {
-      title: "Designed for two audiences at once",
-      problem:
-        "A launcher with no games is worth nothing, and the studios deciding whether to publish on it had their own problems — distribution, visibility, reaching players.",
-      decision:
-        "We treated game developers as users too, interviewed them about those problems, and designed the launcher around what they needed as well as what players needed.",
-      why: "It changed what got built. The developer side was the half nobody else was asking about.",
+      type: "quote",
+      text: "Game developers told us the problem was attracting players who wanted to play.",
+      body: [
+        "The design team interviewed game creators as well as players. A launcher with no games is worth nothing, so their side had to be designed for as deliberately as the player side.",
+        "What they complained about was specific. They needed people who would come to play their games, not people who were there only to make money. Players, meanwhile, were being asked to trust a category most of them associated with risk.",
+      ],
     },
     {
-      title: "Built it for people who had never touched web3",
-      problem:
-        "The people we most wanted to reach were unfamiliar with web3, and the category's reputation meant a wrong-looking screen would end the session.",
-      decision:
-        "The launcher had to read as a games launcher first, and earn trust before asking anyone to approve anything.",
-      why: "Someone who does not understand what an action is doing will not take it, however good the game library is.",
-    },
-  ],
-
-  context: [
-    "HyperPlay is a game launcher for web3 games, built by a team spread across the US, Europe and Latin America. I joined the design team in 2022 and stayed until 2025, when the studio wound down and the same group started again on a new product. I moved straight across to it — CoinFello — with no break in between.",
-    "In late 2024 I moved to the engineering team as a front-end developer on the same product, working in TypeScript and React. I wrote all of it by hand — this was before I used AI for any of my work.",
-  ],
-
-  responsibilities: [
-    {
-      title: "Research and interviews",
-      body: "Ran user research and interviews, and turned the findings into flows and prototypes the team could review before anything was built.",
-    },
-    {
-      title: "Product design for the launcher",
-      body: "Flows, screens and interactive prototypes — the store, the game pages, quests and the library.",
+      type: "text",
+      title: "So we redesigned the store",
+      body: [
+        "The answer was not a new screen. We redid the entire design of the store. Games got more description and more information, so a player could decide with confidence, and the pages became more attractive, so there was a reason to look.",
+        "A game page now carries the gallery, what the game is about, where it runs, its quests, its on-chain assets, the system requirements and the latest updates.",
+      ],
       media: {
-        src: "/work/hyperplay/game-page.jpg",
-        alt: "A HyperPlay game page: gallery, metadata, quests, on-chain assets, system requirements and changelog",
-        caption: "A game page end to end",
-        aspect: "9/16",
+        src: "/work/hyperplay/game-detail.jpg",
+        alt: "A HyperPlay game page: gallery, description, genres and tags, supported platforms, quests with rewards and on-chain assets",
+        caption: "A game page, from gallery to on-chain assets",
+        aspect: "496/1040",
       },
     },
     {
-      title: "The design system",
-      body: "Within the design team I was responsible for the design system: token architecture, component library and documented states, kept usable by the engineers consuming it.",
-      media: {
-        src: "/work/hyperplay/combobox.jpg",
-        alt: "The HyperPlay Combobox component in Figma, with every combination of type, state, open, valid and required",
-        caption: "Combobox — single and multiple, every state, open and closed, valid and not",
-        aspect: "4/3",
-      },
+      type: "gallery",
+      title: "The system under it",
+      intro:
+        "I was responsible for the design system inside the design team: tokens, library and documented states, usable by the engineers who consumed it.",
+      media: [
+        {
+          src: "/work/hyperplay/combobox-states.jpg",
+          alt: "The HyperPlay combobox in every combination of type, state, open, valid and required",
+          caption: "Combobox: single and multiple, every state",
+          aspect: "820/1290",
+        },
+        {
+          src: "/work/hyperplay/header-variants.jpg",
+          alt: "The HyperPlay navigation header for the desktop client, the website and mobile, signed in and signed out",
+          caption: "One header, with the platform as a property",
+          aspect: "775/1184",
+        },
+      ],
     },
     {
-      title: "Front-end in the engineering team",
-      body: "TypeScript and React on the launcher interface, alongside the rest of the engineering team. No AI in any of it.",
+      type: "text",
+      title: "Then I moved to engineering",
+      body: [
+        "In late 2024 I joined the engineering team and worked in TypeScript and React on the interface I had helped design, including part of the design system. I wrote it by hand, before I used AI in any of my work.",
+      ],
     },
     {
-      title: "Content and player support",
-      body: "For over a year I also tested games and troubleshot with players and game developers.",
+      type: "text",
+      title: "What support taught me about the product",
+      body: [
+        "For over a year I did content and player support, testing games and troubleshooting with players and game developers. I saw where people got stuck, and that fed straight back into the design.",
+      ],
     },
   ],
-
-  system: {
-    title: "One header, five platform states",
-    body: [
-      "The launcher runs as a desktop client and as a website, signed in and signed out, on desktop and on mobile. The navigation header covers all of it as one component, with the platform as a property.",
-    ],
-    media: {
-      src: "/work/hyperplay/navigation.jpg",
-      alt: "The HyperPlay navigation header in Figma, with variants for desktop client, website, and mobile signed in, signed out and open",
-      caption: "Navigation header — all platform variants",
-      aspect: "16/9",
-    },
-  },
-
-  build: {
-    body: [
-      "The same craft is public in my open-source work on Heroic Games Launcher, where every pull request and review conversation can be read on GitHub.",
-    ],
-    notes: [
-      { value: "3y 8m", label: "On the same product" },
-      { value: "2", label: "Teams — design, then engineering" },
-      { value: "0", label: "AI in the code I wrote here" },
-    ],
-  },
 };

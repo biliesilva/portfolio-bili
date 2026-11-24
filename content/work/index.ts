@@ -7,7 +7,7 @@ import { remoteWork } from "./remote-work";
 import { heavyMuscle } from "./heavy-muscle";
 
 /**
- * Six entries, deliberately. Everything else lives on LinkedIn — a portfolio
+ * Six entries, four of them featured. Everything else lives on LinkedIn — a portfolio
  * that gives equal weight to a 2010 internship is a portfolio nobody finishes.
  */
 export const caseStudies: WorkEntry[] = [
@@ -41,5 +41,5 @@ export const disciplines: Discipline[] = [
 export const kindLabel: Record<WorkEntry["kind"], string> = {
   "case-study": "Case study",
   role: "Role",
-  project: "Personal project",
+  project: "Independent app",
 };

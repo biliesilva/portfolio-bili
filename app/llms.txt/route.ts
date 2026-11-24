@@ -15,7 +15,7 @@ function build(): string {
   const work = caseStudies
     .map(
       (study) =>
-        `- [${study.title}](${site.url}/work/${study.slug}) — ${kindLabel[study.kind]}, ${study.client}, ${study.year}. ${study.summary} Disciplines: ${study.disciplines.join(", ")}. Stack: ${study.stack.join(", ")}.`
+        `- [${study.title}](${site.url}/work/${study.slug}): ${kindLabel[study.kind]}, ${study.client}, ${study.year}. ${study.summary} Disciplines: ${study.disciplines.join(", ")}. Stack: ${study.stack.join(", ")}.`
     )
     .join("\n");
 
@@ -28,10 +28,10 @@ function build(): string {
     .join("\n\n");
 
   const facts = site.proof
-    .map((item) => `- ${item.value} — ${item.label}. ${item.note}`)
+    .map((item) => `- ${item.value}: ${item.label}. ${item.note}`)
     .join("\n");
 
-  return `# ${site.name} — ${site.role}
+  return `# ${site.name}, ${site.role}
 
 > ${site.tagline} Based in ${site.location}, working remotely with teams in the United States.
 
@@ -64,11 +64,11 @@ ${faq.map((item) => `### ${item.question}\n${item.answer}`).join("\n\n")}
 
 ## Pages
 
-- [Home](${site.url}) — overview
-- [Work](${site.url}/work) — all ${caseStudies.length} projects
-- [About](${site.url}/about) — background, principles, timeline
-- [CV](${site.url}/resume) — full curriculum vitae
-- [Contact](${site.url}/contact) — how to get in touch
+- [Home](${site.url}): overview
+- [Work](${site.url}/work): all ${caseStudies.length} projects
+- [About](${site.url}/about): background, principles, timeline
+- [CV](${site.url}/resume): full curriculum vitae
+- [Contact](${site.url}/contact): how to get in touch
 
 ## Elsewhere
 

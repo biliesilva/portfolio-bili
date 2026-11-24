@@ -1,35 +1,14 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element -- hover preview, static export */
-
 import Link from "next/link";
-
-import { useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useMotionValue,
-  useSpring,
-  useReducedMotion,
-} from "motion/react";
+import { useState, ViewTransition } from "react";
 import type { WorkEntry, Discipline } from "@/content/types";
 import { disciplines, kindLabel } from "@/content/work";
+import { MediaFrame } from "@/components/ui/media-frame";
 import { cn } from "@/lib/cn";
 
-/**
- * The project index: a type-led list of rows with a cursor-following preview.
- * The preview is pointer-only decoration — every row is a plain link, so the
- * list works identically with a keyboard, a screen reader or no JavaScript.
- */
 export function WorkIndex({ items }: { items: WorkEntry[] }) {
   const [filter, setFilter] = useState<Discipline | "All">("All");
-  const [hovered, setHovered] = useState<WorkEntry | null>(null);
-  const reduced = useReducedMotion();
-
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const sx = useSpring(x, { stiffness: 160, damping: 20, mass: 0.5 });
-  const sy = useSpring(y, { stiffness: 160, damping: 20, mass: 0.5 });
 
   const visible =
     filter === "All"
@@ -37,14 +16,8 @@ export function WorkIndex({ items }: { items: WorkEntry[] }) {
       : items.filter((item) => item.disciplines.includes(filter));
 
   return (
-    <div
-      onPointerMove={(event) => {
-        if (reduced || event.pointerType !== "mouse") return;
-        x.set(event.clientX + 24);
-        y.set(event.clientY - 120);
-      }}
-    >
-      <div className="hairline flex flex-wrap items-center gap-2 pt-6">
+    <div>
+      <div role="group" aria-label="Filter by discipline" className="hairline flex flex-wrap gap-2 pt-6">
         {(["All", ...disciplines] as const).map((option) => (
           <button
             key={option}
@@ -52,10 +25,10 @@ export function WorkIndex({ items }: { items: WorkEntry[] }) {
             onClick={() => setFilter(option)}
             aria-pressed={filter === option}
             className={cn(
-              "rounded-full border px-5 py-2 font-display text-lg font-medium tracking-[0.01em] transition-colors duration-300",
+              "min-h-11 rounded-sm border px-4 font-display text-lg transition-colors duration-200",
               filter === option
                 ? "border-bone bg-bone text-ink"
-                : "border-ink-line text-bone-dim hover:border-bone hover:text-bone"
+                : "border-bone-faint text-bone hover:bg-ink-line"
             )}
           >
             {option}
@@ -63,35 +36,44 @@ export function WorkIndex({ items }: { items: WorkEntry[] }) {
           </button>
         ))}
       </div>
+      <p className="sr-only" aria-live="polite">
+        {visible.length} projects shown
+      </p>
 
-      <ul className="mt-4">
+      <ul className="mt-8 space-y-3">
         {visible.map((item, i) => (
           <li key={item.slug}>
             <Link
               href={`/work/${item.slug}`}
-              onPointerEnter={() => setHovered(item)}
-              onPointerLeave={() => setHovered(null)}
-              onFocus={() => setHovered(null)}
-              className="group hairline grid grid-cols-12 items-baseline gap-4 py-7 transition-colors duration-500 hover:border-bone"
+              data-chapter={item.tone}
+              className="chapter group grid items-center gap-6 p-6 transition-[padding] duration-300 hover:pl-10 focus-visible:pl-10 md:grid-cols-12 md:p-10 md:hover:pl-14 md:focus-visible:pl-14"
             >
-              <span className="holo-text col-span-2 font-display text-2xl font-medium leading-none tabular-nums md:col-span-1">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="col-span-10 text-title transition-colors duration-500 group-hover:text-accent md:col-span-5">
-                {item.title}
-              </span>
-              <span className="col-span-10 col-start-3 text-base text-bone-dim md:col-span-4 md:col-start-auto">
-                {item.disciplines.join(" · ")}
-                <span className="label mt-2 block text-bone-faint">
-                  {kindLabel[item.kind]}
-                </span>
-              </span>
-              <span className="label col-span-2 md:col-span-2 md:text-right">
-                {item.year}
-              </span>
-              <span className="col-span-10 col-start-3 max-w-[60ch] text-base text-bone-faint md:col-span-6 md:col-start-7">
-                {item.summary}
-              </span>
+              <ViewTransition name={`cover-${item.slug}`} share="morph" default="none">
+              <div className="overflow-hidden rounded-sm md:col-span-4">
+                <MediaFrame
+                  media={{ ...(item.panel ?? item.cover), alt: "", caption: undefined, aspect: "16/10" }}
+                  priority={i === 0}
+                  sizes="(min-width: 768px) 30vw, 54vw"
+                  className="transition-transform duration-500 group-hover:scale-[1.02] group-focus-visible:scale-[1.02]"
+                />
+              </div>
+              </ViewTransition>
+              <div className="md:col-span-8 md:pl-6">
+                <ViewTransition name={`title-${item.slug}`} share="morph" default="none">
+                  <h2 className="text-headline decoration-2 underline-offset-8 group-hover:underline group-focus-visible:underline">
+                  {item.title}
+                </h2>
+                </ViewTransition>
+                <p className="chapter-dim mt-3 text-base">
+                  {kindLabel[item.kind]}, {item.year}. {item.disciplines.map((discipline, i) => (
+                    <span key={discipline} className="whitespace-nowrap">
+                      {discipline}
+                      {i < item.disciplines.length - 1 ? ", " : ""}
+                    </span>
+                  ))}
+                </p>
+                <p className="mt-4 max-w-[60ch] text-lead">{item.summary}</p>
+              </div>
             </Link>
           </li>
         ))}
@@ -102,44 +84,6 @@ export function WorkIndex({ items }: { items: WorkEntry[] }) {
           Nothing under that filter yet.
         </p>
       ) : null}
-
-      {/* Pointer preview */}
-      <AnimatePresence>
-        {hovered && !reduced ? (
-          <motion.div
-            key={hovered.slug}
-            aria-hidden="true"
-            initial={{ opacity: 0, scale: 0.94 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.96 }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            style={{ x: sx, y: sy }}
-            className="pointer-events-none fixed left-0 top-0 z-40 hidden w-[22rem] overflow-hidden rounded-sm bg-ink-raised md:block"
-          >
-            <div className="relative aspect-[16/10]">
-              {hovered.cover.src ? (
-                <img
-                  src={hovered.cover.src.replace(/\.(jpe?g|png)$/i, "-640.webp")}
-                  alt=""
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              ) : (
-                <div
-                  className="absolute inset-0 flex items-end p-4"
-                  style={{
-                    backgroundImage:
-                      "repeating-linear-gradient(135deg, transparent 0 11px, rgba(242,240,234,0.05) 11px 12px)",
-                  }}
-                >
-                  <span className="label text-bone-faint">
-                    {hovered.title} — image pending
-                  </span>
-                </div>
-              )}
-            </div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
     </div>
   );
 }

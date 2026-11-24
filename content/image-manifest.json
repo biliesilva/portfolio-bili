@@ -9,48 +9,32 @@
     "width": 1611,
     "height": 2000
   },
-  "/work/coinfello/alert-cards.jpg": {
+  "/work/coinfello/alert-tones.jpg": {
     "widths": [
       640,
       1024,
-      1600,
-      1916
+      1070
     ],
-    "width": 1916,
-    "height": 1672
+    "width": 1070,
+    "height": 1370
   },
-  "/work/coinfello/app.jpg": {
+  "/work/coinfello/app-main.jpg": {
     "widths": [
       640,
       1024,
       1600,
-      2400,
-      3448
+      2250
     ],
-    "width": 3448,
-    "height": 1812
+    "width": 2250,
+    "height": 1400
   },
-  "/work/coinfello/button.jpg": {
+  "/work/coinfello/button-states.jpg": {
     "widths": [
       640,
-      1024,
-      1600,
-      2400,
-      2788
+      1020
     ],
-    "width": 2788,
-    "height": 1696
-  },
-  "/work/coinfello/chip.jpg": {
-    "widths": [
-      640,
-      1024,
-      1600,
-      2400,
-      2528
-    ],
-    "width": 2528,
-    "height": 1700
+    "width": 1020,
+    "height": 1000
   },
   "/work/heavy-muscle/coach.jpg": {
     "widths": [
@@ -94,6 +78,16 @@
     "width": 513,
     "height": 1151
   },
+  "/work/heavy-muscle/panel.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1920
+    ],
+    "width": 1920,
+    "height": 1200
+  },
   "/work/heavy-muscle/session.jpg": {
     "widths": [
       513
@@ -101,98 +95,184 @@
     "width": 513,
     "height": 1151
   },
-  "/work/heroic/game-page.jpg": {
+  "/work/heroic/before-downloads.jpg": {
     "widths": [
       640,
       1024,
       1600,
-      2400,
-      3400
+      2000
     ],
-    "width": 3400,
-    "height": 1938
+    "width": 2000,
+    "height": 1136
   },
-  "/work/heroic/icons.jpg": {
+  "/work/heroic/before-game-page.jpg": {
     "widths": [
       640,
       1024,
       1600,
-      2400,
-      3432
+      2000
     ],
-    "width": 3432,
-    "height": 1974
+    "width": 2000,
+    "height": 1124
   },
-  "/work/heroic/library.jpg": {
+  "/work/heroic/before-library.jpg": {
     "widths": [
       640,
       1024,
       1600,
-      2400,
-      3400
+      2000
     ],
-    "width": 3400,
-    "height": 1944
+    "width": 2000,
+    "height": 1150
   },
-  "/work/heroic/settings.jpg": {
+  "/work/heroic/before-settings.jpg": {
     "widths": [
       640,
       1024,
       1600,
-      2400,
-      3400
+      2000
     ],
-    "width": 3400,
-    "height": 1934
+    "width": 2000,
+    "height": 690
   },
-  "/work/heroic/type-scale.jpg": {
+  "/work/heroic/before-wine-manager.jpg": {
     "widths": [
       640,
       1024,
       1600,
-      2400,
-      3422
+      2000
     ],
-    "width": 3422,
-    "height": 1970
+    "width": 2000,
+    "height": 1139
   },
-  "/work/hyperplay/combobox.jpg": {
+  "/work/heroic/downloads-2026.jpg": {
     "widths": [
       640,
       1024,
       1600,
-      2198
+      2000
     ],
-    "width": 2198,
-    "height": 1582
+    "width": 2000,
+    "height": 1141
   },
-  "/work/hyperplay/discover.jpg": {
+  "/work/heroic/game-page-2026.jpg": {
     "widths": [
       640,
       1024,
       1600,
-      1818
+      2000
     ],
-    "width": 1818,
-    "height": 1664
+    "width": 2000,
+    "height": 1141
   },
-  "/work/hyperplay/game-page.jpg": {
+  "/work/heroic/library-2026.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1138
+  },
+  "/work/heroic/library-mobile.jpg": {
+    "widths": [
+      640,
+      1024,
+      1112
+    ],
+    "width": 1112,
+    "height": 834
+  },
+  "/work/heroic/settings-2026.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 690
+  },
+  "/work/heroic/stores.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1135
+  },
+  "/work/heroic/support-us.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1143
+  },
+  "/work/heroic/theme-list.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1916
+    ],
+    "width": 1916,
+    "height": 1644
+  },
+  "/work/heroic/type-roles.jpg": {
+    "widths": [
+      640,
+      1024,
+      1410
+    ],
+    "width": 1410,
+    "height": 820
+  },
+  "/work/heroic/wine-manager-2026.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1140
+  },
+  "/work/hyperplay/combobox-states.jpg": {
+    "widths": [
+      640,
+      820
+    ],
+    "width": 820,
+    "height": 1290
+  },
+  "/work/hyperplay/game-detail.jpg": {
     "widths": [
       496
     ],
     "width": 496,
-    "height": 1342
+    "height": 1040
   },
-  "/work/hyperplay/navigation.jpg": {
+  "/work/hyperplay/header-variants.jpg": {
     "widths": [
       640,
-      1024,
-      1600,
-      2400,
-      2744
+      775
     ],
-    "width": 2744,
-    "height": 1402
+    "width": 775,
+    "height": 1184
+  },
+  "/work/hyperplay/store.jpg": {
+    "widths": [
+      640,
+      826
+    ],
+    "width": 826,
+    "height": 700
   },
   "/work/remote-work/applications.jpg": {
     "widths": [
@@ -239,6 +319,16 @@
     "width": 666,
     "height": 1480
   },
+  "/work/remote-work/panel.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1920
+    ],
+    "width": 1920,
+    "height": 1200
+  },
   "/work/remote-work/resume.jpg": {
     "widths": [
       640,
@@ -253,9 +343,47 @@
       1024,
       1600,
       2400,
-      3200
+      2800
     ],
-    "width": 3200,
-    "height": 1240
+    "width": 2800,
+    "height": 700
+  },
+  "/work/starbreeze/down-counter.jpg": {
+    "widths": [
+      640,
+      1024,
+      1280
+    ],
+    "width": 1280,
+    "height": 720
+  },
+  "/work/starbreeze/exclusive-set.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2048
+    ],
+    "width": 2048,
+    "height": 1152
+  },
+  "/work/starbreeze/motion-dot.jpg": {
+    "widths": [
+      640,
+      1024,
+      1280
+    ],
+    "width": 1280,
+    "height": 720
+  },
+  "/work/starbreeze/update-217.jpg": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      2048
+    ],
+    "width": 2048,
+    "height": 1152
   }
 }

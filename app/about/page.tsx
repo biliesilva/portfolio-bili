@@ -11,7 +11,7 @@ import { PageJsonLd, ids } from "@/components/layout/json-ld";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `${site.name} is a product designer and front-end developer with ${site.yearsOfExperience} years of experience, based in ${site.location} and working remotely with US teams.`,
+  description: `${site.name}, product designer and front-end developer in ${site.location}. Six years in product design, remote with US teams since 2022.`,
   alternates: { canonical: "/about" },
 };
 
@@ -31,21 +31,21 @@ export default function AboutPage() {
   return (
     <>
       <PageJsonLd data={profileSchema} />
-      <section className="container-edge pt-36 pb-16 md:pt-44">
-        <div className="hairline pt-6">
-          <span className="label">About — {site.role}</span>
+      <header data-chapter="profile" className="chapter">
+        <div className="container-edge grid items-end gap-10 pt-32 pb-14 md:grid-cols-12 md:pt-40 md:pb-20">
           <RevealWords
             as="h1"
             text={about.headline}
-            className="mt-10 max-w-[20ch] text-hero font-medium"
+            className="text-display font-medium md:col-span-8"
           />
+          <p className="chapter-dim text-lead md:col-span-4">{site.role}</p>
         </div>
-      </section>
+      </header>
 
-      <section className="container-edge pb-24">
+      <section className="container-edge py-16 md:py-24">
         <div className="grid gap-16 md:grid-cols-12">
           <Reveal className="md:col-span-5">
-            <Portrait sizes="(min-width: 768px) 40vw, 100vw" />
+            <Portrait priority sizes="(max-width: 767px) 60vw, 40vw" />
             <dl className="mt-8 overflow-hidden rounded-2xl border border-ink-line bg-ink-raised/40">
               {[
                 { label: "Based in", value: site.location },
@@ -54,7 +54,7 @@ export default function AboutPage() {
                   label: "Languages",
                   value: site.languages.map((l) => l.name).join(" · "),
                 },
-                { label: "Open to", value: "Full-time · Contract · US teams" },
+                { label: "Open to", value: "Full-time with US teams, as an employee or contractor" },
               ].map((row, i) => (
                 <div
                   key={row.label}
@@ -88,7 +88,7 @@ export default function AboutPage() {
       </section>
 
       <section className="container-edge py-24">
-        <SectionHead index="01" label="How I work" title="Six things I will not trade away." />
+        <SectionHead label="How I work" title="Six things I will not trade away." />
         <div className="mt-16">
           {about.principles.map((principle, i) => (
             <Reveal key={principle.title} delay={i * 0.05}>
@@ -107,10 +107,10 @@ export default function AboutPage() {
       </section>
 
       <section className="container-edge py-24">
-        <SectionHead index="02" label="Tools" />
-        <div className="mt-12 grid gap-px bg-ink-line md:grid-cols-3">
+        <SectionHead label="Tools" />
+        <div className="mt-12 grid md:grid-cols-3">
           {about.tools.map((group) => (
-            <div key={group.group} className="bg-ink p-8">
+            <div key={group.group} className="bg-ink py-8 md:pr-8">
               <h3 className="label">{group.group}</h3>
               <ul className="mt-6 space-y-2">
                 {group.items.map((item) => (
@@ -125,14 +125,16 @@ export default function AboutPage() {
       </section>
 
       <section className="container-edge py-24">
-        <SectionHead index="03" label="Timeline" />
+        <SectionHead label="Timeline" />
         <ol className="mt-12">
           {about.timeline.map((entry) => (
-            <Reveal key={`${entry.year}-${entry.event}`}>
-              <li className="hairline grid grid-cols-12 gap-4 py-6">
-                <span className="label col-span-4 md:col-span-2">{entry.year}</span>
-                <span className="col-span-8 md:col-span-9">{entry.event}</span>
-              </li>
+            <Reveal
+              as="li"
+              key={`${entry.year}-${entry.event}`}
+              className="hairline grid grid-cols-12 gap-4 py-6"
+            >
+              <span className="label col-span-4 md:col-span-2">{entry.year}</span>
+              <span className="col-span-8 md:col-span-9">{entry.event}</span>
             </Reveal>
           ))}
         </ol>

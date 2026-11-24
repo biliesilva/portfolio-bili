@@ -3,14 +3,13 @@ import { site } from "@/content/site";
 import { Reveal, RevealWords } from "@/components/ui/reveal";
 import { SectionHead } from "@/components/ui/section-head";
 import { ButtonLink } from "@/components/ui/button-link";
-import { Magnetic } from "@/components/ui/magnetic";
 import { LocalTime } from "@/components/ui/local-time";
 import { PageJsonLd, ids } from "@/components/layout/json-ld";
 import { faq } from "@/content/faq";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Get in touch with ${site.name} — ${site.availability.label.toLowerCase()}, working remotely with US teams.`,
+  description: `Get in touch with ${site.name}. ${site.availability.label}, working remotely with US teams.`,
   alternates: { canonical: "/contact" },
 };
 
@@ -34,47 +33,43 @@ export default function ContactPage() {
     <>
       <PageJsonLd data={faqSchema} />
 
-      <section className="container-edge pt-36 pb-16 md:pt-44">
-        <div className="hairline pt-6">
-          <span className="label">
-            {site.availability.open ? site.availability.label : "Contact"}
-          </span>
-          <RevealWords
-            as="h1"
-            text="Tell me what you're building."
-            className="mt-10 max-w-[18ch] text-hero font-medium"
-          />
-          <Reveal delay={0.2} className="mt-12 max-w-[52ch]">
-            <p className="text-lead text-bone-dim">
-              {site.availability.detail} Email or LinkedIn both reach me, and I
-              reply to everything within two business days — including the ones
-              that turn out not to be a fit.
+      <header data-chapter="contact" className="chapter">
+        <div className="container-edge grid items-end gap-12 pt-32 pb-16 md:grid-cols-12 md:pt-40 md:pb-24">
+          <div className="md:col-span-7">
+            <p className="chapter-dim text-base">
+              {site.availability.open ? site.availability.label : "Contact"}
             </p>
-          </Reveal>
-          <Reveal
-            delay={0.3}
-            className="mt-12 flex flex-wrap items-center gap-4"
-          >
-            <Magnetic>
-              <ButtonLink href={`mailto:${site.email}`}>
+            <RevealWords
+              as="h1"
+              text="Tell me what you're building."
+              className="mt-6 max-w-[14ch] text-display font-medium"
+            />
+          </div>
+          <div className="md:col-span-5">
+            <p className="text-lead">
+              {site.availability.detail} I reply to everything within two
+              business days, including the ones that turn out not to be a fit.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <ButtonLink href={`mailto:${site.email}`} variant="ink">
                 {site.email}
               </ButtonLink>
-            </Magnetic>
-            <ButtonLink
-              href={
-                site.socials.find((s) => s.label === "LinkedIn")?.href ?? "#"
-              }
-              variant="ghost"
-              external
-            >
-              Message me on LinkedIn
-            </ButtonLink>
-          </Reveal>
+              <a
+                href={site.socials.find((s) => s.label === "LinkedIn")?.href ?? "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 items-center font-display text-lg underline underline-offset-4 hover:decoration-2"
+              >
+                Message me on LinkedIn
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </div>
         </div>
-      </section>
+      </header>
 
       <section className="container-edge py-16">
-        <SectionHead index="01" label="Questions I get asked" />
+        <SectionHead label="Questions I get asked" />
         <div className="mt-16">
           {faq.map((item, i) => (
             <Reveal key={item.question} delay={i * 0.05}>
@@ -90,7 +85,7 @@ export default function ContactPage() {
       </section>
 
       <section className="container-edge py-16">
-        <SectionHead index="02" label="Details" />
+        <SectionHead label="Details" />
         <div className="mt-16">
           <dl>
             {[
@@ -118,7 +113,7 @@ export default function ContactPage() {
                     target={
                       row.href.startsWith("mailto:") ? undefined : "_blank"
                     }
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="link-wipe break-all"
                   >
                     {row.value}

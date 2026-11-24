@@ -26,15 +26,6 @@
   /* Real foil cycles the whole spectrum — magenta through blue, cyan, mint and
      gold, back to magenta. Three stops read as an ordinary gradient; eight read
      as iridescence. Every stop is light enough for dark text to sit on it. */
-  /* Backdrop drifts. These live in @theme because Tailwind prunes any
-     @keyframes it cannot trace to an --animate-* key — the first version of
-     this shipped with the shapes frozen in place. */
-  --animate-backdrop-pan: backdrop-pan 90s linear infinite;
-  --animate-backdrop-drift-a: backdrop-drift-a 54s ease-in-out infinite alternate;
-  --animate-backdrop-drift-b: backdrop-drift-b 68s ease-in-out infinite alternate;
-  --animate-backdrop-spin: backdrop-spin 150s linear infinite;
-  --animate-backdrop-spin-slow: backdrop-spin-slow 190s linear infinite;
-
   --gradient-holo: linear-gradient(
     105deg,
     var(--color-holo-pink) 0%,
@@ -57,16 +48,17 @@
     sans-serif;
   --font-condensed: var(--font-barlow-condensed), ui-sans-serif, system-ui,
     sans-serif;
+  --font-code: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --font-mono: var(--font-barlow-condensed), ui-sans-serif, system-ui, sans-serif;
 
   /* Fluid display sizes */
-  --text-display: clamp(3.25rem, 10.5vw, 11rem);
+  --text-display: clamp(3.4rem, 8.5vw, 8.5rem);
   --text-display--line-height: 0.92;
   --text-display--letter-spacing: -0.04em;
-  --text-hero: clamp(2.75rem, 7.5vw, 7.5rem);
+  --text-hero: clamp(2.5rem, 6vw, 6rem);
   --text-hero--line-height: 0.95;
   --text-hero--letter-spacing: -0.035em;
-  --text-headline: clamp(2.25rem, 5.5vw, 5rem);
+  --text-headline: clamp(2.125rem, 4.4vw, 4.25rem);
   --text-headline--line-height: 1;
   --text-headline--letter-spacing: -0.03em;
   --text-title: clamp(1.625rem, 2.8vw, 2.5rem);
@@ -75,7 +67,7 @@
   --text-lead: clamp(1.25rem, 1.7vw, 1.625rem);
   --text-lead--line-height: 1.45;
   --text-lead--letter-spacing: -0.01em;
-  --text-label: 0.9375rem;
+  --text-label: 1rem;
   --text-label--line-height: 1.35;
   --text-label--letter-spacing: 0.01em;
 
@@ -104,15 +96,7 @@
     text-rendering: optimizeLegibility;
   }
 
-  /* Lenis owns the scroll; never fight it with CSS smooth scroll. */
-  html.lenis,
-  html.lenis body {
-    height: auto;
-  }
-  .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
-  }
-  .lenis.lenis-stopped {
+  html.nav-open {
     overflow: hidden;
   }
 
@@ -121,6 +105,52 @@
     font-size: 1.0625rem;
     line-height: 1.55;
     overflow-x: clip;
+  }
+
+  [data-chapter="heroic"] {
+    --chapter-bg: #12343b;
+    --chapter-ink: #f2f0ea;
+    --chapter-dim: #b4cdd0;
+  }
+  [data-chapter="coinfello"] {
+    --chapter-bg: #e6d98c;
+    --chapter-ink: #17160f;
+    --chapter-dim: #4d4724;
+  }
+  [data-chapter="hyperplay"] {
+    --chapter-bg: #2a2150;
+    --chapter-ink: #f2f0ea;
+    --chapter-dim: #c4bbe4;
+  }
+  [data-chapter="starbreeze"] {
+    --chapter-bg: #4a231d;
+    --chapter-ink: #f2f0ea;
+    --chapter-dim: #e0bdb4;
+  }
+  [data-chapter="remote-work"] {
+    --chapter-bg: #163a2d;
+    --chapter-ink: #f2f0ea;
+    --chapter-dim: #b2d2c4;
+  }
+  [data-chapter="heavy-muscle"] {
+    --chapter-bg: #31390f;
+    --chapter-ink: #f2f0ea;
+    --chapter-dim: #cdd4a6;
+  }
+  [data-chapter="profile"] {
+    --chapter-bg: #e8e3d6;
+    --chapter-ink: #14130f;
+    --chapter-dim: #56513f;
+  }
+  [data-chapter="contact"] {
+    --chapter-bg: #c4b2ff;
+    --chapter-ink: #0a0a0b;
+    --chapter-dim: #2f2654;
+  }
+
+  [data-chapter] .chapter :focus-visible,
+  [data-chapter].chapter :focus-visible {
+    outline-color: currentColor;
   }
 
   ::selection {
@@ -173,6 +203,56 @@
   color: var(--color-bone-dim);
 }
 
+@utility chapter {
+  background-color: var(--chapter-bg);
+  color: var(--chapter-ink);
+}
+
+@utility chapter-dim {
+  color: var(--chapter-dim);
+}
+
+@utility theme-surface {
+  --demo-ink: oklch(from var(--panel-base) clamp(0.14, (0.62 - l) * 1000, 0.97) 0 h);
+  --demo-muted: oklch(from var(--panel-base) clamp(0.36, (0.62 - l) * 1000, 0.79) 0 h);
+  background-color: var(--panel-base);
+}
+
+@utility theme-ink {
+  color: var(--demo-ink);
+}
+
+@utility theme-ink-muted {
+  color: var(--demo-muted);
+}
+
+@utility theme-chip {
+  color: var(--demo-ink);
+  border-color: var(--demo-muted);
+  &:has(:focus-visible) {
+    outline: 2px solid var(--demo-ink);
+    outline-offset: 3px;
+  }
+}
+
+@utility theme-chip-active {
+  color: var(--panel-base);
+  background-color: var(--demo-ink);
+}
+
+@utility rise {
+  animation: rise 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(0.25em);
+  }
+  to {
+    transform: none;
+  }
+}
+
 @utility hairline {
   border-top: 1px solid var(--color-ink-line);
 }
@@ -210,33 +290,6 @@
   animation: holo-drift 11s ease-in-out infinite alternate;
 }
 
-/* Holographic surface, for primary actions and accent rules. */
-/* Holographic surface: the spectrum, plus a specular sheen that travels at a
-   different rate because it sits on a wider layer. That parallax is what makes
-   foil look wet rather than printed. */
-@utility holo-surface {
-  background-image:
-    linear-gradient(
-      112deg,
-      transparent 12%,
-      rgba(255, 255, 255, 0.6) 30%,
-      rgba(255, 255, 255, 0) 46%
-    ),
-    var(--gradient-holo);
-  background-size: 280% 100%, 150% 100%;
-  background-repeat: no-repeat;
-  animation: holo-sheen 9s ease-in-out infinite alternate;
-}
-
-@keyframes holo-sheen {
-  from {
-    background-position: 0% 50%, 0% 50%;
-  }
-  to {
-    background-position: 100% 50%, 100% 50%;
-  }
-}
-
 @keyframes holo-drift {
   from {
     background-position: 0% 50%;
@@ -244,27 +297,6 @@
   to {
     background-position: 100% 50%;
   }
-}
-
-/* Holographic border ring. Two masks cancel out the middle, leaving only the
-   1px frame painted — which is what lets a gradient follow rounded corners. */
-@utility holo-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background-image: var(--gradient-holo);
-  background-size: 220% 100%;
-  animation: holo-drift 11s ease-in-out infinite alternate;
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  pointer-events: none;
 }
 
 /* Organic blob mask. The radii drift so the silhouette never settles into a
@@ -286,115 +318,6 @@
   }
 }
 
-/* ---------------------------------------------------------------
-   Ambient backdrop — drifting design-tool primitives
-   The ink canvas lives on `html`, so z-index -1 here paints above the
-   background and below every bit of content without touching the layout.
-   --------------------------------------------------------------- */
-@utility backdrop {
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-  contain: strict;
-}
-
-@utility backdrop-grid {
-  position: absolute;
-  inset: -10%;
-  opacity: 0.75;
-  background-image: radial-gradient(
-    circle at center,
-    color-mix(in oklab, var(--color-bone) 22%, transparent) 0.5px,
-    transparent 0.5px
-  );
-  background-size: 46px 46px;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 20%, transparent 78%);
-}
-
-@utility backdrop-item {
-  position: absolute;
-  color: var(--color-bone);
-  will-change: transform;
-}
-
-.backdrop-item svg {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.backdrop-item--bezier {
-  top: 9%;
-  left: -4%;
-  width: clamp(180px, 20vw, 320px);
-  aspect-ratio: 220 / 140;
-  opacity: 0.42;
-}
-
-.backdrop-item--orbit {
-  bottom: -18%;
-  right: 4%;
-  width: clamp(200px, 26vw, 400px);
-  aspect-ratio: 1;
-  opacity: 0.34;
-}
-
-.backdrop-item--graph {
-  top: 33%;
-  right: -3%;
-  width: clamp(150px, 16vw, 250px);
-  aspect-ratio: 200 / 160;
-  opacity: 0.4;
-}
-
-.backdrop-item--frame {
-  bottom: -16%;
-  left: -6%;
-  width: clamp(140px, 15vw, 230px);
-  aspect-ratio: 1;
-  opacity: 0.34;
-}
-
-/* Small screens get the two quietest shapes only — the others would sit
-   under the text rather than beside it. */
-@media (max-width: 768px) {
-  .backdrop-item--graph,
-  .backdrop-item--frame {
-    display: none;
-  }
-  .backdrop-item--bezier,
-  .backdrop-item--orbit {
-    opacity: 0.3;
-  }
-}
-
-@keyframes backdrop-pan {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(46px, 46px, 0); }
-}
-
-@keyframes backdrop-drift-a {
-  from { transform: translate3d(0, 0, 0) rotate(-4deg); }
-  to { transform: translate3d(4vw, -6vh, 0) rotate(5deg); }
-}
-
-@keyframes backdrop-drift-b {
-  from { transform: translate3d(0, 0, 0) rotate(6deg); }
-  to { transform: translate3d(-5vw, 5vh, 0) rotate(-6deg); }
-}
-
-@keyframes backdrop-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes backdrop-spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
-}
-
 /* Film grain overlay */
 @utility grain {
   pointer-events: none;
@@ -404,6 +327,19 @@
   opacity: 0.035;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::view-transition-group(.morph) {
+  animation-duration: 420ms;
+  animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
 }
 
 /* ---------------------------------------------------------------
@@ -484,8 +420,7 @@
   }
 
   /* Gradient text renders as nothing on paper. */
-  .holo-text,
-  .holo-surface {
+  .holo-text {
     background: none !important;
     animation: none !important;
     color: #111 !important;
@@ -510,8 +445,10 @@
   }
 
   [class*="bg-ink-raised"],
-  .bg-ink {
+  .bg-ink,
+  .chapter {
     background: #fff !important;
+    color: #111 !important;
   }
 
   [class*="bg-ink-line"] > * {

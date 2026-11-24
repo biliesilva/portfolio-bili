@@ -2,6 +2,9 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { RevealWords } from "@/components/ui/reveal";
 import { caseStudies } from "@/content/work";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Page not found" };
 
 export default function NotFound() {
   return (
@@ -15,7 +18,7 @@ export default function NotFound() {
         />
         <p className="mt-10 max-w-[48ch] text-lead text-bone-dim">
           Nothing here. An honest 404 is better than a redirect that pretends
-          otherwise — here is where you probably wanted to go.
+          otherwise. This is where you probably wanted to go.
         </p>
         <div className="mt-12 flex flex-wrap gap-4">
           <ButtonLink href="/">Home</ButtonLink>
@@ -26,10 +29,10 @@ export default function NotFound() {
 
         <ul className="mt-20 grid gap-px bg-ink-line md:grid-cols-3">
           {caseStudies.slice(0, 3).map((study) => (
-            <li key={study.slug} className="bg-ink p-8">
+            <li key={study.slug} data-chapter={study.tone} className="chapter p-8">
               <Link href={`/work/${study.slug}`} className="group block">
-                <span className="label">{study.year}</span>
-                <h2 className="mt-4 text-title transition-colors duration-500 group-hover:text-accent">
+                <span className="chapter-dim">{study.year}</span>
+                <h2 className="mt-4 text-title decoration-1 underline-offset-4 group-hover:underline">
                   {study.title}
                 </h2>
               </Link>

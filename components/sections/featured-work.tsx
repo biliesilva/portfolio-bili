@@ -1,72 +1,43 @@
 import Link from "next/link";
-import { featuredCaseStudies } from "@/content/work";
-import { SectionHead } from "@/components/ui/section-head";
-import { Reveal } from "@/components/ui/reveal";
-import { MediaFrame } from "@/components/ui/media-frame";
-import { ButtonLink } from "@/components/ui/button-link";
-
-/** Written out, because "6 pieces of work" reads like a spreadsheet. */
-const COUNT = ["no", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"];
+import { caseStudies, featuredCaseStudies } from "@/content/work";
+import { ChapterPanel } from "@/components/work/chapter-panel";
 
 export function FeaturedWork() {
-  // Counted, not typed. It said "Five" for a week after the sixth was added.
-  const count = COUNT[featuredCaseStudies.length] ?? featuredCaseStudies.length;
+  const others = caseStudies.filter((study) => !study.featured);
 
   return (
-    <section id="work" className="container-edge py-24 md:py-36">
-      <SectionHead
-        index="01"
-        label="Selected work"
-        title={`${count} pieces of work, told properly.`}
-      />
-
-      <div className="mt-20 space-y-28 md:space-y-40">
-        {featuredCaseStudies.map((study, i) => (
-          <Reveal key={study.slug} y={40}>
-            <article>
-              <Link href={`/work/${study.slug}`} className="group block">
-                <div className="grid gap-6 md:grid-cols-12">
-                  <div className="md:col-span-7">
-                    <div className="flex items-baseline gap-4">
-                      <span className="holo-text font-display text-3xl font-medium leading-none tabular-nums">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <h3 className="text-headline transition-colors duration-500 group-hover:text-accent">
-                        {study.title}
-                      </h3>
-                    </div>
-                    <p className="label mt-4 ml-[2.4rem]">
-                      {study.client} — {study.year}
-                    </p>
-                  </div>
-                  <div className="md:col-span-5">
-                    <p className="max-w-[46ch] text-lead text-bone-dim">
-                      {study.summary}
-                    </p>
-                    <p className="label mt-6">{study.disciplines.join(" · ")}</p>
-                  </div>
-                </div>
-
-                <div className="mt-10 overflow-hidden rounded-sm">
-                  <div className="transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]">
-                    <MediaFrame
-                      media={study.cover}
-                      priority={i === 0}
-                      sizes="(min-width: 1024px) 90vw, 100vw"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </Reveal>
-        ))}
+    <section id="work" aria-labelledby="work-title" className="pt-24 md:pt-32">
+      <div className="container-edge pb-12">
+        <h2 id="work-title" className="text-headline">
+          Selected work
+        </h2>
       </div>
 
-      <Reveal className="mt-24 flex justify-center">
-        <ButtonLink href="/work" variant="ghost">
-          Open the index
-        </ButtonLink>
-      </Reveal>
+      {featuredCaseStudies.map((study, i) => (
+        <ChapterPanel key={study.slug} study={study} flip={i % 2 === 1} />
+      ))}
+
+      <div className="container-edge py-20">
+        <h3 className="text-title">Also live on Google Play</h3>
+        <ul className="mt-6 space-y-3">
+          {others.map((study) => (
+            <li key={study.slug}>
+              <Link
+                href={`/work/${study.slug}`}
+                data-chapter={study.tone}
+                className="chapter group grid gap-2 p-6 transition-[padding] duration-300 hover:pl-10 focus-visible:pl-10 md:grid-cols-12"
+              >
+                <span className="text-title decoration-1 underline-offset-4 group-hover:underline group-focus-visible:underline md:col-span-4">
+                  {study.title}
+                </span>
+                <span className="max-w-[60ch] md:col-span-8">
+                  {study.summary}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

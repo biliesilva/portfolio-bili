@@ -18,12 +18,14 @@ export function ResponsiveImage({
   sizes,
   priority = false,
   className,
+  mobileSrc,
 }: {
   src: string;
   alt: string;
   sizes: string;
   priority?: boolean;
   className?: string;
+  mobileSrc?: string;
 }) {
   const entry = images[src];
 
@@ -44,7 +46,10 @@ export function ResponsiveImage({
   const base = src.replace(/\.(jpe?g|png)$/i, "");
   const srcSet = entry.widths.map((w) => `${base}-${w}.webp ${w}w`).join(", ");
 
-  return (
+  const mobile = mobileSrc ? images[mobileSrc] : undefined;
+  const mobileBase = mobileSrc?.replace(/\.(jpe?g|png)$/i, "");
+
+  const image = (
     <img
       src={src}
       srcSet={srcSet}
@@ -57,5 +62,18 @@ export function ResponsiveImage({
       fetchPriority={priority ? "high" : undefined}
       className={cn(className)}
     />
+  );
+
+  if (!mobile) return image;
+
+  return (
+    <picture>
+      <source
+        media="(max-width: 767px)"
+        srcSet={mobile.widths.map((w) => `${mobileBase}-${w}.webp ${w}w`).join(", ")}
+        sizes="54vw"
+      />
+      {image}
+    </picture>
   );
 }

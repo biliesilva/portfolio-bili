@@ -1,4 +1,6 @@
 import { ResponsiveImage } from "./responsive-image";
+import manifest from "@/content/image-manifest.json";
+import type { CSSProperties } from "react";
 import { cn } from "@/lib/cn";
 import type { Media } from "@/content/types";
 
@@ -21,16 +23,21 @@ export function MediaFrame({
   // Nothing to show is better than a labelled empty box.
   if (!media.src) return null;
 
+  const nativeWidth = (manifest as Record<string, { width: number }>)[media.src]?.width;
   const aspect = media.aspect ?? "16/10";
 
   return (
-    <figure className={cn("w-full", className)}>
+    <figure className={cn("w-full", className)} style={{ maxWidth: nativeWidth }}>
       <div
-        className="relative w-full overflow-hidden rounded-sm bg-ink-raised"
-        style={{ aspectRatio: aspect }}
+        className={cn(
+          "relative w-full overflow-hidden rounded-sm bg-ink-raised",
+          media.mobileSrc ? "aspect-[4/3] md:aspect-(--frame)" : "aspect-(--frame)"
+        )}
+        style={{ "--frame": aspect } as CSSProperties}
       >
         <ResponsiveImage
           src={media.src}
+          mobileSrc={media.mobileSrc}
           alt={media.alt}
           sizes={sizes}
           priority={priority}

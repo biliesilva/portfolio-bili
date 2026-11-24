@@ -14,17 +14,17 @@ export const faq = [
   {
     question: "What time zone are you in, and how much overlap is there?",
     answer:
-      "Maceió, Brazil — UTC-3, one to two hours ahead of US Eastern. The working day overlaps almost entirely. I have worked with US companies since 2022, on teams with people in Texas, California, San Juan, Europe and Latin America.",
+      "Maceió, Brazil. UTC-3, one to two hours ahead of US Eastern. The working day overlaps almost entirely. I have worked with US companies since 2022, as a full-time contractor, on teams mostly in the US with a few people in Europe.",
   },
   {
     question: "Full-time or contract, and how does invoicing work?",
     answer:
-      "Full-time, as a contractor. I invoice as a business entity from Brazil.",
+      "Full-time, as an employee or as a contractor. As a contractor, I invoice as a business entity from Brazil.",
   },
   {
     question: "What have you actually shipped that I can look at?",
     answer:
-      "Heroic Games Launcher — open source, over 500,000 monthly users, and every decision I made is a public pull request you can read. HyperPlay and CoinFello — design systems I was responsible for and implemented in code. Remote Work and HeavyMuscle — two Android apps on Google Play; install them and you are looking at the work.",
+      "Heroic Games Launcher: open source, over 500,000 monthly users, with my pull requests and their reviews public on GitHub. CoinFello: a design system I built and implemented in code. HyperPlay: a design system I was responsible for in the design team, and implemented part of. Remote Work and HeavyMuscle: two Android apps on Google Play; install them and you are looking at the work.",
   },
   {
     question: "What roles are you a fit for?",

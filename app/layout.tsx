@@ -4,14 +4,12 @@ import "./globals.css";
 import { site } from "@/content/site";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { JsonLd } from "@/components/layout/json-ld";
-import { Backdrop } from "@/components/layout/backdrop";
 import { MotionProvider } from "@/components/layout/motion-provider";
 
 const display = Barlow_Condensed({
   variable: "--font-barlow-condensed",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
@@ -19,8 +17,8 @@ const display = Barlow_Condensed({
 
 const sans = Barlow_Semi_Condensed({
   variable: "--font-barlow-semi-condensed",
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
+  weight: ["400", "500"],
+  style: ["normal"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -28,10 +26,10 @@ const sans = Barlow_Semi_Condensed({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.role}`,
-    template: `%s — ${site.name}`,
+    default: `${site.name} | ${site.role}`,
+    template: `%s | ${site.name}`,
   },
-  description: `${site.tagline} ${site.yearsOfExperience} years across product design, design systems and front-end engineering. Based in ${site.location}, working remotely with US teams.`,
+  description: `${site.name}, product designer specialised in design systems who writes the front-end. Six years in product design, remote with US teams.`,
   keywords: [
     "product designer",
     "UI UX designer",
@@ -48,9 +46,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: site.url,
     siteName: site.name,
-    title: `${site.name} — ${site.role}`,
+    title: `${site.name} | ${site.role}`,
     description: site.tagline,
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: `${site.name} — ${site.role}` }],
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: `${site.name} | ${site.role}` }],
   },
   twitter: {
     card: "summary_large_image",
@@ -77,11 +75,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${sans.variable} ${display.variable}`}
     >
       <body className="min-h-svh">
-        <Backdrop />
-        <SmoothScroll />
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-accent focus:px-5 focus:py-2 focus:font-condensed focus:text-base focus:text-ink"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-sm focus:bg-accent focus:px-5 focus:py-2 focus:font-condensed focus:text-base focus:text-ink"
         >
           Skip to content
         </a>

@@ -3,124 +3,96 @@ import type { WorkEntry } from "../types";
 export const coinfello: WorkEntry = {
   slug: "coinfello",
   kind: "role",
+  tone: "coinfello",
   title: "CoinFello",
-  client: "CoinFello — United States",
-  year: "2025 — 2026",
+  client: "CoinFello, United States",
+  year: "2025 to 2026",
   summary:
-    "Owned the design system end to end — designed it, then implemented it in code. A DeFi product with an AI agent at the centre of it.",
+    "I built the design system for a DeFi agent, wrote it in code, and set it up so other developers and AI tools built on it without redoing components.",
   disciplines: ["Design Systems", "Front-end", "UI/UX"],
   featured: true,
-  order: 1,
+  order: 2,
 
   disclosure:
-    "Employed work under NDA. What I can show is the design system itself — components with placeholder content — and the public site. No product screens, no customer data, no internal numbers.",
+    "Confidential contract work. I can show design system components with placeholder content and the publicly released app. Results and internal material are confidential.",
 
   role: "Front-end Developer & Design System Owner",
-  team: "Distributed team — US and Europe",
+  team: "Mostly in the US, with a few people in Europe. I worked remotely as a full-time contractor",
   timeline: "1 year 3 months",
   platforms: ["Web"],
-  stack: ["TypeScript", "React", "SCSS", "Design tokens", "AI tooling"],
+  stack: ["TypeScript", "React", "SCSS", "Mantine", "Design tokens", "Figma MCP"],
 
   cover: {
-    src: "/work/coinfello/button.jpg",
-    alt: "The CoinFello button component in Figma: brand, secondary, tertiary, danger and gradient variants across every state",
-    caption: "Button — every variant and state",
-    aspect: "16/10",
+    src: "/work/coinfello/app-main.jpg",
+    alt: "The CoinFello app: an Ask Fello prompt field with a yellow primary button, above strategy template cards showing fee APR, risk level and TVL",
+    caption: "The public app, built from the system",
+    aspect: "2250/1400",
   },
 
-  goal:
-    "Keep a product that ships features every day consistent — in its components, its behaviour and its layout at every screen size.",
-  constraints: [
-    "Features shipped daily",
-    "Tablet and mobile had to work on everything, not just desktop",
-    "I designed the components and implemented them, so there was no hand-off to catch mistakes",
-  ],
-
-  decisions: [
-    {
-      title: "Consistency had to be structural, not reviewed",
-      problem:
-        "We released features every day. At that pace an interface cannot be kept consistent by reviewing screens — something always ships before anyone looks at it.",
-      decision:
-        "I built the design system so the component is the fastest way to build a screen, and implemented every component myself.",
-      why: "When using the system is less work than going around it, consistency stops depending on anyone remembering.",
-    },
-    {
-      title: "Responsiveness in the component, not the page",
-      problem:
-        "Every feature had to work on tablet and mobile, and features arrived faster than anyone could retrofit layouts.",
-      decision:
-        "Each component handles its own breakpoints, so a screen assembled from components is responsive before anyone thinks about it.",
-      why: "It moves the work to the place it is done once instead of the place it is done every time.",
-    },
-    {
-      title: "I implemented what I designed",
-      problem:
-        "A design system described in a file and a design system in the codebase drift apart, and nobody notices until a screen looks wrong.",
-      decision:
-        "I owned both ends: the components in the file and the components in the app were the same work.",
-      why: "There was no specification to interpret, so there was nothing to interpret differently.",
-    },
-  ],
-
-  context: [
-    "CoinFello is a DeFi agent: it answers questions about assets and protocols, executes swaps and staking, and runs recurring strategies inside limits the user sets.",
-    "I came to it straight from HyperPlay — same group, new startup, new product, no gap. I joined as a front-end developer and built the design system: tokens, components and conventions. There was nothing to inherit. Then I implemented it in code.",
-    "This is also where I started using AI daily, after the system existed and I already knew what good looked like in the codebase.",
-  ],
-
-  responsibilities: [
-    {
-      title: "Built the design system",
-      body: "Token architecture, component library and the conventions that keep an interface coherent while several people change it at once.",
-      media: {
-        src: "/work/coinfello/chip.jpg",
-        alt: "The CoinFello chip component in Figma, with selected, size and state variants laid out as a matrix",
-        caption: "Chip — selected, size and state",
-        aspect: "3/2",
-      },
-    },
-    {
-      title: "Implemented it in code",
-      body: "I wrote the system rather than specifying it. 55 components, built in React and SCSS on top of Mantine.",
-      media: {
-        src: "/work/coinfello/alert-cards.jpg",
-        alt: "CoinFello alert cards in Figma: error, warning, success, info and brand tones, each with its own icon",
-        caption: "Alert cards — tone as a property, not five components",
-        aspect: "3/2",
-      },
-    },
-    {
-      title: "Used AI deliberately",
-      body: "I use AI daily and review everything it produces the way I would review a junior's pull request. It handles scaffolding, migrations and repetitive variants.",
-    },
-  ],
-
-  system: {
-    title: "The system in production",
-    body: [
-      "The product is public. The yellow on the Ask Fello button is the same token as the yellow on the chip and the button in the files above, and the strategy cards are the component library doing its job on real data.",
-    ],
-    media: {
-      src: "/work/coinfello/app.jpg",
-      alt: "The CoinFello app: a portfolio balance and strategy list in the sidebar, an Ask Fello prompt field with the yellow primary button, and strategy template cards showing fee APR, risk level and TVL",
-      caption: "The app in production — the same tokens, on real data",
-      aspect: "3448/1812",
-    },
+  brief: {
+    problem:
+      "Features shipped every day, on every screen size. At that pace nobody can keep an interface consistent by reviewing screens.",
+    contribution:
+      "I designed the system in Figma, coded a good part of its first atomic components myself, and later wrote the rules AI tools follow in the codebase.",
+    outcome:
+      "With the rules set in code and in Figma, the other developers did not need to create components or correct them.",
   },
 
-  build: {
-    title: "Design system as AI context",
-    body: [
-      "Most teams use AI to write code faster. I used it to keep a product that ships daily consistent with itself.",
-      "Once the design system existed, I wrote it down for the machine as well as for people. A CLAUDE.md file in the repository described the tokens, the naming rules, the component structure and the responsive conventions. Through the Figma MCP the agent could read a component straight from the design file, rather than guessing from a screenshot.",
-      "The loop: I design the component and its states in Figma, on the system's tokens. The agent reads it through the MCP, with CLAUDE.md as the rulebook, and generates the React component and its variants. I review what comes back the way I would review a junior developer's pull request, and fix what it missed. Around 70 to 85% of a generated component matched the system on the first pass.",
-      "That moved my time from typing variants to reviewing decisions. AI is fast, but it does not know what is right for this product — the design system is what told it what right meant, and the review is what made sure it got there. I wrote production front-end by hand for a year at HyperPlay before any of this, which is exactly why I can judge what it hands back.",
-    ],
-    notes: [
-      { value: "70–85%", label: "Generated components matching the system first pass" },
-      { value: "55", label: "Components designed, built and documented" },
-      { value: "1y 3m", label: "Duration" },
-    ],
-  },
+  blocks: [
+    {
+      type: "text",
+      body: [
+        "CoinFello answers questions about assets and protocols, executes swaps and staking, and runs recurring strategies inside limits the user sets. I came straight from HyperPlay: same group, new product.",
+        "I joined as a front-end developer and built the system from zero: tokens, components and conventions. Then I implemented it in code.",
+      ],
+    },
+    {
+      type: "gallery",
+      title: "55 components, in Figma and in code",
+      intro:
+        "Each component carries its own states and its own breakpoints. A screen assembled from them is responsive before anyone thinks about it.",
+      media: [
+        {
+          src: "/work/coinfello/button-states.jpg",
+          alt: "The CoinFello button in brand, secondary, tertiary and danger variants, across default, hover, pressed, focus and disabled states",
+          caption: "Button: variant by state",
+          aspect: "1020/1000",
+        },
+        {
+          src: "/work/coinfello/alert-tones.jpg",
+          alt: "CoinFello alert cards in error, warning, success, info and brand tones, each with its own icon",
+          caption: "Alert: tone is a property, not five components",
+          aspect: "1070/1370",
+        },
+      ],
+    },
+    {
+      type: "text",
+      title: "The system as context for AI",
+      body: [
+        "I designed the first atomic components and added a good part of them to the code myself. Only after about three months did we start testing AI for this work.",
+        "By then the system existed, so I wrote it down for the machine as well as for people. A CLAUDE.md file in the repository described the tokens, the naming, the component structure and the responsive rules. Through the Figma MCP, the agent read a component from the design file instead of guessing from a screenshot.",
+        "From there, I kept designing each component and its states in Figma, and the agent generated the React component from them, with that file as the rulebook. I reviewed what came back as I would review a junior developer's pull request.",
+        "When I set the rules up, I estimated that 70 to 85% of a generated component matched the system on the first pass. It is my estimate from that work, not an instrumented metric. The result I could see was in the team: the other developers did not have to create components or fix them, because the rules were already in the code and in Figma.",
+      ],
+    },
+    {
+      type: "list",
+      title: "Three choices that held it together",
+      items: [
+        {
+          title: "The component is the fastest way to build",
+          body: "When using the system is less work than going around it, consistency stops depending on anyone remembering.",
+        },
+        {
+          title: "Responsive in the component, not in the page",
+          body: "Breakpoints are solved once, where the component lives, instead of on every screen that uses it.",
+        },
+        {
+          title: "Design and code by the same person",
+          body: "A system in a file and a system in a codebase drift apart. Here there was no specification to interpret differently.",
+        },
+      ],
+    },
+  ],
 };

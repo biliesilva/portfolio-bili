@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/hero";
-import { Proof } from "@/components/sections/proof";
+import { PointOfView } from "@/components/sections/point-of-view";
 import { FeaturedWork } from "@/components/sections/featured-work";
 import { Capabilities } from "@/components/sections/capabilities";
 import { RemoteReady } from "@/components/sections/remote-ready";
@@ -9,8 +9,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Proof />
       <FeaturedWork />
+      <PointOfView />
       <Capabilities />
       <RemoteReady />
       <ContactCta />

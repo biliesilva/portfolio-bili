@@ -1,7 +1,7 @@
+import Link from "next/link";
 import { site } from "@/content/site";
-import { RevealWords, Reveal } from "@/components/ui/reveal";
 import { ButtonLink } from "@/components/ui/button-link";
-import { Magnetic } from "@/components/ui/magnetic";
+import { RevealWords } from "@/components/ui/reveal";
 
 export function ContactCta({
   heading = "Let's build something that ships.",
@@ -9,24 +9,21 @@ export function ContactCta({
   heading?: string;
 }) {
   return (
-    <section className="container-edge py-32 md:py-48">
-      <div className="hairline pt-6">
-        <span className="label">Next step</span>
-        <RevealWords
-          text={heading}
-          className="mt-10 max-w-[20ch] text-display font-medium"
-        />
-        <Reveal delay={0.2} className="mt-12 max-w-[52ch]">
-          <p className="text-lead text-bone-dim">{site.availability.detail}</p>
-        </Reveal>
-        <Reveal delay={0.3} className="mt-10 flex flex-wrap items-center gap-4">
-          <Magnetic>
-            <ButtonLink href={`mailto:${site.email}`}>{site.email}</ButtonLink>
-          </Magnetic>
-          <ButtonLink href="/contact" variant="ghost">
-            All the ways to reach me
+    <section data-chapter="contact" className="chapter">
+      <div className="container-edge py-24 md:py-36">
+        <RevealWords text={heading} className="max-w-[16ch] text-display font-medium" />
+        <p className="mt-8 max-w-[48ch] text-lead">{site.availability.label}.</p>
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <ButtonLink href={`mailto:${site.email}`} variant="ink">
+            {site.email}
           </ButtonLink>
-        </Reveal>
+          <Link
+            href="/contact"
+            className="inline-flex min-h-11 items-center font-display text-lg underline underline-offset-4 hover:decoration-2"
+          >
+            Other ways to reach me
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -1,15 +1,16 @@
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 
-type Variant = "primary" | "ghost";
+type Variant = "primary" | "ghost" | "ink";
 
 const base =
-  "group inline-flex items-center gap-2.5 rounded-full px-7 py-3 font-display text-lg font-medium tracking-[0.01em] transition-[color,background-color,border-color,box-shadow] duration-300";
+  "group inline-flex items-center gap-2.5 rounded-sm px-6 py-3 font-display text-lg font-medium tracking-[0.01em] transition-colors duration-200";
 
 const variants: Record<Variant, string> = {
   primary:
-    "holo-surface text-ink shadow-[0_0_24px_-8px_var(--color-holo-pink),0_0_32px_-10px_var(--color-holo-cyan)] hover:shadow-[0_0_34px_-6px_var(--color-holo-violet),0_0_46px_-8px_var(--color-holo-mint)]",
-  ghost: "border border-ink-line text-bone hover:border-bone hover:bg-bone hover:text-ink",
+    "bg-bone text-ink hover:bg-accent",
+  ink: "bg-ink text-bone hover:bg-ink-line",
+  ghost: "border border-bone-faint text-bone hover:border-bone hover:bg-bone hover:text-ink",
 };
 
 export function ButtonLink({
@@ -25,24 +26,27 @@ export function ButtonLink({
   className?: string;
   external?: boolean;
 }) {
+  const download = href.endsWith(".pdf");
+  const isExternal = external || href.startsWith("http") || href.startsWith("mailto:");
+
   const content = (
     <>
       {children}
       <span
         aria-hidden="true"
-        className="text-xl leading-none transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
+        className="text-xl leading-none transition-transform duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
       >
-        &#8599;
+        {download ? "\u2193" : isExternal ? "\u2197" : "\u2192"}
       </span>
     </>
   );
 
-  if (external || href.startsWith("http") || href.startsWith("mailto:")) {
+  if (isExternal) {
     return (
       <a
         href={href}
         target={href.startsWith("mailto:") ? undefined : "_blank"}
-        rel="noreferrer"
+        rel="noopener noreferrer"
         className={cn(base, variants[variant], className)}
       >
         {content}

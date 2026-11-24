@@ -8,22 +8,22 @@ import { MoreExperience } from "@/components/sections/more-experience";
 
 export const metadata: Metadata = {
   title: "CV",
-  description: `CV of ${site.name} — ${site.role} with ${site.yearsOfExperience} years of experience across product design, design systems and front-end engineering.`,
+  description: `CV of ${site.name}, ${site.role} with ${site.experience}.`,
   alternates: { canonical: "/resume" },
 };
 
 export default function ResumePage() {
   return (
     <>
-      <section className="container-edge pt-36 pb-16 md:pt-44">
-        <div className="hairline pt-6">
-          <span className="label">CV — updated November 2026</span>
+      <section data-chapter="profile" className="chapter">
+        <div className="container-edge pt-32 pb-14 md:pt-40 md:pb-20">
+          <span className="chapter-dim text-base">CV, updated November 2026</span>
           <RevealWords
             as="h1"
             text={site.name}
-            className="mt-10 text-hero font-medium"
+            className="mt-6 text-display font-medium"
           />
-          <p className="mt-6 text-lead text-bone-dim">
+          <p className="mt-6 text-lead">
             {site.role} · {site.location} · {site.usOverlap}
           </p>
 
@@ -37,18 +37,21 @@ export default function ResumePage() {
               .join(" · ")}
           </p>
           <Reveal delay={0.2} className="mt-10 flex flex-wrap gap-4 print:hidden">
-            <ButtonLink href="/biliane-silva-cv.pdf" external>
+            <ButtonLink href="/biliane-silva-cv.pdf" external variant="ink">
               Download CV
             </ButtonLink>
-            <ButtonLink href={`mailto:${site.email}`} variant="ghost">
+            <a
+              href={`mailto:${site.email}`}
+              className="inline-flex min-h-11 items-center font-display text-lg underline underline-offset-4 hover:decoration-2"
+            >
               {site.email}
-            </ButtonLink>
+            </a>
           </Reveal>
         </div>
       </section>
 
       <section className="container-edge py-16">
-        <SectionHead index="01" label="Experience" />
+        <SectionHead label="Experience" />
         <div className="mt-12 space-y-16">
           {roles.map((role, i) => (
             <Reveal key={`${role.company}-${role.period}-${i}`}>
@@ -83,7 +86,7 @@ export default function ResumePage() {
       </section>
 
       <section className="container-edge py-16">
-        <SectionHead index="02" label="Earlier" />
+        <SectionHead label="Earlier" />
         <ul className="mt-12">
           {earlier.map((entry) => (
             <li
@@ -92,10 +95,10 @@ export default function ResumePage() {
             >
               <span className="label col-span-4 md:col-span-2">{entry.period}</span>
               <span className="col-span-8 md:col-span-3">{entry.title}</span>
-              <span className="col-span-12 text-bone-dim md:col-span-3">
+              <span className="col-span-8 col-start-5 text-bone-dim md:col-span-3 md:col-start-auto">
                 {entry.company}
               </span>
-              <span className="col-span-12 text-base text-bone-faint md:col-span-4">
+              <span className="col-span-8 col-start-5 text-base text-bone-dim md:col-span-4 md:col-start-auto">
                 {entry.note}
               </span>
             </li>
@@ -104,10 +107,10 @@ export default function ResumePage() {
       </section>
 
       <section className="container-edge py-16">
-        <SectionHead index="03" label="Skills" />
-        <div className="mt-12 grid gap-px bg-ink-line md:grid-cols-3">
+        <SectionHead label="Skills" />
+        <div className="mt-12 grid md:grid-cols-3">
           {skills.map((group) => (
-            <div key={group.group} className="bg-ink p-8">
+            <div key={group.group} className="bg-ink py-8 md:pr-8">
               <h3 className="label">{group.group}</h3>
               <ul className="mt-6 space-y-2">
                 {group.items.map((item) => (
@@ -122,7 +125,7 @@ export default function ResumePage() {
       </section>
 
       <section className="container-edge py-16">
-        <SectionHead index="04" label="Education" />
+        <SectionHead label="Education" />
         <ul className="mt-12">
           {education.map((entry, i) => (
             <li
@@ -131,11 +134,11 @@ export default function ResumePage() {
             >
               <span className="label col-span-4 md:col-span-2">{entry.period}</span>
               <span className="col-span-8 md:col-span-6">{entry.title}</span>
-              <span className="col-span-12 text-bone-dim md:col-span-4">
+              <span className="col-span-8 col-start-5 text-bone-dim md:col-span-4 md:col-start-auto">
                 {entry.institution}
               </span>
               {"note" in entry && entry.note ? (
-                <span className="label col-span-12 text-bone-faint md:col-start-3 md:col-end-9">
+                <span className="label col-span-8 col-start-5 md:col-start-3 md:col-end-9">
                   {entry.note}
                 </span>
               ) : null}
@@ -145,12 +148,12 @@ export default function ResumePage() {
       </section>
 
       <section className="container-edge py-16">
-        <SectionHead index="05" label="Certifications" />
+        <SectionHead label="Certifications" />
         <ul className="mt-12 flex flex-wrap gap-2">
           {certifications.map((item) => (
             <li
               key={item}
-              className="label rounded-full border border-ink-line px-4 py-2"
+              className="label rounded-sm border border-ink-line px-4 py-2"
             >
               {item}
             </li>
@@ -159,7 +162,7 @@ export default function ResumePage() {
       </section>
 
       <section className="container-edge py-16">
-        <SectionHead index="06" label="Languages" />
+        <SectionHead label="Languages" />
         <ul className="mt-12 md:max-w-xl">
           {site.languages.map((language) => (
             <li
